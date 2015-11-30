@@ -1,0 +1,196 @@
+{
+  "objectType" : "Graph",
+  "metadata" : {
+    "camera_mat44" : "{\n  \"row0\" : {\n    \"x\" : -0.9627615809440613,\n    \"y\" : 0.238373726606369,\n    \"z\" : -0.1302375644445419,\n    \"t\" : -12.64062881469727\n    },\n  \"row1\" : {\n    \"x\" : 1.401226427333313e-06,\n    \"y\" : 0.4794458150863648,\n    \"z\" : 0.8777113556861877,\n    \"t\" : 120.9000625610352\n    },\n  \"row2\" : {\n    \"x\" : 0.2717148661613464,\n    \"y\" : 0.8446220755577087,\n    \"z\" : -0.4614724516868591,\n    \"t\" : -61.53324127197266\n    },\n  \"row3\" : {\n    \"x\" : 0,\n    \"y\" : 0,\n    \"z\" : 0,\n    \"t\" : 1\n    }\n  }",
+    "timeline_start" : "1",
+    "timeline_loopMode" : "1",
+    "uiGraphZoom" : "{\n  \"value\" : 0.3937111794948578\n  }",
+    "timeline_simMode" : "0",
+    "camera_focalDistance" : "132.1158599853516",
+    "timeline_current" : "1",
+    "timeline_end" : "50",
+    "uiGraphPan" : "{\n  \"x\" : 314.2163126168427,\n  \"y\" : 4.518045951625055\n  }"
+    },
+  "title" : "",
+  "ports" : [
+    {
+      "objectType" : "Port",
+      "metadata" : {},
+      "nodePortType" : "In",
+      "name" : "value",
+      "execPortType" : "Out",
+      "typeSpec" : "SInt32"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {},
+      "nodePortType" : "Out",
+      "name" : "pixels",
+      "execPortType" : "In",
+      "typeSpec" : "Color[]"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {},
+      "nodePortType" : "Out",
+      "name" : "width",
+      "execPortType" : "In",
+      "typeSpec" : "Size"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {},
+      "nodePortType" : "Out",
+      "name" : "height",
+      "execPortType" : "In",
+      "typeSpec" : "Size"
+      }
+    ],
+  "extDeps" : {},
+  "nodes" : [
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiComment" : "This node demonstrates accessing \npixel values by row & index",
+        "uiGraphPos" : "{\"x\":627.0962524414063,\"y\":340.9234619140625}",
+        "uiCommentExpanded" : "true"
+        },
+      "name" : "FindMaxRow",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "pixels"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "height"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "maxRow"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Func",
+        "title" : "FindMaxRow",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "pixels",
+            "execPortType" : "In",
+            "typeSpec" : "Color[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "width",
+            "execPortType" : "In",
+            "typeSpec" : "Size"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "height",
+            "execPortType" : "In",
+            "typeSpec" : "Size"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "maxRow",
+            "execPortType" : "Out",
+            "typeSpec" : "SInt32"
+            }
+          ],
+        "extDeps" : {},
+        "code" : "dfgEntry {\n  // This is sample code to show iterating over each row of the texture to find\n  // the row that has the maximum pixel value in it\n  Float32 maxR = 0.0f;\n  maxRow = -1;\n  // Our height is the number of rows of pixels\n  for (UInt32 row = 0; row < height; row++)\n  {\n    // For each row, find the maximum pixel R value\n    for (UInt32 pixIdx = 0; pixIdx < width; pixIdx++)\n    {\n      // The pixels are stored in a 1D array, where\n      // the rows are packed together.  We find the \n      // correct pixel by expanding our 2D indices\n      // to a 1D address\n      Color pix = pixels[row * width + pixIdx];\n      if (pix.r > maxR)\n      {\n        maxR = pix.r;\n        maxRow = row;\n      }\n    }\n  }\n}\n"
+        }
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiComment" : "The report statement is just here so we can see something.  \nThe value will be printed to the command window",
+        "uiGraphPos" : "{\"x\":897.283203125,\"y\":383.1656799316406}",
+        "uiCommentExpanded" : "true"
+        },
+      "name" : "Report",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "value"
+          }
+        ],
+      "executable" : "Fabric.Core.Func.Report",
+      "presetGUID" : "E9448726588111C443C34B2F3D9B0172"
+      }
+    ],
+  "connections" : {
+    "pixels" : [
+      "FindMaxRow.pixels"
+      ],
+    "width" : [
+      "FindMaxRow.width"
+      ],
+    "height" : [
+      "FindMaxRow.height"
+      ],
+    "FindMaxRow.maxRow" : [
+      "Report.value"
+      ],
+    "Report.value" : [
+      "value"
+      ]
+    },
+  "requiredPresets" : {
+    "Fabric.Core.Func.Report" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiNodeColor" : "{\n  \"r\" : 214,\n  \"g\" : 191,\n  \"b\" : 103\n  }",
+        "uiAlwaysShowDaisyChainPorts" : "true",
+        "uiHeaderColor" : "{\n  \"r\" : 188,\n  \"g\" : 129,\n  \"b\" : 83\n  }"
+        },
+      "title" : "Report",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "value",
+          "execPortType" : "In",
+          "typeSpec" : "$TYPE$"
+          }
+        ],
+      "extDeps" : {},
+      "presetGUID" : "E9448726588111C443C34B2F3D9B0172",
+      "code" : "\ndfgEntry {\n\treport(value);\n}\n"
+      }
+    },
+  "args" : [
+    {
+      "type" : "SInt32",
+      "value" : null
+      },
+    {
+      "type" : "Color[]",
+      "value" : null,
+      "ext" : "Math"
+      },
+    {
+      "type" : "Size",
+      "value" : null
+      },
+    {
+      "type" : "Size",
+      "value" : null
+      }
+    ]
+  }
