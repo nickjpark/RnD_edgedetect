@@ -1,0 +1,1847 @@
+{
+  "objectType" : "Graph",
+  "metadata" : {
+    "camera_mat44" : "{\n  \"row0\" : {\n    \"x\" : -0.9995133280754089,\n    \"y\" : -0.04420386627316475,\n    \"z\" : 0.008044046349823475,\n    \"t\" : 5.830448627471924\n    },\n  \"row1\" : {\n    \"x\" : 1.643713176235906e-06,\n    \"y\" : 0.1789751052856445,\n    \"z\" : 0.9840890765190125,\n    \"t\" : 160.0549163818359\n    },\n  \"row2\" : {\n    \"x\" : -0.04495096951723099,\n    \"y\" : 0.9829075336456299,\n    \"z\" : -0.1788285374641419,\n    \"t\" : -28.76544189453125\n    },\n  \"row3\" : {\n    \"x\" : 0,\n    \"y\" : 0,\n    \"z\" : 0,\n    \"t\" : 1\n    }\n  }",
+    "timeline_start" : "1",
+    "timeline_loopMode" : "1",
+    "uiGraphZoom" : "{\n  \"value\" : 0.4154971539974213\n  }",
+    "timeline_simMode" : "0",
+    "camera_focalDistance" : "157.6495208740234",
+    "timeline_current" : "1",
+    "timeline_end" : "50",
+    "uiGraphPan" : "{\n  \"x\" : 373.313480912977,\n  \"y\" : -83.40872246672049\n  }"
+    },
+  "title" : "",
+  "ports" : [
+    {
+      "objectType" : "Port",
+      "metadata" : {
+        "uiPersistValue" : "true"
+        },
+      "nodePortType" : "Out",
+      "name" : "filePath",
+      "execPortType" : "In",
+      "typeSpec" : "String"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {
+        "uiPersistValue" : "true"
+        },
+      "nodePortType" : "Out",
+      "name" : "MeshScale",
+      "execPortType" : "In",
+      "typeSpec" : "Float32"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {
+        "uiPersistValue" : "true"
+        },
+      "nodePortType" : "Out",
+      "name" : "HeightScale",
+      "execPortType" : "In",
+      "typeSpec" : "Float32"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {
+        "uiPersistValue" : "true"
+        },
+      "nodePortType" : "Out",
+      "name" : "threshold",
+      "execPortType" : "In",
+      "typeSpec" : "Float32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "this",
+      "execPortType" : "Out",
+      "typeSpec" : "DrawingHandle"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {},
+      "nodePortType" : "In",
+      "name" : "value",
+      "execPortType" : "Out",
+      "typeSpec" : "SInt32[]"
+      }
+    ],
+  "extDeps" : {},
+  "nodes" : [
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":-380.7238159179688,\"y\":264.78515625}"
+        },
+      "name" : "LoadImage",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "verbose"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "filePath"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "result"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "pixels"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "height"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Graph",
+        "metadata" : {
+          "uiNodeColor" : "{\n  \"r\" : 144,\n  \"g\" : 130,\n  \"b\" : 120\n  }",
+          "uiGraphZoom" : "{\n  \"value\" : 0.8138958215713501\n  }",
+          "uiHeaderColor" : "{\n  \"r\" : 115,\n  \"g\" : 105,\n  \"b\" : 75\n  }",
+          "uiTooltip" : "loads an image from disk",
+          "uiGraphPan" : "{\n  \"x\" : 21.2629981637001,\n  \"y\" : 9.372200310230255\n  }"
+          },
+        "title" : "LoadImage",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "verbose",
+            "execPortType" : "In",
+            "typeSpec" : "Boolean"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "defaultValues" : {
+              "String" : "C:\\Temp\\image1.jpg"
+              },
+            "name" : "filePath",
+            "execPortType" : "In",
+            "typeSpec" : "String"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "result",
+            "execPortType" : "Out",
+            "typeSpec" : "Image2DColor"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "pixels",
+            "execPortType" : "Out",
+            "typeSpec" : "Color[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "width",
+            "execPortType" : "Out",
+            "typeSpec" : "Size"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "height",
+            "execPortType" : "Out",
+            "typeSpec" : "Size"
+            }
+          ],
+        "extDeps" : {
+          "OpenImageIO" : "*",
+          "FileIO" : "*",
+          "Images" : "*"
+          },
+        "origPresetGUID" : "71A393CF88679424EF2212A78848F258",
+        "nodes" : [
+          {
+            "objectType" : "Inst",
+            "metadata" : {
+              "uiGraphPos" : "{\"x\":125.0,\"y\":50.0}"
+              },
+            "name" : "applyLoadImage",
+            "ports" : [
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "verbose"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "filePath"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "success"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "image"
+                }
+              ],
+            "definition" : {
+              "objectType" : "Func",
+              "title" : "applyLoadImage",
+              "ports" : [
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "verbose",
+                  "execPortType" : "In",
+                  "typeSpec" : "Boolean"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "filePath",
+                  "execPortType" : "In",
+                  "typeSpec" : "String"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "In",
+                  "name" : "success",
+                  "execPortType" : "Out",
+                  "typeSpec" : "Boolean"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "In",
+                  "name" : "image",
+                  "execPortType" : "Out",
+                  "typeSpec" : "Image2DColor"
+                  }
+                ],
+              "extDeps" : {},
+              "code" : "require OpenImageIO;\nrequire FileIO;\nrequire Images;\n\ndfgEntry\n{ \n  // init the outputs.\n  success = false;\n  image   = Image2DColor();\n\n  // open the image file.\n  if (verbose)  report(\"opening image file \\\"\" + filePath + \"\\\"\");\n  OpenImageInput file = OpenImageInput();\n  file.open(filePath);\n  if(!file.valid())\n  {\n    if (verbose)  report(\"ERROR: unable to open image file.\");\n    return;\n  }\n  \n  // get the image file's specs, verbose and check image resolution.\n  OpenImageSpec fileSpec = file.spec();\n  if (verbose)\n  {\n    report(\"   width    = \" + fileSpec.get_full_width ());\n    report(\"   height   = \" + fileSpec.get_full_height());\n    report(\"   channels = \" + fileSpec.get_nchannels  ());\n  }\n  if (fileSpec.get_full_width() <= 0 || fileSpec.get_full_height() <= 0)\n  {\n    if (verbose)  report(\"ERROR: bad image resolution.\");\n    return;\n  }\n  \n  // set output image from image file data.\n  OpenImageTypeDesc fileDesc = OpenImageTypeDesc(OpenImage_BASETYPE_FLOAT, OpenImage_AGGREGATE_SCALAR, OpenImage_VECSEMANTICS_NOXFORM);\n  switch (fileSpec.get_nchannels())\n  {\n    case 1:    // gray scale.\n    {\n      image.resize(fileSpec.get_full_width(), fileSpec.get_full_height());\n      Float32 tmp[];\n      tmp.resize(image.width * image.height);\n      Data data = tmp.data();\n      success = file.read_image(fileDesc, data, 0, 0, 0);\n      if (success)\n      {\n        for (UInt32 i=0;i<image.pixels.size();i++)\n        {\n          image.pixels[i].r = tmp[i];\n          image.pixels[i].g = tmp[i];\n          image.pixels[i].b = tmp[i];\n          image.pixels[i].a = 1.0;\n        }\n      }\n      else\n        if (verbose)  report(\"ERROR: read error.\");\n      break;\n    }\n    case 3:    // RGB.\n    {\n      image.resize(fileSpec.get_full_width(), fileSpec.get_full_height());\n      Float32 tmp[];\n      tmp.resize(image.width * image.height * 3);\n      Data data = tmp.data();\n      success = file.read_image(fileDesc, data, 0, 0, 0);\n      if (success)\n      {\n        UInt32 offset = 0;\n        for (UInt32 i=0;i<image.pixels.size();i++)\n        {\n          image.pixels[i].r = tmp[offset++];\n          image.pixels[i].g = tmp[offset++];\n          image.pixels[i].b = tmp[offset++];\n          image.pixels[i].a = 1.0;\n        }\n      }\n      else\n        if (verbose)  report(\"ERROR: read error.\");\n      break;\n    }\n    case 4:    // RGBA.\n    {\n      image.resize(fileSpec.get_full_width(), fileSpec.get_full_height());\n      Data data = image.pixels.data();\n      success = file.read_image(fileDesc, data, 0, 0, 0);\n      if (!success)\n        if (verbose)  report(\"ERROR: read error.\");\n      break;\n    }\n    default:   // unsupported amount of channels.\n    {\n      if (verbose)  report(\"ERROR: unsupported amount of channels.\");\n      break;\n    }\n  }\n  \n  // done.\n  if (success && verbose)\n    report(\"image successfully read.\");\n}\n\n"
+              },
+            "title" : "applyLoadImage"
+            },
+          {
+            "objectType" : "Inst",
+            "metadata" : {
+              "uiGraphPos" : "{\"x\":365.0,\"y\":153.0}"
+              },
+            "name" : "Cache_2",
+            "ports" : [
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "value"
+                }
+              ],
+            "executable" : "Fabric.Core.Data.Cache",
+            "presetGUID" : "D903AFD981FE9214C69943F542D5FD60"
+            },
+          {
+            "objectType" : "Inst",
+            "metadata" : {
+              "uiGraphPos" : "{\"x\":957.7288818359375,\"y\":208.054931640625}"
+              },
+            "name" : "imageMetaData",
+            "ports" : [
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "image"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "pixels"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "width"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "height"
+                }
+              ],
+            "definition" : {
+              "objectType" : "Func",
+              "title" : "imageMetaData",
+              "ports" : [
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "image",
+                  "execPortType" : "In",
+                  "typeSpec" : "Image2D"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "In",
+                  "name" : "pixels",
+                  "execPortType" : "Out",
+                  "typeSpec" : "Color[]"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "In",
+                  "name" : "width",
+                  "execPortType" : "Out",
+                  "typeSpec" : "Size"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "In",
+                  "name" : "height",
+                  "execPortType" : "Out",
+                  "typeSpec" : "Size"
+                  }
+                ],
+              "extDeps" : {},
+              "code" : "dfgEntry {\n  //result = lhs + rhs;\n  pixels = image.pixels;\n  width = image.width;\n  height = image.height;\n}\n"
+              }
+            }
+          ],
+        "connections" : {
+          "verbose" : [
+            "applyLoadImage.verbose"
+            ],
+          "filePath" : [
+            "applyLoadImage.filePath"
+            ],
+          "applyLoadImage.image" : [
+            "Cache_2.value"
+            ],
+          "Cache_2.value" : [
+            "imageMetaData.image"
+            ],
+          "imageMetaData.image" : [
+            "result"
+            ],
+          "imageMetaData.pixels" : [
+            "pixels"
+            ],
+          "imageMetaData.width" : [
+            "width"
+            ],
+          "imageMetaData.height" : [
+            "height"
+            ]
+          }
+        }
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":781.6676635742188,\"y\":219.8912963867188}"
+        },
+      "name" : "GetPlane",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "value"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "length"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "lengthSections"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "widthSections"
+          }
+        ],
+      "executable" : "Fabric.Compounds.PolygonMesh.Create.GetPlane",
+      "presetGUID" : "6C8ECE265942DFCCBDA5217ED711FF80"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":427.2572021484375,\"y\":269.1093139648438}"
+        },
+      "name" : "Mul",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "lhs"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "rhs"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "result"
+          }
+        ],
+      "executable" : "Fabric.Core.Math.Mul",
+      "presetGUID" : "CC951B43BB879483B46EFF7965692350"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":533.1262817382813,\"y\":129.0571899414063}"
+        },
+      "name" : "Mul_2",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "lhs"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "rhs"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "result"
+          }
+        ],
+      "executable" : "Fabric.Core.Math.Mul",
+      "presetGUID" : "CC951B43BB879483B46EFF7965692350"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiComment" : "This node pushes mesh vertices according\n to the texture R value at each vertex",
+        "uiGraphPos" : "{\"x\":1083.692993164063,\"y\":291.7907104492188}",
+        "uiCommentExpanded" : "true"
+        },
+      "name" : "displace",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "mesh"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "image"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "scale"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "result"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Func",
+        "title" : "displace",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "mesh",
+            "execPortType" : "In",
+            "typeSpec" : "PolygonMesh"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "image",
+            "execPortType" : "In",
+            "typeSpec" : "Image2D"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "scale",
+            "execPortType" : "In",
+            "typeSpec" : "Float32"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "result",
+            "execPortType" : "Out",
+            "typeSpec" : "PolygonMesh"
+            }
+          ],
+        "extDeps" : {},
+        "code" : "dfgEntry {\n  //result = lhs + rhs;\n  result = mesh.clone();\n  Vec3Attribute positions = result.attributes.positionsAttribute;\n  LocalBoundingVolume meshbb = result.getBoundingVolume();\n  Vec3 min = meshbb.bBoxGetMin();\n  Vec3 max = meshbb.bBoxGetMax();\n  Vec3 dim = max - min;\n  \n  for (UInt32 i = 0; i < positions.count; i++)\n  {\n    // Generate a UV coordinate based on the point location\n    // Our up-vector is the Y vector, so UV's are based on XZ\n    // UV's are values 0-1 which specify the ratio across\n    // the texture to sample the pixel at.\n    Float32 u = (positions.values[i].x - min.x) / dim.x;\n    Float32 v = 1.0 - (positions.values[i].z - min.z) / dim.z;\n    \n    Color c = image.sample(u, v);\n    // Once we have the color value for this vertex,\n    // offset the points position by the appropriate amount\n    // (assume grayscale, so every channel has the same val)\n    positions.values[i].y += c.r * scale;\n    //positions.values[i].y += 10;\n  }\n  // Increment the version to tell Fabric that the values in this\n  // container have changed.\n  positions.incrementVersion();\n  result.recomputePointNormals();\n}\n"
+        }
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":1651.642578125,\"y\":142.3506011962891}"
+        },
+      "name" : "DrawTexturedPolygonMesh_2",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "IO",
+          "name" : "this"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "name"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "filePath"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "specular"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "specFactor"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "ambient"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "transform"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "mesh"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "wireFrame"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "doubleSided"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "dummyResult"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "instance"
+          }
+        ],
+      "executable" : "Fabric.Exts.InlineDrawing.DrawingHandle.DrawTexturedPolygonMesh",
+      "presetGUID" : "2422BED0AFC9A66EFC9086103DB69004"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":995.72607421875,\"y\":56.35878753662109}"
+        },
+      "name" : "EmptyDrawingHandle",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "handle"
+          }
+        ],
+      "executable" : "Fabric.Exts.InlineDrawing.DrawingHandle.EmptyDrawingHandle",
+      "presetGUID" : "2440020BA6A1CAB1CEB690A198F99C70"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":674.36279296875,\"y\":413.1999816894531}"
+        },
+      "name" : "findingremainingedgepixels",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "xstart"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "ystart"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "pixels"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "height"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "IO",
+          "name" : "xdata"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "IO",
+          "name" : "ydata"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "IO",
+          "name" : "depthdata"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "directionstart"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "direction"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Func",
+        "title" : "findingremainingedgepixels",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "xstart",
+            "execPortType" : "In",
+            "typeSpec" : "$TYPE$"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "ystart",
+            "execPortType" : "In",
+            "typeSpec" : "$TYPE$"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "pixels",
+            "execPortType" : "In",
+            "typeSpec" : "Color[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "width",
+            "execPortType" : "In",
+            "typeSpec" : "Size"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "height",
+            "execPortType" : "In",
+            "typeSpec" : "Size"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "IO",
+            "name" : "xdata",
+            "execPortType" : "IO",
+            "typeSpec" : "SInt32[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "IO",
+            "name" : "ydata",
+            "execPortType" : "IO",
+            "typeSpec" : "SInt32[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "IO",
+            "name" : "depthdata",
+            "execPortType" : "IO",
+            "typeSpec" : "Float64[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "directionstart",
+            "execPortType" : "In",
+            "typeSpec" : "UInt8"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "direction",
+            "execPortType" : "In",
+            "typeSpec" : "SInt8"
+            }
+          ],
+        "extDeps" : {},
+        "code" : "dfgEntry {\n  \n    Float64 xcurrent = xdata[xdata.size()-1];\n    Float64 ycurrent = ydata[ydata.size()-1];\n    \nwhile (xcurrent != xstart || ycurrent != ystart){\n    // The first step is to identify where we are coming from. this is stored in direction. \n    // Direction has 4 options 1 moving to the right, 2 moving down, 3 moving to the left, 4 moving up. \n    // All of these directions are global or relative to the picture. These are the targets of the switch statements\n    switch(direction){\n\t\tcase 1:\n\t\t{//brace opening the case\n\t\t\tif (pixels[ (xcurrent-1) * width + (ycurrent  ) ].r > 0){\n\t\t\t\txcurrent--;\n\t\t\t\tdirection = 4;\n\t\t\t} else if (pixels[ (xcurrent  ) * width + (ycurrent+1) ].r > 0){\n\t\t\t\tycurrent++;\n\t\t\t\tdirection = 1;\n\t\t\t} else if (pixels[ (xcurrent+1) * width + (ycurrent  ) ].r > 0){\n\t\t\t\txcurrent++;\n\t\t\t\tdirection = 2;\n\t\t\t} else if (pixels[ (xcurrent  ) * width + (ycurrent-1) ].r > 0){\n\t\t\t\tycurrent--;\n\t\t\t\tdirection = 3;\n\t\t\t} else {\n\t\t\t\treport('something weird happened to the picture...');\n\t\t\t}\n\t\t}//brace closing the case\n\t\tcase 2:\n\t\t{//brace opening the case\n\t\t\tif (pixels[ (xcurrent  ) * width + (ycurrent+1) ].r > 0){\n\t\t\t\tycurrent++;\n\t\t\t\tdirection = 1;\n\t\t\t} else if (pixels[ (xcurrent+1) * width + (ycurrent  ) ].r > 0){\n\t\t\t\txcurrent++;\n\t\t\t\tdirection = 2;\n\t\t\t} else if (pixels[ (xcurrent  ) * width + (ycurrent-1) ].r > 0){\n\t\t\t\tycurrent--;\n\t\t\t\tdirection = 3;\n\t\t\t} else if (pixels[ (xcurrent-1) * width + (ycurrent  ) ].r > 0){\n\t\t\t\txcurrent--;\n\t\t\t\tdirection = 4;\n\t\t\t} else {\n\t\t\t\treport('something weird happened to the picture...');\n\t\t\t}\n\t\t}//brace closing the case\n\t\tcase 3:\n\t\t{//brace opening the case\n\t\t\tif (pixels[ (xcurrent+1) * width + (ycurrent  ) ].r > 0){\n\t\t\t\txcurrent++;\n\t\t\t\tdirection = 2;\n\t\t\t} else if (pixels[ (xcurrent  ) * width + (ycurrent-1) ].r > 0){\n\t\t\t\tycurrent--;\n\t\t\t\tdirection = 3;\n\t\t\t} else if(pixels[ (xcurrent-1) * width + (ycurrent  ) ].r > 0){\n\t\t\t\txcurrent--;\n\t\t\t\tdirection = 4;\n\t\t\t} else if (pixels[ (xcurrent  ) * width + (ycurrent+1) ].r > 0){\n\t\t\t\tycurrent++;\n\t\t\t\tdirection = 1;\n\t\t\t} else{\n\t\t\t\treport('something weird happened to the picture...');\n\t\t\t}\n\t\t}//brace closing the case\n\t\tcase 4:\n\t\t{//brace opening the case\n\t\t\tif (pixels[ (xcurrent  ) * width + (ycurrent-1) ].r > 0){\n\t\t\t\tycurrent--;\n\t\t\t\tdirection = 3;\n\t\t\t} else if (pixels[ (xcurrent-1) * width + (ycurrent  ) ].r > 0){\n\t\t\t\txcurrent--;\n\t\t\t\tdirection = 4;\n\t\t\t} else if (pixels[ (xcurrent  ) * width + (ycurrent+1) ].r > 0){\n\t\t\t\tycurrent++;\n\t\t\t\tdirection = 1;\n\t\t\t} else if (pixels[ (xcurrent+1) * width + (ycurrent  ) ].r > 0){\n\t\t\t\txcurrent++;\n\t\t\t\tdirection = 2;\n\t\t\t}else{\n\t\t\t\treport('something weird happened to the picture...');\n\t\t\t}\n\t\t}//brace closing the case\n\t}//brace closing the switch\n    xdata.push(xcurrent);\n    ydata.push(ycurrent);\n    depthdata.push(pixels[ (xcurrent  ) * width + (ycurrent  ) ].r);\n} //brace closing the while loop\n}//brace closing the function\n"
+        }
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":-6.579742431640625,\"y\":397.4718627929688}"
+        },
+      "name" : "findfirstpixel",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "pixels"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "height"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "xstart"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "ystart"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "directionstart"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Func",
+        "title" : "findfirstpixel",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "pixels",
+            "execPortType" : "In",
+            "typeSpec" : "Color[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "width",
+            "execPortType" : "In",
+            "typeSpec" : "Size"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "height",
+            "execPortType" : "In",
+            "typeSpec" : "Size"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "xstart",
+            "execPortType" : "Out",
+            "typeSpec" : "SInt32"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "ystart",
+            "execPortType" : "Out",
+            "typeSpec" : "SInt32"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "directionstart",
+            "execPortType" : "Out",
+            "typeSpec" : "UInt8"
+            }
+          ],
+        "extDeps" : {},
+        "code" : "dfgEntry {\n  // This fuction searches for an edge in the picture.\n   // Our height is the number of rows of pixels\n   xstart = 0;\n   directionstart = 1;\n  for (UInt32 row = 0; row < height; row++)\n  {\n    // For each row, find the maximum pixel R value\n    for (UInt32 column = 0; column < width; column++)\n    {\n      // The pixels are stored in a 1D array, where\n      // the rows are packed together.  We find the \n      // correct pixel by expanding our 2D indices\n      // to a 1D address\n      if (pixels[row * width + column].r > 0)\n      {\n        xstart = row;\n        ystart = column;\n      }\n      if (xstart > 0)\n        break;\n    }\n     if (xstart > 0)\n       break;\n  }\n}"
+        }
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":231.1115112304688,\"y\":396.9903869628906}",
+        "uiCollapsedState" : "0"
+        },
+      "name" : "findingsecondpixel",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "xstart"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "ystart"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "pixels"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "height"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "xdata"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "ydata"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "depthdata"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "direction"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Func",
+        "title" : "findingsecondpixel",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "xstart",
+            "execPortType" : "In",
+            "typeSpec" : "UInt32"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "ystart",
+            "execPortType" : "In",
+            "typeSpec" : "UInt32"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "pixels",
+            "execPortType" : "In",
+            "typeSpec" : "Color[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "width",
+            "execPortType" : "In",
+            "typeSpec" : "Size"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "height",
+            "execPortType" : "In",
+            "typeSpec" : "Size"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "xdata",
+            "execPortType" : "Out",
+            "typeSpec" : "SInt32[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "ydata",
+            "execPortType" : "Out",
+            "typeSpec" : "SInt32[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "depthdata",
+            "execPortType" : "Out",
+            "typeSpec" : "Float64[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "direction",
+            "execPortType" : "Out",
+            "typeSpec" : "UInt8"
+            }
+          ],
+        "extDeps" : {},
+        "code" : "dfgEntry {\n   xdata.resize(0);\n   ydata.resize(0);\n   depthdata.resize(0);\n   if (pixels[xstart* width + ystart + 1].r > 0)\n   {\n     direction = 1;\n     xdata.push(xstart);\n     ydata.push(ystart+1);\n     depthdata.push(pixels[xstart * width + (ystart+1)].r);\n   }\n   else if (pixels[(xstart+1)* width + ystart ].r > 0)\n   {\n     direction = 2;\n     xdata.push(xstart+1);\n     ydata.push(ystart);\n     depthdata.push(pixels[(xstart+1) * width + ystart].r);\n   }\n   else\n   {\n   report('Isolated pixel');\n   }\n   \n  //result = lhs + rhs;\n}\n"
+        }
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":1363.935424804688,\"y\":565.6251220703125}"
+        },
+      "name" : "Report",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "value"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Func",
+        "metadata" : {
+          "uiNodeColor" : "{\n  \"r\" : 214,\n  \"g\" : 191,\n  \"b\" : 103\n  }",
+          "uiAlwaysShowDaisyChainPorts" : "true",
+          "uiHeaderColor" : "{\n  \"r\" : 188,\n  \"g\" : 129,\n  \"b\" : 83\n  }"
+          },
+        "title" : "Report",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "value",
+            "execPortType" : "In",
+            "typeSpec" : "SInt32[]"
+            }
+          ],
+        "extDeps" : {},
+        "origPresetGUID" : "E9448726588111C443C34B2F3D9B0172",
+        "code" : "\ndfgEntry {\n\treport(value);\n}\n"
+        }
+      }
+    ],
+  "connections" : {
+    "filePath" : [
+      "DrawTexturedPolygonMesh_2.filePath",
+      "LoadImage.filePath"
+      ],
+    "MeshScale" : [
+      "Mul_2.lhs",
+      "Mul.lhs"
+      ],
+    "HeightScale" : [
+      "displace.scale"
+      ],
+    "LoadImage.result" : [
+      "displace.image"
+      ],
+    "LoadImage.pixels" : [
+      "findfirstpixel.pixels"
+      ],
+    "LoadImage.width" : [
+      "GetPlane.widthSections",
+      "Mul.rhs",
+      "findfirstpixel.width"
+      ],
+    "LoadImage.height" : [
+      "GetPlane.lengthSections",
+      "Mul_2.rhs",
+      "findfirstpixel.height"
+      ],
+    "GetPlane.value" : [
+      "displace.mesh"
+      ],
+    "Mul.result" : [
+      "GetPlane.width"
+      ],
+    "Mul_2.result" : [
+      "GetPlane.length"
+      ],
+    "displace.result" : [
+      "DrawTexturedPolygonMesh_2.mesh"
+      ],
+    "DrawTexturedPolygonMesh_2.this" : [
+      "this"
+      ],
+    "EmptyDrawingHandle.handle" : [
+      "DrawTexturedPolygonMesh_2.this"
+      ],
+    "findingremainingedgepixels.xdata" : [
+      "Report.value"
+      ],
+    "findfirstpixel.pixels" : [
+      "findingsecondpixel.pixels"
+      ],
+    "findfirstpixel.width" : [
+      "findingsecondpixel.width"
+      ],
+    "findfirstpixel.height" : [
+      "findingsecondpixel.height"
+      ],
+    "findfirstpixel.xstart" : [
+      "findingsecondpixel.xstart"
+      ],
+    "findfirstpixel.ystart" : [
+      "findingsecondpixel.ystart"
+      ],
+    "findfirstpixel.directionstart" : [
+      "findingremainingedgepixels.directionstart"
+      ],
+    "findingsecondpixel.xstart" : [
+      "findingremainingedgepixels.xstart"
+      ],
+    "findingsecondpixel.ystart" : [
+      "findingremainingedgepixels.ystart"
+      ],
+    "findingsecondpixel.pixels" : [
+      "findingremainingedgepixels.pixels"
+      ],
+    "findingsecondpixel.width" : [
+      "findingremainingedgepixels.width"
+      ],
+    "findingsecondpixel.height" : [
+      "findingremainingedgepixels.height"
+      ],
+    "findingsecondpixel.xdata" : [
+      "findingremainingedgepixels.xdata"
+      ],
+    "findingsecondpixel.ydata" : [
+      "findingremainingedgepixels.ydata"
+      ],
+    "findingsecondpixel.depthdata" : [
+      "findingremainingedgepixels.depthdata"
+      ],
+    "findingsecondpixel.direction" : [
+      "findingremainingedgepixels.direction"
+      ],
+    "Report.value" : [
+      "value"
+      ]
+    },
+  "requiredPresets" : {
+    "Fabric.Core.Data.Cache" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiNodeColor" : "{\n  \"r\" : 214,\n  \"g\" : 191,\n  \"b\" : 103\n  }",
+        "uiAlwaysShowDaisyChainPorts" : "true",
+        "uiHeaderColor" : "{\n  \"r\" : 188,\n  \"g\" : 129,\n  \"b\" : 83\n  }"
+        },
+      "title" : "Cache",
+      "cacheRule" : "always",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "value",
+          "execPortType" : "In",
+          "typeSpec" : "$TYPE$"
+          }
+        ],
+      "extDeps" : {},
+      "presetGUID" : "D903AFD981FE9214C69943F542D5FD60",
+      "code" : "dfgEntry {\n}\n"
+      },
+    "Fabric.Compounds.PolygonMesh.Create.GetPlane" : {
+      "objectType" : "Graph",
+      "metadata" : {
+        "uiNodeColor" : "{\n  \"r\" : 120,\n  \"g\" : 130,\n  \"b\" : 144\n  }",
+        "uiHeaderColor" : "{\n  \"r\" : 88,\n  \"g\" : 92,\n  \"b\" : 110\n  }",
+        "uiTooltip" : "Generates a polygon mesh plane (grid)."
+        },
+      "title" : "GetPlane",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "value",
+          "execPortType" : "Out",
+          "typeSpec" : "PolygonMesh"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiRange" : "(0, 20)"
+            },
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Float32" : 10
+            },
+          "name" : "length",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiRange" : "(0, 20)"
+            },
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Float32" : 10
+            },
+          "name" : "width",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiRange" : "(2, 24)"
+            },
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "UInt32" : 10
+            },
+          "name" : "lengthSections",
+          "execPortType" : "In",
+          "typeSpec" : "Size"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiRange" : "(2, 24)"
+            },
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "UInt32" : 10
+            },
+          "name" : "widthSections",
+          "execPortType" : "In",
+          "typeSpec" : "Size"
+          }
+        ],
+      "extDeps" : {},
+      "presetGUID" : "6C8ECE265942DFCCBDA5217ED711FF80",
+      "nodes" : [
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\": 320, \"y\": 61}"
+            },
+          "name" : "EmptyPolygonMesh",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "mesh"
+              }
+            ],
+          "executable" : "Fabric.Exts.Geometry.PolygonMesh.EmptyPolygonMesh",
+          "presetGUID" : "EE0894325519F66F17D265A042545FEB"
+          },
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\": 535, \"y\": 96}"
+            },
+          "name" : "AddPlane",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "IO",
+              "name" : "this"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "xfo"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "defaultValues" : {
+                "Float32" : 8
+                },
+              "name" : "length"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "defaultValues" : {
+                "Float32" : 4
+                },
+              "name" : "width"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "defaultValues" : {
+                "UInt32" : 8
+                },
+              "name" : "lengthSections"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "defaultValues" : {
+                "UInt32" : 8
+                },
+              "name" : "widthSections"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "setNormals"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "setUVs"
+              }
+            ],
+          "executable" : "Fabric.Exts.Geometry.PolygonMesh.AddPlane",
+          "presetGUID" : "D39C36E964BC1FED99E42B4D6CCAD3F4"
+          },
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\": 809, \"y\": 96}"
+            },
+          "name" : "Cache",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "value"
+              }
+            ],
+          "executable" : "Fabric.Core.Data.Cache",
+          "presetGUID" : "D903AFD981FE9214C69943F542D5FD60"
+          }
+        ],
+      "connections" : {
+        "length" : [
+          "AddPlane.length"
+          ],
+        "width" : [
+          "AddPlane.width"
+          ],
+        "lengthSections" : [
+          "AddPlane.lengthSections"
+          ],
+        "widthSections" : [
+          "AddPlane.widthSections"
+          ],
+        "EmptyPolygonMesh.mesh" : [
+          "AddPlane.this"
+          ],
+        "AddPlane.this" : [
+          "Cache.value"
+          ],
+        "Cache.value" : [
+          "value"
+          ]
+        }
+      },
+    "Fabric.Exts.Geometry.PolygonMesh.EmptyPolygonMesh" : {
+      "objectType" : "Graph",
+      "title" : "EmptyPolygonMesh",
+      "cacheRule" : "never",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "mesh",
+          "execPortType" : "Out",
+          "typeSpec" : "PolygonMesh"
+          }
+        ],
+      "extDeps" : {},
+      "presetGUID" : "EE0894325519F66F17D265A042545FEB",
+      "nodes" : [
+        {
+          "objectType" : "Inst",
+          "name" : "PolygonMesh",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "debugName"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "float64Positions"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "result"
+              }
+            ],
+          "executable" : "Fabric.Exts.Geometry.PolygonMesh.PolygonMesh",
+          "presetGUID" : "18F3A38BE7497D6BFC18A148A520B66D"
+          },
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\": 951, \"y\": 145}"
+            },
+          "name" : "Clear",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "IO",
+              "name" : "this"
+              }
+            ],
+          "executable" : "Fabric.Exts.Geometry.Func.Clear",
+          "presetGUID" : "96D1EC86835296FFDC60533717804EE7",
+          "cacheRule" : "never"
+          },
+        {
+          "objectType" : "Var",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\": 744, \"y\": 122}"
+            },
+          "name" : "meshVar",
+          "ports" : [
+            {
+              "objectType" : "VarPort",
+              "nodePortType" : "IO",
+              "name" : "value"
+              }
+            ],
+          "dataType" : "PolygonMesh",
+          "extDep" : "Geometry:*"
+          }
+        ],
+      "connections" : {
+        "PolygonMesh.result" : [
+          "meshVar.value"
+          ],
+        "Clear.this" : [
+          "mesh"
+          ],
+        "meshVar.value" : [
+          "Clear.this"
+          ]
+        }
+      },
+    "Fabric.Exts.Geometry.PolygonMesh.PolygonMesh" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/Geometry/PolygonMesh.html",
+        "uiTooltip" : "Constructor.\n\n Supported by PolygonMesh"
+        },
+      "title" : "PolygonMesh",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "debugName",
+          "execPortType" : "In",
+          "typeSpec" : "String"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "float64Positions",
+          "execPortType" : "In",
+          "typeSpec" : "Boolean"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 51,\n  \"g\" : 1,\n  \"b\" : 106\n  }"
+            },
+          "nodePortType" : "In",
+          "name" : "result",
+          "execPortType" : "Out",
+          "typeSpec" : "PolygonMesh"
+          }
+        ],
+      "extDeps" : {
+        "Geometry" : "*"
+        },
+      "presetGUID" : "18F3A38BE7497D6BFC18A148A520B66D",
+      "code" : "require Geometry;\n\ndfgEntry {\n  result = PolygonMesh(debugName, float64Positions);\n}\n"
+      },
+    "Fabric.Exts.Geometry.Func.Clear" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/Geometry/GeometryAttributes.html",
+        "uiTooltip" : "Removes all attributes, and resets attribute value array sizes to 0.\n\n Supported by GeometryAttributes,BaseGeometry,Points,Lines,PolygonMesh"
+        },
+      "title" : "Clear",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "IO",
+          "name" : "this",
+          "execPortType" : "IO",
+          "typeSpec" : "$TYPE$"
+          }
+        ],
+      "extDeps" : {
+        "Geometry" : "*"
+        },
+      "presetGUID" : "96D1EC86835296FFDC60533717804EE7",
+      "code" : "require Geometry;\n\ndfgEntry {\n  this.clear();\n}\n"
+      },
+    "Fabric.Exts.Geometry.PolygonMesh.AddPlane" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/Geometry/PolygonMesh.html",
+        "uiTooltip" : "Appends a transformed plane to this mesh.\nBefore applying the transformation, it will be in the XZ plane, centered at the origin.\n\n\n\n Supported by PolygonMesh"
+        },
+      "title" : "AddPlane",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 51,\n  \"g\" : 1,\n  \"b\" : 106\n  }"
+            },
+          "nodePortType" : "IO",
+          "name" : "this",
+          "execPortType" : "IO",
+          "typeSpec" : "PolygonMesh"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 249,\n  \"g\" : 157,\n  \"b\" : 28\n  }"
+            },
+          "nodePortType" : "Out",
+          "name" : "xfo",
+          "execPortType" : "In",
+          "typeSpec" : "Xfo"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiRange" : "(0.0, 8.0)"
+            },
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Scalar" : 4
+            },
+          "name" : "length",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiRange" : "(0.0, 8.0)"
+            },
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Scalar" : 4
+            },
+          "name" : "width",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiRange" : "(2, 24)"
+            },
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Size" : 4
+            },
+          "name" : "lengthSections",
+          "execPortType" : "In",
+          "typeSpec" : "Size"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiRange" : "(2, 24)"
+            },
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Size" : 4
+            },
+          "name" : "widthSections",
+          "execPortType" : "In",
+          "typeSpec" : "Size"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Boolean" : true
+            },
+          "name" : "setNormals",
+          "execPortType" : "In",
+          "typeSpec" : "Boolean"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Boolean" : true
+            },
+          "name" : "setUVs",
+          "execPortType" : "In",
+          "typeSpec" : "Boolean"
+          }
+        ],
+      "extDeps" : {
+        "Geometry" : "*"
+        },
+      "presetGUID" : "D39C36E964BC1FED99E42B4D6CCAD3F4",
+      "code" : "require Geometry;\n\ndfgEntry {\n  this.addPlane(xfo, length, width, lengthSections, widthSections, setNormals, setUVs);\n}\n"
+      },
+    "Fabric.Core.Math.Mul" : {
+      "objectType" : "Func",
+      "title" : "Mul",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "lhs",
+          "execPortType" : "In",
+          "typeSpec" : "$TYPE$"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "rhs",
+          "execPortType" : "In",
+          "typeSpec" : "$TYPE$"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "result",
+          "execPortType" : "Out",
+          "typeSpec" : "$TYPE$"
+          }
+        ],
+      "extDeps" : {},
+      "presetGUID" : "CC951B43BB879483B46EFF7965692350",
+      "code" : "\ndfgEntry {\n\tresult = lhs * rhs;\n}\n"
+      },
+    "Fabric.Exts.InlineDrawing.DrawingHandle.DrawTexturedPolygonMesh" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/InlineDrawing/DrawingHandle.html",
+        "uiTooltip" : "helper function to draw a mesh given a color + a single transform\n\n Supported by DrawingHandle"
+        },
+      "title" : "DrawTexturedPolygonMesh",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "IO",
+          "name" : "this",
+          "execPortType" : "IO",
+          "typeSpec" : "DrawingHandle"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "name",
+          "execPortType" : "In",
+          "typeSpec" : "String"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "filePath",
+          "execPortType" : "In",
+          "typeSpec" : "String"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 0,\n  \"b\" : 0\n  }"
+            },
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Color" : {
+              "r" : 0.2000000029802322,
+              "g" : 0.2000000029802322,
+              "b" : 0.2000000029802322,
+              "a" : 1
+              }
+            },
+          "name" : "specular",
+          "execPortType" : "In",
+          "typeSpec" : "Color"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Float32" : 16
+            },
+          "name" : "specFactor",
+          "execPortType" : "In",
+          "typeSpec" : "Float32"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 0,\n  \"b\" : 0\n  }"
+            },
+          "nodePortType" : "Out",
+          "name" : "ambient",
+          "execPortType" : "In",
+          "typeSpec" : "Color"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 249,\n  \"g\" : 157,\n  \"b\" : 28\n  }"
+            },
+          "nodePortType" : "Out",
+          "name" : "transform",
+          "execPortType" : "In",
+          "typeSpec" : "Xfo"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 51,\n  \"g\" : 1,\n  \"b\" : 106\n  }"
+            },
+          "nodePortType" : "Out",
+          "name" : "mesh",
+          "execPortType" : "In",
+          "typeSpec" : "PolygonMesh"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "wireFrame",
+          "execPortType" : "In",
+          "typeSpec" : "Boolean"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "doubleSided",
+          "execPortType" : "In",
+          "typeSpec" : "Boolean"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 242,\n  \"b\" : 0\n  }"
+            },
+          "nodePortType" : "In",
+          "name" : "dummyResult",
+          "execPortType" : "Out",
+          "typeSpec" : "Vec3"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "instance",
+          "execPortType" : "Out",
+          "typeSpec" : "InlineInstance"
+          }
+        ],
+      "extDeps" : {
+        "InlineDrawing" : "*"
+        },
+      "presetGUID" : "2422BED0AFC9A66EFC9086103DB69004",
+      "code" : "require InlineDrawing;\n\ndfgEntry {\n  this.drawTexturedPolygonMesh(name, filePath, specular, specFactor, ambient, transform, mesh, wireFrame, doubleSided, dummyResult, instance);\n}\n"
+      },
+    "Fabric.Exts.InlineDrawing.DrawingHandle.EmptyDrawingHandle" : {
+      "objectType" : "Graph",
+      "title" : "EmptyDrawingHandle",
+      "cacheRule" : "never",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "handle",
+          "execPortType" : "Out",
+          "typeSpec" : "DrawingHandle"
+          }
+        ],
+      "extDeps" : {},
+      "presetGUID" : "2440020BA6A1CAB1CEB690A198F99C70",
+      "nodes" : [
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\": 894, \"y\": 100}"
+            },
+          "name" : "Clear",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "IO",
+              "name" : "this"
+              }
+            ],
+          "executable" : "Fabric.Exts.InlineDrawing.DrawingHandle.Clear",
+          "presetGUID" : "39E8D81FA7C7C4A825877F16EFE3564F",
+          "cacheRule" : "never"
+          },
+        {
+          "objectType" : "Var",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\":567.0,\"y\":56.0}",
+            "uiCollapsedState" : "0"
+            },
+          "name" : "handleVar",
+          "ports" : [
+            {
+              "objectType" : "VarPort",
+              "nodePortType" : "IO",
+              "name" : "value"
+              }
+            ],
+          "dataType" : "DrawingHandle",
+          "extDep" : "InlineDrawing:*"
+          },
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\":287.0,\"y\":56.0}"
+            },
+          "name" : "CreateDrawingHandle",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "handle"
+              }
+            ],
+          "definition" : {
+            "objectType" : "Func",
+            "title" : "Create DrawingHandle",
+            "ports" : [
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "handle",
+                "execPortType" : "Out",
+                "typeSpec" : "DrawingHandle"
+                }
+              ],
+            "extDeps" : {
+              "InlineDrawing" : "*"
+              },
+            "code" : "dfgEntry {\n  handle = DrawingHandle();\n}\n"
+            }
+          }
+        ],
+      "connections" : {
+        "Clear.this" : [
+          "handle"
+          ],
+        "handleVar.value" : [
+          "Clear.this"
+          ],
+        "CreateDrawingHandle.handle" : [
+          "handleVar.value"
+          ]
+        }
+      },
+    "Fabric.Exts.InlineDrawing.DrawingHandle.Clear" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/InlineDrawing/DrawingHandle.html",
+        "uiTooltip" : "removes all contents from the DrawingHandle\n\n Supported by DrawingHandle"
+        },
+      "title" : "Clear",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "IO",
+          "name" : "this",
+          "execPortType" : "IO",
+          "typeSpec" : "DrawingHandle"
+          }
+        ],
+      "extDeps" : {
+        "InlineDrawing" : "*"
+        },
+      "presetGUID" : "39E8D81FA7C7C4A825877F16EFE3564F",
+      "code" : "require InlineDrawing;\n\ndfgEntry {\n  this.clear();\n}\n"
+      }
+    },
+  "args" : [
+    {
+      "type" : "String",
+      "value" : "C:\\Users\\Nick\\Documents\\GitHub\\RnD_edgedetect\\Textures_original\\Bunny_Left.tga"
+      },
+    {
+      "type" : "Float32",
+      "value" : 0.1779000014066696
+      },
+    {
+      "type" : "Float32",
+      "value" : 27.34799957275391
+      },
+    {
+      "type" : "Float32",
+      "value" : 0.6000000238418579
+      },
+    {
+      "type" : "DrawingHandle",
+      "value" : null,
+      "ext" : "InlineDrawing"
+      },
+    {
+      "type" : "SInt32[]",
+      "value" : null
+      }
+    ]
+  }
