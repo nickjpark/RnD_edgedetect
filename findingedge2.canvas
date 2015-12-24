@@ -1,15 +1,15 @@
 {
   "objectType" : "Graph",
   "metadata" : {
-    "camera_mat44" : "{\n  \"row0\" : {\n    \"x\" : -0.9995133280754089,\n    \"y\" : -0.04420386627316475,\n    \"z\" : 0.00804404728114605,\n    \"t\" : 5.830448627471924\n    },\n  \"row1\" : {\n    \"x\" : 1.643713176235906e-06,\n    \"y\" : 0.1789751052856445,\n    \"z\" : 0.984089195728302,\n    \"t\" : 160.0549163818359\n    },\n  \"row2\" : {\n    \"x\" : -0.04495096951723099,\n    \"y\" : 0.9829075336456299,\n    \"z\" : -0.178828552365303,\n    \"t\" : -28.76544189453125\n    },\n  \"row3\" : {\n    \"x\" : 0,\n    \"y\" : 0,\n    \"z\" : 0,\n    \"t\" : 1\n    }\n  }",
+    "camera_mat44" : "{\n  \"row0\" : {\n    \"x\" : -0.9995133280754089,\n    \"y\" : -0.04420386627316475,\n    \"z\" : 0.008044048212468624,\n    \"t\" : 5.830448627471924\n    },\n  \"row1\" : {\n    \"x\" : 1.643713176235906e-06,\n    \"y\" : 0.1789751052856445,\n    \"z\" : 0.9840893149375916,\n    \"t\" : 160.0549163818359\n    },\n  \"row2\" : {\n    \"x\" : -0.04495096951723099,\n    \"y\" : 0.9829075336456299,\n    \"z\" : -0.1788285821676254,\n    \"t\" : -28.76544189453125\n    },\n  \"row3\" : {\n    \"x\" : 0,\n    \"y\" : 0,\n    \"z\" : 0,\n    \"t\" : 1\n    }\n  }",
     "timeline_start" : "1",
     "timeline_loopMode" : "1",
-    "uiGraphZoom" : "{\n  \"value\" : 0.5377468466758728\n  }",
+    "uiGraphZoom" : "{\n  \"value\" : 0.2910230159759522\n  }",
     "timeline_simMode" : "0",
     "camera_focalDistance" : "157.6495208740234",
     "timeline_current" : "1",
     "timeline_end" : "50",
-    "uiGraphPan" : "{\n  \"x\" : 285.0753778800205,\n  \"y\" : -146.3865417138816\n  }"
+    "uiGraphPan" : "{\n  \"x\" : 427.1445043911845,\n  \"y\" : 35.70958275224328\n  }"
     },
   "title" : "",
   "ports" : [
@@ -45,16 +45,6 @@
       },
     {
       "objectType" : "Port",
-      "metadata" : {
-        "uiPersistValue" : "true"
-        },
-      "nodePortType" : "Out",
-      "name" : "threshold",
-      "execPortType" : "In",
-      "typeSpec" : "Float32"
-      },
-    {
-      "objectType" : "Port",
       "nodePortType" : "In",
       "name" : "this",
       "execPortType" : "Out",
@@ -62,7 +52,6 @@
       },
     {
       "objectType" : "Port",
-      "metadata" : {},
       "nodePortType" : "In",
       "name" : "value",
       "execPortType" : "Out",
@@ -70,7 +59,6 @@
       },
     {
       "objectType" : "Port",
-      "metadata" : {},
       "nodePortType" : "In",
       "name" : "value_2",
       "execPortType" : "Out",
@@ -78,11 +66,28 @@
       },
     {
       "objectType" : "Port",
-      "metadata" : {},
       "nodePortType" : "In",
       "name" : "value_3",
       "execPortType" : "Out",
       "typeSpec" : "Float64[]"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {
+        "uiPersistValue" : "true"
+        },
+      "nodePortType" : "Out",
+      "name" : "order",
+      "execPortType" : "In",
+      "typeSpec" : "UInt32"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {},
+      "nodePortType" : "In",
+      "name" : "value_4",
+      "execPortType" : "Out",
+      "typeSpec" : "Float64"
       }
     ],
   "extDeps" : {},
@@ -90,7 +95,7 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\":-347.029296875,\"y\":320.1405639648438}"
+        "uiGraphPos" : "{\"x\":-314.3407592773438,\"y\":-45.01384735107422}"
         },
       "name" : "LoadImage",
       "ports" : [
@@ -368,7 +373,7 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\":781.6676635742188,\"y\":219.8912963867188}"
+        "uiGraphPos" : "{\"x\":806.3892211914063,\"y\":255.3981018066406}"
         },
       "name" : "GetPlane",
       "ports" : [
@@ -404,7 +409,7 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\":427.2572021484375,\"y\":269.1093139648438}"
+        "uiGraphPos" : "{\"x\":410.2278137207031,\"y\":267.62744140625}"
         },
       "name" : "Mul",
       "ports" : [
@@ -430,7 +435,7 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\":533.1262817382813,\"y\":129.0571899414063}"
+        "uiGraphPos" : "{\"x\":599.5877685546875,\"y\":164.1966857910156}"
         },
       "name" : "Mul_2",
       "ports" : [
@@ -457,7 +462,7 @@
       "objectType" : "Inst",
       "metadata" : {
         "uiComment" : "This node pushes mesh vertices according\n to the texture R value at each vertex",
-        "uiGraphPos" : "{\"x\":1083.692993164063,\"y\":291.7907104492188}",
+        "uiGraphPos" : "{\"x\":1219.248168945313,\"y\":338.5354614257813}",
         "uiCommentExpanded" : "true"
         },
       "name" : "displace",
@@ -523,7 +528,7 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\":1651.642578125,\"y\":142.3506011962891}"
+        "uiGraphPos" : "{\"x\":1609.3095703125,\"y\":176.64794921875}"
         },
       "name" : "DrawTexturedPolygonMesh_2",
       "ports" : [
@@ -594,7 +599,7 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\":995.72607421875,\"y\":56.35878753662109}"
+        "uiGraphPos" : "{\"x\":919.9948120117188,\"y\":138.6757659912109}"
         },
       "name" : "EmptyDrawingHandle",
       "ports" : [
@@ -610,45 +615,204 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\":1252.7119140625,\"y\":544.442626953125}"
+        "uiGraphPos" : "{\"x\":975.5667114257813,\"y\":619.8244018554688}"
         },
-      "name" : "Report",
+      "name" : "FourierSeries",
       "ports" : [
         {
           "objectType" : "InstPort",
           "nodePortType" : "In",
-          "name" : "value"
+          "name" : "data"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "order"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "sincoefficients"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "coscoefficients"
           }
         ],
       "definition" : {
         "objectType" : "Func",
-        "metadata" : {
-          "uiNodeColor" : "{\n  \"r\" : 214,\n  \"g\" : 191,\n  \"b\" : 103\n  }",
-          "uiAlwaysShowDaisyChainPorts" : "true",
-          "uiHeaderColor" : "{\n  \"r\" : 188,\n  \"g\" : 129,\n  \"b\" : 83\n  }"
-          },
-        "title" : "Report",
+        "title" : "FourierSeries",
         "ports" : [
           {
             "objectType" : "Port",
             "nodePortType" : "Out",
-            "name" : "value",
+            "name" : "data",
             "execPortType" : "In",
-            "typeSpec" : "$TYPE$"
+            "typeSpec" : "$TYPE$[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "order",
+            "execPortType" : "In",
+            "typeSpec" : "UInt32"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "sincoefficients",
+            "execPortType" : "Out",
+            "typeSpec" : "Float64[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "coscoefficients",
+            "execPortType" : "Out",
+            "typeSpec" : "Float64[]"
             }
           ],
         "extDeps" : {},
-        "origPresetGUID" : "E9448726588111C443C34B2F3D9B0172",
-        "code" : "\ndfgEntry {\n\treport(value.size());\n}\n"
+        "code" : "dfgEntry {\n  sincoefficients.resize(0);\n  coscoefficients.resize(0);\n  Float64 doublepi = 6.28318530717958648;\n  Float64 multiplier;\n  for (UInt32 j = 0 ; j < order + 1 ; j++){\n      Float64 sinsum = 0;\n      Float64 cossum = 0;\n      multiplier = 1;\n      if (j==0){\n        multiplier = 0.5;\n      }\n      for (UInt32 i = 0 ; i<data.size() ; i++){\n        sinsum = sinsum + ( 2. / data.size() ) * sin( ( doublepi * j * i )/ data.size() ) * data[i] ;\n        cossum = cossum + ( 2. * multiplier / data.size() ) * cos( ( doublepi * j * i )/ data.size() ) * data[i] ;\n      }\n      sincoefficients.push(sinsum);\n      coscoefficients.push(cossum);\n   }\n}\n"
         }
       },
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\":573.6528930664063,\"y\":517.1361083984375}",
-        "uiCollapsedState" : "0"
+        "uiGraphPos" : "{\"x\":968.408203125,\"y\":478.635009765625}"
         },
-      "name" : "findingedgedata",
+      "name" : "FourierSeries_2",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "data"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "order"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "sincoefficients"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "coscoefficients"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Func",
+        "title" : "FourierSeries",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "data",
+            "execPortType" : "In",
+            "typeSpec" : "$TYPE$[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "order",
+            "execPortType" : "In",
+            "typeSpec" : "UInt32"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "sincoefficients",
+            "execPortType" : "Out",
+            "typeSpec" : "Float64[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "coscoefficients",
+            "execPortType" : "Out",
+            "typeSpec" : "Float64[]"
+            }
+          ],
+        "extDeps" : {},
+        "code" : "dfgEntry {\n  sincoefficients.resize(0);\n  coscoefficients.resize(0);\n  Float64 doublepi = 6.28318530717958648;\n  Float64 multiplier;\n  for (UInt32 j = 0 ; j < order + 1 ; j++){\n      Float64 sinsum = 0;\n      Float64 cossum = 0;\n      multiplier = 1;\n      if (j==0){\n        multiplier = 0.5;\n      }\n      for (UInt32 i = 0 ; i<data.size() ; i++){\n        sinsum = sinsum + ( 2. / data.size() ) * sin( ( doublepi * j * i )/ data.size() ) * data[i] ;\n        cossum = cossum + ( 2. * multiplier / data.size() ) * cos( ( doublepi * j * i )/ data.size() ) * data[i] ;\n      }\n      sincoefficients.push(sinsum);\n      coscoefficients.push(cossum);\n   }\n}\n"
+        }
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":978.1640625,\"y\":772.8507690429688}"
+        },
+      "name" : "FourierSeries_3",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "data"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "order"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "sincoefficients"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "coscoefficients"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Func",
+        "title" : "FourierSeries",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "data",
+            "execPortType" : "In",
+            "typeSpec" : "$TYPE$[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "order",
+            "execPortType" : "In",
+            "typeSpec" : "UInt32"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "sincoefficients",
+            "execPortType" : "Out",
+            "typeSpec" : "Float64[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "coscoefficients",
+            "execPortType" : "Out",
+            "typeSpec" : "Float64[]"
+            }
+          ],
+        "extDeps" : {},
+        "code" : "dfgEntry {\n  sincoefficients.resize(0);\n  coscoefficients.resize(0);\n  Float64 doublepi = 6.28318530717958648;\n  Float64 multiplier;\n  for (UInt32 j = 0 ; j < order + 1 ; j++){\n      Float64 sinsum = 0;\n      Float64 cossum = 0;\n      multiplier = 1;\n      if (j==0){\n        multiplier = 0.5;\n      }\n      for (UInt32 i = 0 ; i<data.size() ; i++){\n        sinsum = sinsum + ( 2. / data.size() ) * sin( ( doublepi * j * i )/ data.size() ) * data[i] ;\n        cossum = cossum + ( 2. * multiplier / data.size() ) * cos( ( doublepi * j * i )/ data.size() ) * data[i] ;\n      }\n      sincoefficients.push(sinsum);\n      coscoefficients.push(cossum);\n   }\n}\n"
+        }
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":545.8169555664063,\"y\":544.562255859375}"
+        },
+      "name" : "findingedge",
       "ports" : [
         {
           "objectType" : "InstPort",
@@ -669,6 +833,16 @@
           "objectType" : "InstPort",
           "nodePortType" : "Out",
           "name" : "xdata"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "ydata"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "depthdata"
           }
         ],
       "definition" : {
@@ -698,6 +872,18 @@
             "nodePortType" : "In",
             "name" : "xdata",
             "execPortType" : "Out"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "ydata",
+            "execPortType" : "Out"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "depthdata",
+            "execPortType" : "Out"
             }
           ],
         "extDeps" : {},
@@ -705,7 +891,7 @@
           {
             "objectType" : "Inst",
             "metadata" : {
-              "uiGraphPos" : "{\"x\":-11.39324760437012,\"y\":493.7422180175781}"
+              "uiGraphPos" : "{\"x\":-326.8580017089844,\"y\":383.3693542480469}"
               },
             "name" : "findfirstpixel",
             "ports" : [
@@ -782,7 +968,7 @@
           {
             "objectType" : "Inst",
             "metadata" : {
-              "uiGraphPos" : "{\"x\":285.6637573242188,\"y\":510.287841796875}",
+              "uiGraphPos" : "{\"x\":-29.80117797851563,\"y\":399.9150085449219}",
               "uiCollapsedState" : "0"
               },
             "name" : "findingsecondpixel_2",
@@ -896,7 +1082,7 @@
           {
             "objectType" : "Inst",
             "metadata" : {
-              "uiGraphPos" : "{\"x\":727.0183715820313,\"y\":480.4324340820313}"
+              "uiGraphPos" : "{\"x\":411.5535583496094,\"y\":370.0595397949219}"
               },
             "name" : "findingremainingedgepixels",
             "ports" : [
@@ -1094,10 +1280,16 @@
             ],
           "findingremainingedgepixels.xdata" : [
             "xdata"
+            ],
+          "findingremainingedgepixels.ydata" : [
+            "ydata"
+            ],
+          "findingremainingedgepixels.depthdata" : [
+            "depthdata"
             ]
           }
         },
-      "title" : "findingedgedata"
+      "title" : "findingedge"
       }
     ],
   "connections" : {
@@ -1112,21 +1304,26 @@
     "HeightScale" : [
       "displace.scale"
       ],
+    "order" : [
+      "FourierSeries.order",
+      "FourierSeries_2.order",
+      "FourierSeries_3.order"
+      ],
     "LoadImage.result" : [
       "displace.image"
       ],
     "LoadImage.pixels" : [
-      "findingedgedata.pixels"
+      "findingedge.pixels"
       ],
     "LoadImage.width" : [
       "GetPlane.widthSections",
       "Mul.rhs",
-      "findingedgedata.width"
+      "findingedge.width"
       ],
     "LoadImage.height" : [
       "GetPlane.lengthSections",
       "Mul_2.rhs",
-      "findingedgedata.height"
+      "findingedge.height"
       ],
     "GetPlane.value" : [
       "displace.mesh"
@@ -1146,11 +1343,14 @@
     "EmptyDrawingHandle.handle" : [
       "DrawTexturedPolygonMesh_2.this"
       ],
-    "Report.value" : [
-      "value"
+    "findingedge.xdata" : [
+      "FourierSeries_2.data"
       ],
-    "findingedgedata.xdata" : [
-      "Report.value"
+    "findingedge.ydata" : [
+      "FourierSeries.data"
+      ],
+    "findingedge.depthdata" : [
+      "FourierSeries_3.data"
       ]
     },
   "requiredPresets" : {
@@ -1267,7 +1467,7 @@
         {
           "objectType" : "Inst",
           "metadata" : {
-            "uiGraphPos" : "{\"x\": 535, \"y\": 96}"
+            "uiGraphPos" : "{\"x\":544.0,\"y\":72.0}"
             },
           "name" : "AddPlane",
           "ports" : [
@@ -1907,10 +2107,6 @@
       "value" : 27.34799957275391
       },
     {
-      "type" : "Float32",
-      "value" : 0.6000000238418579
-      },
-    {
       "type" : "DrawingHandle",
       "value" : null,
       "ext" : "InlineDrawing"
@@ -1925,6 +2121,14 @@
       },
     {
       "type" : "Float64[]",
+      "value" : null
+      },
+    {
+      "type" : "UInt32",
+      "value" : 4
+      },
+    {
+      "type" : "Float64",
       "value" : null
       }
     ]

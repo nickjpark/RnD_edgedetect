@@ -1,15 +1,15 @@
 {
   "objectType" : "Graph",
   "metadata" : {
-    "camera_mat44" : "{\n  \"row0\" : {\n    \"x\" : -0.9627615809440613,\n    \"y\" : 0.238373726606369,\n    \"z\" : -0.1302375644445419,\n    \"t\" : -12.64062881469727\n    },\n  \"row1\" : {\n    \"x\" : 1.401226427333313e-06,\n    \"y\" : 0.4794458150863648,\n    \"z\" : 0.8777113556861877,\n    \"t\" : 120.9000625610352\n    },\n  \"row2\" : {\n    \"x\" : 0.2717148661613464,\n    \"y\" : 0.8446220755577087,\n    \"z\" : -0.4614724516868591,\n    \"t\" : -61.53324127197266\n    },\n  \"row3\" : {\n    \"x\" : 0,\n    \"y\" : 0,\n    \"z\" : 0,\n    \"t\" : 1\n    }\n  }",
+    "camera_mat44" : "{\n  \"row0\" : {\n    \"x\" : -0.9995133280754089,\n    \"y\" : -0.04420387372374535,\n    \"z\" : 0.008044060319662094,\n    \"t\" : 5.830448627471924\n    },\n  \"row1\" : {\n    \"x\" : 1.639985157453339e-06,\n    \"y\" : 0.1789752542972565,\n    \"z\" : 0.9840888381004334,\n    \"t\" : 160.0549163818359\n    },\n  \"row2\" : {\n    \"x\" : -0.04495096579194069,\n    \"y\" : 0.9829075336456299,\n    \"z\" : -0.1788290739059448,\n    \"t\" : -28.76544189453125\n    },\n  \"row3\" : {\n    \"x\" : 0,\n    \"y\" : 0,\n    \"z\" : 0,\n    \"t\" : 1\n    }\n  }",
     "timeline_start" : "1",
     "timeline_loopMode" : "1",
-    "uiGraphZoom" : "{\n  \"value\" : 0.4859204888343811\n  }",
+    "uiGraphZoom" : "{\n  \"value\" : 0.6888173222541809\n  }",
     "timeline_simMode" : "0",
-    "camera_focalDistance" : "132.1158599853516",
+    "camera_focalDistance" : "157.6495208740234",
     "timeline_current" : "1",
     "timeline_end" : "50",
-    "uiGraphPan" : "{\n  \"x\" : 184.549696346307,\n  \"y\" : 10.13213405531496\n  }"
+    "uiGraphPan" : "{\n  \"x\" : 303.0577168952319,\n  \"y\" : -267.6803103710575\n  }"
     },
   "title" : "",
   "ports" : [
@@ -45,50 +45,36 @@
       },
     {
       "objectType" : "Port",
+      "metadata" : {
+        "uiPersistValue" : "true"
+        },
+      "nodePortType" : "Out",
+      "name" : "threshold",
+      "execPortType" : "In",
+      "typeSpec" : "Float32"
+      },
+    {
+      "objectType" : "Port",
       "nodePortType" : "In",
-      "name" : "this",
+      "name" : "xdata",
       "execPortType" : "Out",
-      "typeSpec" : "DrawingHandle"
+      "typeSpec" : "Float64[]"
       },
     {
       "objectType" : "Port",
       "metadata" : {},
       "nodePortType" : "In",
-      "name" : "value",
+      "name" : "value_4",
       "execPortType" : "Out",
-      "typeSpec" : "SInt32[]"
+      "typeSpec" : "Float64[]"
       },
     {
       "objectType" : "Port",
       "metadata" : {},
       "nodePortType" : "In",
-      "name" : "value_2",
+      "name" : "value_3",
       "execPortType" : "Out",
-      "typeSpec" : "SInt32[]"
-      },
-    {
-      "objectType" : "Port",
-      "metadata" : {},
-      "nodePortType" : "In",
-      "name" : "Row",
-      "execPortType" : "Out",
-      "typeSpec" : "SInt32[]"
-      },
-    {
-      "objectType" : "Port",
-      "metadata" : {},
-      "nodePortType" : "In",
-      "name" : "Col",
-      "execPortType" : "Out",
-      "typeSpec" : "SInt32[]"
-      },
-    {
-      "objectType" : "Port",
-      "metadata" : {},
-      "nodePortType" : "In",
-      "name" : "Pix",
-      "execPortType" : "Out",
-      "typeSpec" : "Float32[]"
+      "typeSpec" : "Float64[]"
       }
     ],
   "extDeps" : {},
@@ -96,7 +82,7 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\":136.2994842529297,\"y\":227.6876373291016}"
+        "uiGraphPos" : "{\"x\":-248.8224945068359,\"y\":256.3661193847656}"
         },
       "name" : "LoadImage",
       "ports" : [
@@ -374,7 +360,7 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\":671.6649169921875,\"y\":143.7052307128906}"
+        "uiGraphPos" : "{\"x\":761.3515625,\"y\":143.7052307128906}"
         },
       "name" : "GetPlane",
       "ports" : [
@@ -529,7 +515,7 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\":1349.0,\"y\":52.0}"
+        "uiGraphPos" : "{\"x\":1323.037841796875,\"y\":106.2841873168945}"
         },
       "name" : "DrawTexturedPolygonMesh_2",
       "ports" : [
@@ -616,78 +602,11 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiComment" : "This node demonstrates accessing \npixel values by row & index",
-        "uiGraphPos" : "{\"x\":638.0184936523438,\"y\":354.6827392578125}",
-        "uiCommentExpanded" : "true"
-        },
-      "name" : "FindMaxRow",
-      "ports" : [
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "In",
-          "name" : "pixels"
-          },
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "In",
-          "name" : "width"
-          },
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "In",
-          "name" : "height"
-          },
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "Out",
-          "name" : "maxRow"
-          }
-        ],
-      "definition" : {
-        "objectType" : "Func",
-        "title" : "FindMaxRow",
-        "ports" : [
-          {
-            "objectType" : "Port",
-            "nodePortType" : "Out",
-            "name" : "pixels",
-            "execPortType" : "In",
-            "typeSpec" : "Color[]"
-            },
-          {
-            "objectType" : "Port",
-            "nodePortType" : "Out",
-            "name" : "width",
-            "execPortType" : "In",
-            "typeSpec" : "Size"
-            },
-          {
-            "objectType" : "Port",
-            "nodePortType" : "Out",
-            "name" : "height",
-            "execPortType" : "In",
-            "typeSpec" : "Size"
-            },
-          {
-            "objectType" : "Port",
-            "nodePortType" : "In",
-            "name" : "maxRow",
-            "execPortType" : "Out",
-            "typeSpec" : "SInt32[]"
-            }
-          ],
-        "extDeps" : {},
-        "code" : "dfgEntry {\n  // This is sample code to show iterating over each row of the texture to find\n  // the row that has the maximum pixel value in it\n  Float32 maxR = 0.0;\n  maxRow.resize(0);\n   // Our height is the number of rows of pixels\n  for (UInt32 row = 0; row < height; row++)\n  {\n    // For each row, find the maximum pixel R value\n    for (UInt32 pixIdx = 0; pixIdx < width; pixIdx++)\n    {\n      // The pixels are stored in a 1D array, where\n      // the rows are packed together.  We find the \n      // correct pixel by expanding our 2D indices\n      // to a 1D address\n      Color pix = pixels[row * width + pixIdx];\n      if (pixels[row * width + pixIdx].r > maxR)\n      {\n        maxR = pixels[row * width + pixIdx].g;\n        maxRow.push(row);\n      }\n    }\n  }\n}\n"
-        }
-      },
-    {
-      "objectType" : "Inst",
-      "metadata" : {
         "uiComment" : "The report statement is just here so we can see something.  \nThe value will be printed to the command window",
-        "uiGraphPos" : "{\"x\":1250.174072265625,\"y\":477.8529357910156}",
+        "uiGraphPos" : "{\"x\":879.4710693359375,\"y\":593.4273681640625}",
         "uiCommentExpanded" : "true"
         },
-      "name" : "Report",
+      "name" : "Report2",
       "ports" : [
         {
           "objectType" : "InstPort",
@@ -701,11 +620,182 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiComment" : "This node demonstrates accessing \npixel values by row & index",
-        "uiGraphPos" : "{\"x\":431.3287658691406,\"y\":473.8114013671875}",
+        "uiComment" : "The report statement is just here so we can see something.  \nThe value will be printed to the command window",
+        "uiGraphPos" : "{\"x\":890.0402221679688,\"y\":667.3944091796875}",
         "uiCommentExpanded" : "true"
         },
-      "name" : "FindMaxRow_2",
+      "name" : "Report2_2",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "value"
+          }
+        ],
+      "executable" : "Fabric.Core.Func.Report",
+      "presetGUID" : "E9448726588111C443C34B2F3D9B0172"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiComment" : "The report statement is just here so we can see something.  \nThe value will be printed to the command window",
+        "uiGraphPos" : "{\"x\":903.8663330078125,\"y\":763.4908447265625}",
+        "uiCommentExpanded" : "true"
+        },
+      "name" : "Report22",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "value"
+          }
+        ],
+      "executable" : "Fabric.Core.Func.Report",
+      "presetGUID" : "E9448726588111C443C34B2F3D9B0172"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":506.7047729492188,\"y\":473.4796752929688}"
+        },
+      "name" : "findingremainingedgepixels",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "xstart"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "ystart"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "pixels"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "height"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "IO",
+          "name" : "xdata"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "IO",
+          "name" : "ydata"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "IO",
+          "name" : "depthdata"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "directionstart"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "direction"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Func",
+        "title" : "findingremainingedgepixels",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "xstart",
+            "execPortType" : "In",
+            "typeSpec" : "$TYPE$"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "ystart",
+            "execPortType" : "In",
+            "typeSpec" : "$TYPE$"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "pixels",
+            "execPortType" : "In",
+            "typeSpec" : "Color[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "width",
+            "execPortType" : "In",
+            "typeSpec" : "Size"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "height",
+            "execPortType" : "In",
+            "typeSpec" : "Size"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "IO",
+            "name" : "xdata",
+            "execPortType" : "IO",
+            "typeSpec" : "Float64[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "IO",
+            "name" : "ydata",
+            "execPortType" : "IO",
+            "typeSpec" : "Float64[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "IO",
+            "name" : "depthdata",
+            "execPortType" : "IO",
+            "typeSpec" : "Float64[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "directionstart",
+            "execPortType" : "In",
+            "typeSpec" : "UInt32"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "direction",
+            "execPortType" : "In",
+            "typeSpec" : "UInt32"
+            }
+          ],
+        "extDeps" : {},
+        "code" : "dfgEntry {\n  \n    Float64 xcurrent=xdata[xdata.size()-1];\n    xdata.push(xcurrent+1);\n   \n\n}\n"
+        }
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":-6.579742431640625,\"y\":397.4718627929688}"
+        },
+      "name" : "findfirstpixel",
       "ports" : [
         {
           "objectType" : "InstPort",
@@ -725,22 +815,22 @@
         {
           "objectType" : "InstPort",
           "nodePortType" : "Out",
-          "name" : "Row"
+          "name" : "xstart"
           },
         {
           "objectType" : "InstPort",
           "nodePortType" : "Out",
-          "name" : "Col"
+          "name" : "ystart"
           },
         {
           "objectType" : "InstPort",
           "nodePortType" : "Out",
-          "name" : "Val"
+          "name" : "directionstart"
           }
         ],
       "definition" : {
         "objectType" : "Func",
-        "title" : "FindMaxRow",
+        "title" : "findfirstpixel",
         "ports" : [
           {
             "objectType" : "Port",
@@ -766,99 +856,164 @@
           {
             "objectType" : "Port",
             "nodePortType" : "In",
-            "name" : "Row",
+            "name" : "xstart",
             "execPortType" : "Out",
-            "typeSpec" : "SInt32[]"
+            "typeSpec" : "UInt32"
             },
           {
             "objectType" : "Port",
             "nodePortType" : "In",
-            "name" : "Col",
+            "name" : "ystart",
             "execPortType" : "Out",
-            "typeSpec" : "SInt32[]"
+            "typeSpec" : "UInt32"
             },
           {
             "objectType" : "Port",
             "nodePortType" : "In",
-            "name" : "Val",
+            "name" : "directionstart",
             "execPortType" : "Out",
-            "typeSpec" : "Float32[]"
+            "typeSpec" : "UInt8"
             }
           ],
         "extDeps" : {},
-        "code" : "dfgEntry {\n  // We declare 3 lists, containing the row position, column position and pixel value for each point of interest. \n  // Not entirely sure, but arrays need to be resized first...???\n  Row.resize(0);\n  Col.resize(0);\n  Val.resize(0);\n   // Our height is the number of rows of pixels\n  for (UInt32 row = 1; row < height-1; row++)\n  {\n    // For each row, find the maximum pixel R value\n    for (UInt32 pixIdx = 1; pixIdx < width-1; pixIdx++)\n    {\n      // The pixels are stored in a 1D array, where\n      // the rows are packed together.  We find the \n      // correct pixel by expanding our 2D indices\n      // to a 1D address\n      // Color pix = pixels[row * width + pixIdx];\n      \n      //      The first test is to ensure that the pixel is not empty. \n      if (pixels[row * width + pixIdx].r>0)\n      {\n        //Next we use a second derivative test. \n        if (pixels[(row+1) * width + piIdx].r + pixels[(row-1) * width + piIdx].r + pixels[row * width + (piIdx+1)].r + pixels[row * width + (piIdx-1)].r - 4 * (pixels[(row-1) * width + piIdx].r) > 0.4)\n        {\n            Row.push(row);\n            Col.push(piIdx);\n            Val.push(pixels[ row * width + piIdx ].r);\n        }\n      }\n    }\n  }\n}\n"
+        "code" : "dfgEntry {\n  // This fuction searches for an edge in the picture.\n   // Our height is the number of rows of pixels\n   xstart = 0;\n   directionstart = 1;\n  for (UInt32 row = 0; row < height; row++)\n  {\n    // For each row, find the maximum pixel R value\n    for (UInt32 column = 0; column < width; column++)\n    {\n      // The pixels are stored in a 1D array, where\n      // the rows are packed together.  We find the \n      // correct pixel by expanding our 2D indices\n      // to a 1D address\n      if (pixels[row * width + column].r > 0)\n      {\n        xstart = row;\n        ystart = column;\n      }\n      if (xstart > 0)\n        break;\n    }\n     if (xstart > 0)\n       break;\n  }\n}"
         }
       },
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiComment" : "The report statement is just here so we can see something.  \nThe value will be printed to the command window",
-        "uiGraphPos" : "{\"x\":1402.390502929688,\"y\":598.591552734375}",
-        "uiCommentExpanded" : "true"
+        "uiGraphPos" : "{\"x\":231.1115112304688,\"y\":396.9903869628906}",
+        "uiCollapsedState" : "0"
         },
-      "name" : "Report_2",
+      "name" : "findingsecondpixel",
       "ports" : [
         {
           "objectType" : "InstPort",
           "nodePortType" : "In",
-          "name" : "Row"
+          "name" : "xstart"
           },
         {
           "objectType" : "InstPort",
           "nodePortType" : "In",
-          "name" : "Col"
+          "name" : "ystart"
           },
         {
           "objectType" : "InstPort",
           "nodePortType" : "In",
-          "name" : "Pix"
+          "name" : "pixels"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "height"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "xdata"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "ydata"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "depthdata"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "direction"
           }
         ],
       "definition" : {
         "objectType" : "Func",
-        "metadata" : {
-          "uiNodeColor" : "{\n  \"r\" : 214,\n  \"g\" : 191,\n  \"b\" : 103\n  }",
-          "uiAlwaysShowDaisyChainPorts" : "true",
-          "uiHeaderColor" : "{\n  \"r\" : 188,\n  \"g\" : 129,\n  \"b\" : 83\n  }"
-          },
-        "title" : "Report",
+        "title" : "findingsecondpixel",
         "ports" : [
           {
             "objectType" : "Port",
             "nodePortType" : "Out",
-            "name" : "Row",
+            "name" : "xstart",
             "execPortType" : "In",
-            "typeSpec" : "SInt32[]"
+            "typeSpec" : "UInt32"
             },
           {
             "objectType" : "Port",
             "nodePortType" : "Out",
-            "name" : "Col",
+            "name" : "ystart",
             "execPortType" : "In",
-            "typeSpec" : "SInt32[]"
+            "typeSpec" : "UInt32"
             },
           {
             "objectType" : "Port",
             "nodePortType" : "Out",
-            "name" : "Pix",
+            "name" : "pixels",
             "execPortType" : "In",
-            "typeSpec" : "Float32[]"
+            "typeSpec" : "Color[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "width",
+            "execPortType" : "In",
+            "typeSpec" : "Size"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "height",
+            "execPortType" : "In",
+            "typeSpec" : "Size"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "xdata",
+            "execPortType" : "Out",
+            "typeSpec" : "Float64[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "ydata",
+            "execPortType" : "Out",
+            "typeSpec" : "Float64[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "depthdata",
+            "execPortType" : "Out",
+            "typeSpec" : "Float64[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "direction",
+            "execPortType" : "Out",
+            "typeSpec" : "UInt8"
             }
           ],
         "extDeps" : {},
-        "origPresetGUID" : "E9448726588111C443C34B2F3D9B0172",
-        "code" : "\ndfgEntry {\n\treport('Row Data:');\n  report(Row);\n  report('Col Data:');\n\treport(Col);\n\treport('Pix Data:');\n\treport(Pix);\n}\n"
+        "code" : "dfgEntry {\n   xdata.resize(0);\n   ydata.resize(0);\n   depthdata.resize(0);\n   xdata.push(xstart);\n   ydata.push(ystart);\n   depthdata.push(pixels[xstart * width + ystart].r);\n   if (pixels[xstart* width + ystart + 1].r > 0)\n   {\n     direction = 1;\n     xdata.push(xstart);\n     ydata.push(ystart+1);\n     depthdata.push(pixels[xstart * width + (ystart+1)].r);\n   }\n   else if (pixels[(xstart+1)* width + ystart ].r > 0)\n   {\n     direction = 2;\n     xdata.push(xstart+1);\n     ydata.push(ystart);\n     depthdata.push(pixels[(xstart+1) * width + ystart].r);\n   }\n   else\n   {\n   report('Isolated pixel');\n   }\n   \n  //result = lhs + rhs;\n}\n"
         }
       }
     ],
   "connections" : {
     "filePath" : [
-      "LoadImage.filePath",
-      "DrawTexturedPolygonMesh_2.filePath"
+      "DrawTexturedPolygonMesh_2.filePath",
+      "LoadImage.filePath"
       ],
     "MeshScale" : [
-      "Mul.lhs",
-      "Mul_2.lhs"
+      "Mul_2.lhs",
+      "Mul.lhs"
       ],
     "HeightScale" : [
       "displace.scale"
@@ -867,20 +1022,17 @@
       "displace.image"
       ],
     "LoadImage.pixels" : [
-      "FindMaxRow.pixels",
-      "FindMaxRow_2.pixels"
+      "findfirstpixel.pixels"
       ],
     "LoadImage.width" : [
-      "Mul.rhs",
       "GetPlane.widthSections",
-      "FindMaxRow.width",
-      "FindMaxRow_2.width"
+      "Mul.rhs",
+      "findfirstpixel.width"
       ],
     "LoadImage.height" : [
-      "Mul_2.rhs",
       "GetPlane.lengthSections",
-      "FindMaxRow.height",
-      "FindMaxRow_2.height"
+      "Mul_2.rhs",
+      "findfirstpixel.height"
       ],
     "GetPlane.value" : [
       "displace.mesh"
@@ -894,35 +1046,71 @@
     "displace.result" : [
       "DrawTexturedPolygonMesh_2.mesh"
       ],
-    "DrawTexturedPolygonMesh_2.this" : [
-      "this"
-      ],
     "EmptyDrawingHandle.handle" : [
       "DrawTexturedPolygonMesh_2.this"
       ],
-    "FindMaxRow.maxRow" : [
-      "Report.value"
+    "Report2.value" : [
+      "xdata"
       ],
-    "Report.value" : [
-      "value"
+    "Report2_2.value" : [
+      "value_4"
       ],
-    "FindMaxRow_2.Row" : [
-      "Report_2.Row"
+    "Report22.value" : [
+      "value_3"
       ],
-    "FindMaxRow_2.Col" : [
-      "Report_2.Col"
+    "findingremainingedgepixels.xdata" : [
+      "Report2.value"
       ],
-    "FindMaxRow_2.Val" : [
-      "Report_2.Pix"
+    "findingremainingedgepixels.ydata" : [
+      "Report2_2.value"
       ],
-    "Report_2.Row" : [
-      "Row"
+    "findingremainingedgepixels.depthdata" : [
+      "Report22.value"
       ],
-    "Report_2.Col" : [
-      "Col"
+    "findfirstpixel.pixels" : [
+      "findingsecondpixel.pixels"
       ],
-    "Report_2.Pix" : [
-      "Pix"
+    "findfirstpixel.width" : [
+      "findingsecondpixel.width"
+      ],
+    "findfirstpixel.height" : [
+      "findingsecondpixel.height"
+      ],
+    "findfirstpixel.xstart" : [
+      "findingsecondpixel.xstart"
+      ],
+    "findfirstpixel.ystart" : [
+      "findingsecondpixel.ystart"
+      ],
+    "findfirstpixel.directionstart" : [
+      "findingremainingedgepixels.directionstart"
+      ],
+    "findingsecondpixel.xstart" : [
+      "findingremainingedgepixels.xstart"
+      ],
+    "findingsecondpixel.ystart" : [
+      "findingremainingedgepixels.ystart"
+      ],
+    "findingsecondpixel.pixels" : [
+      "findingremainingedgepixels.pixels"
+      ],
+    "findingsecondpixel.width" : [
+      "findingremainingedgepixels.width"
+      ],
+    "findingsecondpixel.height" : [
+      "findingremainingedgepixels.height"
+      ],
+    "findingsecondpixel.xdata" : [
+      "findingremainingedgepixels.xdata"
+      ],
+    "findingsecondpixel.ydata" : [
+      "findingremainingedgepixels.ydata"
+      ],
+    "findingsecondpixel.depthdata" : [
+      "findingremainingedgepixels.depthdata"
+      ],
+    "findingsecondpixel.direction" : [
+      "findingremainingedgepixels.direction"
       ]
     },
   "requiredPresets" : {
@@ -1689,39 +1877,30 @@
   "args" : [
     {
       "type" : "String",
-      "value" : "C:\\Users\\Nick\\Desktop\\depth\\reconstructed\\bunny_left.tga"
+      "value" : "C:\\Users\\Nick\\Documents\\GitHub\\RnD_edgedetect\\Textures_original\\Bunny_Left.tga"
       },
     {
       "type" : "Float32",
-      "value" : 0.2400999963283539
+      "value" : 0.1779000014066696
       },
     {
       "type" : "Float32",
       "value" : 27.34799957275391
       },
     {
-      "type" : "DrawingHandle",
-      "value" : null,
-      "ext" : "InlineDrawing"
+      "type" : "Float32",
+      "value" : 0.6000000238418579
       },
     {
-      "type" : "SInt32[]",
+      "type" : "Float64[]",
       "value" : null
       },
     {
-      "type" : "SInt32[]",
+      "type" : "Float64[]",
       "value" : null
       },
     {
-      "type" : "SInt32[]",
-      "value" : null
-      },
-    {
-      "type" : "SInt32[]",
-      "value" : null
-      },
-    {
-      "type" : "Float32[]",
+      "type" : "Float64[]",
       "value" : null
       }
     ]
