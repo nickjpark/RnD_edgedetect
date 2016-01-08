@@ -35,16 +35,6 @@
       },
     {
       "objectType" : "Port",
-      "metadata" : {
-        "uiPersistValue" : "true"
-        },
-      "nodePortType" : "Out",
-      "name" : "HeightScale",
-      "execPortType" : "In",
-      "typeSpec" : "Float32"
-      },
-    {
-      "objectType" : "Port",
       "nodePortType" : "In",
       "name" : "this",
       "execPortType" : "Out",
@@ -1738,10 +1728,6 @@
     {
       "type" : "Float32",
       "value" : 10
-      },
-    {
-      "type" : "Float32",
-      "value" : 27.34799957275391
       },
     {
       "type" : "DrawingHandle",
