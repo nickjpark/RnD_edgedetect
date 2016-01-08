@@ -1,0 +1,3268 @@
+{
+  "objectType" : "Graph",
+  "metadata" : {
+    "camera_mat44" : "{\n  \"row0\" : {\n    \"x\" : -0.9901683330535889,\n    \"y\" : 0.120944932103157,\n    \"z\" : -0.07924012094736099,\n    \"t\" : -9.389965057373047\n    },\n  \"row1\" : {\n    \"x\" : 1.822906483539555e-06,\n    \"y\" : 0.5479524731636047,\n    \"z\" : 0.8368296027183533,\n    \"t\" : 152.3322906494141\n    },\n  \"row2\" : {\n    \"x\" : 0.1446685791015625,\n    \"y\" : 0.8277872800827026,\n    \"z\" : -0.5423610806465149,\n    \"t\" : -96.10896301269531\n    },\n  \"row3\" : {\n    \"x\" : 0,\n    \"y\" : 0,\n    \"z\" : 0,\n    \"t\" : 1\n    }\n  }",
+    "timeline_start" : "1",
+    "timeline_loopMode" : "1",
+    "uiGraphZoom" : "{\n  \"value\" : 0.4647303521633148\n  }",
+    "timeline_simMode" : "0",
+    "camera_focalDistance" : "176.1891021728516",
+    "timeline_current" : "1",
+    "timeline_end" : "50",
+    "uiGraphPan" : "{\n  \"x\" : 1001.421510493908,\n  \"y\" : 659.5090958111338\n  }"
+    },
+  "title" : "",
+  "ports" : [
+    {
+      "objectType" : "Port",
+      "metadata" : {
+        "uiPersistValue" : "true"
+        },
+      "nodePortType" : "Out",
+      "name" : "filePath",
+      "execPortType" : "In",
+      "typeSpec" : "String"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {
+        "uiPersistValue" : "true"
+        },
+      "nodePortType" : "Out",
+      "name" : "order",
+      "execPortType" : "In",
+      "typeSpec" : "UInt32"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {
+        "uiPersistValue" : "true"
+        },
+      "nodePortType" : "Out",
+      "name" : "position",
+      "execPortType" : "In",
+      "typeSpec" : "Vec3"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {
+        "uiPersistValue" : "true"
+        },
+      "nodePortType" : "Out",
+      "name" : "scale",
+      "execPortType" : "In",
+      "typeSpec" : "Scalar"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "dummyResult",
+      "execPortType" : "Out",
+      "typeSpec" : "Vec3"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "dummyResult_2",
+      "execPortType" : "Out",
+      "typeSpec" : "Vec3"
+      }
+    ],
+  "extDeps" : {},
+  "nodes" : [
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":-448.8312683105469,\"y\":-1207.130126953125}"
+        },
+      "name" : "inst",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "dummyResult"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "height"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "pixels"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "position"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "scale"
+          }
+        ],
+      "executable" : "User.DrawPixels"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":-794.5584716796875,\"y\":-1033.3291015625}"
+        },
+      "name" : "graph_3",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "sincoefx"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "coscoefx"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "sincoefy"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "coscoefy"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "IO",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "IO",
+          "name" : "height"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "this"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Graph",
+        "title" : "",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "sincoefx",
+            "execPortType" : "In"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "coscoefx",
+            "execPortType" : "In"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "sincoefy",
+            "execPortType" : "In"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "coscoefy",
+            "execPortType" : "In"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "IO",
+            "name" : "width",
+            "execPortType" : "IO"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "IO",
+            "name" : "height",
+            "execPortType" : "IO"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "this",
+            "execPortType" : "Out"
+            }
+          ],
+        "extDeps" : {},
+        "nodes" : [
+          {
+            "objectType" : "Inst",
+            "metadata" : {
+              "uiGraphPos" : "{\"x\":-1411.528198242188,\"y\":-1277.482543945313}"
+              },
+            "name" : "graph",
+            "ports" : [
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "sincoefx"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "coscoefx"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "turningpointpos"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "turningpointval"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "issue"
+                }
+              ],
+            "definition" : {
+              "objectType" : "Graph",
+              "metadata" : {
+                "uiGraphZoom" : "{\n  \"value\" : 0.7677109837532044\n  }",
+                "uiGraphPan" : "{\n  \"x\" : 1289.717938658931,\n  \"y\" : 926.6195572356482\n  }"
+                },
+              "title" : "",
+              "ports" : [
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "sincoefx",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "coscoefx",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "In",
+                  "name" : "turningpointpos",
+                  "execPortType" : "Out"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "In",
+                  "name" : "turningpointval",
+                  "execPortType" : "Out"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "In",
+                  "name" : "issue",
+                  "execPortType" : "Out"
+                  }
+                ],
+              "extDeps" : {},
+              "nodes" : [
+                {
+                  "objectType" : "Inst",
+                  "metadata" : {
+                    "uiGraphPos" : "{\"x\":-1526.50927734375,\"y\":-1086.900512695313}",
+                    "uiNodeColor" : "{\n  \"r\" : 121,\n  \"g\" : 134,\n  \"b\" : 143\n  }",
+                    "uiTextColor" : "{\n  \"r\" : 20,\n  \"g\" : 20,\n  \"b\" : 20\n  }"
+                    },
+                  "name" : "func_2",
+                  "ports" : [
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "sincoefx"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "coscoefx"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "Out",
+                      "name" : "xregions"
+                      }
+                    ],
+                  "definition" : {
+                    "objectType" : "Func",
+                    "title" : "func",
+                    "ports" : [
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "sincoefx",
+                        "execPortType" : "In",
+                        "typeSpec" : "Float64[]"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "coscoefx",
+                        "execPortType" : "In",
+                        "typeSpec" : "Float64[]"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "In",
+                        "name" : "xregions",
+                        "execPortType" : "Out",
+                        "typeSpec" : "Float64[]"
+                        }
+                      ],
+                    "extDeps" : {},
+                    "code" : "dfgEntry {\n  Float64 doublepi = 6.2831853071795864769;\n  xregions.resize(0);\n  UInt32 order = sincoefx.size();\n  Float64 doublepioverquadorder = doublepi / (4. * order);\n  Float64 dummyder1x;\n  Float64 dummyder2x;\n  for(UInt32 i = 0; i < 4*order ; i++){\n    dummyder1x = 0;\n    dummyder2x = 0;\n    for(UInt32 j = 0 ; j < order ; j++){\n      dummyder1x = dummyder1x + sincoefx[j] * j * cos(doublepioverquadorder * j * (i  ) ) - coscoefx[j] * j * sin(doublepioverquadorder * j * (i  ) );\n      dummyder2x = dummyder2x + sincoefx[j] * j * cos(doublepioverquadorder * j * (i+1) ) - coscoefx[j] * j * sin(doublepioverquadorder * j * (i+1) );\n    }\n    if(dummyder1x * dummyder2x  < 0){\n      xregions.push( (i  ) / ( 4. * order ) );\n      xregions.push( (i+1) / ( 4. * order ) );\n    }\n  }\n}\n"
+                    },
+                  "title" : "turningpointregions"
+                  },
+                {
+                  "objectType" : "Inst",
+                  "metadata" : {
+                    "uiGraphPos" : "{\"x\":-1222.2529296875,\"y\":-1004.949340820313}",
+                    "uiNodeColor" : "{\n  \"r\" : 121,\n  \"g\" : 134,\n  \"b\" : 143\n  }",
+                    "uiTextColor" : "{\n  \"r\" : 20,\n  \"g\" : 20,\n  \"b\" : 20\n  }"
+                    },
+                  "name" : "func2",
+                  "ports" : [
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "sincoefx"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "coscoefx"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "xregions"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "Out",
+                      "name" : "turningpoints"
+                      }
+                    ],
+                  "definition" : {
+                    "objectType" : "Func",
+                    "title" : "func",
+                    "ports" : [
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "sincoefx",
+                        "execPortType" : "In",
+                        "typeSpec" : "$TYPE$"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "coscoefx",
+                        "execPortType" : "In",
+                        "typeSpec" : "$TYPE$"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "xregions",
+                        "execPortType" : "In",
+                        "typeSpec" : "Float64[]"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "In",
+                        "name" : "turningpoints",
+                        "execPortType" : "Out",
+                        "typeSpec" : "Float64[]"
+                        }
+                      ],
+                    "extDeps" : {},
+                    "code" : "dfgEntry {\n  Float64 doublepi = 6.2831853071795864769;\n  turningpoints.resize(0);\n  Float64 test;\n  Float64 dummypos1;\n  Float64 dummypos2;\n  Float64 dummypos3;\n  Float64 dummyder1;\n  Float64 dummyder2;\n  Float64 dummyder3;\n  for(UInt32 i = 0; i < 0.5* xregions.size(); i++){\n    dummypos1 = xregions[(2*i)    ];\n    dummypos2 = xregions[(2*i) + 1];\n    test=1;\n    while(test>0.001){\n      dummypos3 = 0.5 * (dummypos1 + dummypos2);\n      dummyder1 = 0;\n      dummyder2 = 0;\n      dummyder3 = 0;\n      for(UInt32 j = 1 ; j < sincoefx.size() ; j++){\n        dummyder1  = dummyder1  + j* sincoefx[j] * cos(doublepi * j * dummypos1 ) - j * coscoefx[j] * sin(doublepi * j * dummypos1 );\n        dummyder2  = dummyder2  + j* sincoefx[j] * cos(doublepi * j * dummypos2 ) - j * coscoefx[j] * sin(doublepi * j * dummypos2 );\n        dummyder3  = dummyder3  + j* sincoefx[j] * cos(doublepi * j * dummypos3 ) - j * coscoefx[j] * sin(doublepi * j * dummypos3 );\n      }\n      if(dummyder1 * dummyder3 > 0){\n        dummypos1 = dummypos3;\n      } else{\n        dummypos2 = dummypos3;\n      }\n      test = doublepi * abs( dummyder3 * (dummypos2 - dummypos1) );\n    }\n    turningpoints.push(dummypos3);\n  }\n}\n"
+                    },
+                  "title" : "findingturningpointpositions"
+                  },
+                {
+                  "objectType" : "Inst",
+                  "metadata" : {
+                    "uiGraphPos" : "{\"x\":-856.9960327148438,\"y\":-988.178955078125}",
+                    "uiNodeColor" : "{\n  \"r\" : 121,\n  \"g\" : 134,\n  \"b\" : 143\n  }",
+                    "uiTextColor" : "{\n  \"r\" : 20,\n  \"g\" : 20,\n  \"b\" : 20\n  }"
+                    },
+                  "name" : "func22",
+                  "ports" : [
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "sincoefx"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "coscoefx"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "turningpointpos"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "Out",
+                      "name" : "turningpointval"
+                      }
+                    ],
+                  "definition" : {
+                    "objectType" : "Func",
+                    "title" : "func",
+                    "ports" : [
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "sincoefx",
+                        "execPortType" : "In",
+                        "typeSpec" : "$TYPE$"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "coscoefx",
+                        "execPortType" : "In",
+                        "typeSpec" : "$TYPE$"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "turningpointpos",
+                        "execPortType" : "In",
+                        "typeSpec" : "Float64[]"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "In",
+                        "name" : "turningpointval",
+                        "execPortType" : "Out",
+                        "typeSpec" : "Float64[]"
+                        }
+                      ],
+                    "extDeps" : {},
+                    "code" : "dfgEntry {\n  Float64 doublepi = 6.2831853071795864769;\n  turningpointval.resize(0);\n  Float64 dummy;\n  for(UInt32 i = 0; i < turningpointpos.size(); i++){\n    dummy = 0;\n    for(UInt32 j = 0 ; j < sincoefx.size() ; j++){\n      dummy  = dummy  + sincoefx[j] * sin( doublepi * j * turningpointpos[i] ) + coscoefx[j] * cos( doublepi * j * turningpointpos[i] );\n    }\n    turningpointval.push(dummy);\n  }  \n}\n"
+                    },
+                  "title" : "findingturningpointpositions"
+                  },
+                {
+                  "objectType" : "Inst",
+                  "metadata" : {
+                    "uiGraphPos" : "{\"x\":-556.9639892578125,\"y\":-986.3145751953125}",
+                    "uiNodeColor" : "{\n  \"r\" : 121,\n  \"g\" : 134,\n  \"b\" : 143\n  }",
+                    "uiTextColor" : "{\n  \"r\" : 20,\n  \"g\" : 20,\n  \"b\" : 20\n  }"
+                    },
+                  "name" : "func22_2",
+                  "ports" : [
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "turningpointpos"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "Out",
+                      "name" : "issue"
+                      }
+                    ],
+                  "definition" : {
+                    "objectType" : "Func",
+                    "title" : "func",
+                    "ports" : [
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "turningpointpos",
+                        "execPortType" : "In",
+                        "typeSpec" : "Float64[]"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "In",
+                        "name" : "issue",
+                        "execPortType" : "Out",
+                        "typeSpec" : "Boolean"
+                        }
+                      ],
+                    "extDeps" : {},
+                    "code" : "dfgEntry {\n  issue = false;\n  for(UInt32 i = 0; i < turningpointpos.size(); i++){\n    if (turningpointpos[i] > 1){\n      issue = true;\n    } else if (turningpointpos[i] < 0){\n      issue = true;\n    }\n  }  \n}\n"
+                    },
+                  "title" : "findingturningpointpositions"
+                  }
+                ],
+              "connections" : {
+                "sincoefx" : [
+                  "func_2.sincoefx"
+                  ],
+                "coscoefx" : [
+                  "func_2.coscoefx"
+                  ],
+                "func_2.sincoefx" : [
+                  "func2.sincoefx"
+                  ],
+                "func_2.coscoefx" : [
+                  "func2.coscoefx"
+                  ],
+                "func_2.xregions" : [
+                  "func2.xregions"
+                  ],
+                "func2.sincoefx" : [
+                  "func22.sincoefx"
+                  ],
+                "func2.coscoefx" : [
+                  "func22.coscoefx"
+                  ],
+                "func2.turningpoints" : [
+                  "func22.turningpointpos"
+                  ],
+                "func22.turningpointpos" : [
+                  "turningpointpos",
+                  "func22_2.turningpointpos"
+                  ],
+                "func22.turningpointval" : [
+                  "turningpointval"
+                  ],
+                "func22_2.issue" : [
+                  "issue"
+                  ]
+                }
+              },
+            "title" : "graph"
+            },
+          {
+            "objectType" : "Inst",
+            "metadata" : {
+              "uiGraphPos" : "{\"x\":-782.1229248046875,\"y\":-1239.166625976563}"
+              },
+            "name" : "graph_2",
+            "ports" : [
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "sincoefx"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "coscoefx"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "sincoefy"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "coscoefy"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "turningpointpos"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "turningpointval"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "IO",
+                "name" : "width"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "IO",
+                "name" : "height"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "issue"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "this"
+                }
+              ],
+            "definition" : {
+              "objectType" : "Graph",
+              "title" : "",
+              "ports" : [
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "sincoefx",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "coscoefx",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "sincoefy",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "coscoefy",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "turningpointpos",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "turningpointval",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "IO",
+                  "name" : "width",
+                  "execPortType" : "IO"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "IO",
+                  "name" : "height",
+                  "execPortType" : "IO"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "issue",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "In",
+                  "name" : "this",
+                  "execPortType" : "Out"
+                  }
+                ],
+              "extDeps" : {},
+              "nodes" : [
+                {
+                  "objectType" : "Inst",
+                  "metadata" : {
+                    "uiGraphPos" : "{\"x\":-1129.074951171875,\"y\":-1200.622436523438}"
+                    },
+                  "name" : "func_2",
+                  "ports" : [
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "sincoefx"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "coscoefx"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "sincoefy"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "coscoefy"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "turningpointposx"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "turningpointvalx"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "width"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "height"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "conditional"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "Out",
+                      "name" : "firstpass"
+                      }
+                    ],
+                  "definition" : {
+                    "objectType" : "Func",
+                    "title" : "func",
+                    "ports" : [
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "sincoefx",
+                        "execPortType" : "In",
+                        "typeSpec" : "Float64[]"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "coscoefx",
+                        "execPortType" : "In",
+                        "typeSpec" : "Float64[]"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "sincoefy",
+                        "execPortType" : "In",
+                        "typeSpec" : "Float64[]"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "coscoefy",
+                        "execPortType" : "In",
+                        "typeSpec" : "Float64[]"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "turningpointposx",
+                        "execPortType" : "In",
+                        "typeSpec" : "Float64[]"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "turningpointvalx",
+                        "execPortType" : "In",
+                        "typeSpec" : "Float64[]"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "width",
+                        "execPortType" : "In",
+                        "typeSpec" : "Size"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "height",
+                        "execPortType" : "In",
+                        "typeSpec" : "Size"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "conditional",
+                        "execPortType" : "In",
+                        "typeSpec" : "Boolean"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "In",
+                        "name" : "firstpass",
+                        "execPortType" : "Out",
+                        "typeSpec" : "Scalar[]"
+                        }
+                      ],
+                    "extDeps" : {},
+                    "code" : "dfgEntry {\n  Float64 doublepi = 6.2831853071795864769;\n  firstpass.resize(0);\n  Float64 dummy3;\n  Float64 dummyvalx1;\n  Float64 dummyvalx2;\n  Float64 dummyvalx3;\n  Float64 dummyposx1;\n  Float64 dummyposx2;\n  Float64 dummyposx3;\n  Float64 dummyy;\n  Float64 intersectlist[];\n  Float64 test;\n  Float64 testfirstlast;\n  UInt32 poscount;\n  if(!conditional){\n    firstpass.resize(width*height);// This if statement ensure that there are no mistakes\n    for(UInt32 row = 0 ; row < height ; row++){//this statement will perform the itteration over each row\n      //for each row, we create a list of all the places where the function is larger than the current row value. \n      //We construc the domain by piecewise searching for each edge of the domain.\n      // Each edge is then written into a list. \n      //The first step for each row is to empty this list. \n      intersectlist.resize(0);\n      //Since the function is periodic, the endpoints are not important. \n      for (UInt32 label1 = 0 ; label1 < turningpointposx.size() ; label1++){// This loop will itterate over each of the turning points for fx[s]. We know that between two turning points there can be at most one place where fx[s] = row\n        //in principlie, Since the endpoints are included in turningpoinposx, we do not need to worry about intersections outside of (0,1).\n        // Floatingpoint the precision of the calculation however implies that the end points might not tie up exactly, so we consider on point beyond 1\n        UInt32 label1plus1 = label1 + 1;\n        if(label1plus1 == turningpointposx.size()){\n          label1plus1 = 0;\n        }\n       \n        dummyvalx1 = turningpointvalx[label1    ] - row;\n        dummyvalx2 = turningpointvalx[label1plus1] - row;\n        //If these two expressions have opposite signs, the fx[s] = row somewhere between the two, and we need to find that point.\n        if(dummyvalx1 * dummyvalx2 < 0){// This if statement is true if there is a zero between the turning points\n          dummyposx1 = turningpointposx[label1  ];\n          dummyposx2 = turningpointposx[label1plus1];\n          if(label1plus1 == 0){\n            dummyposx2 = dummyposx2 + 1;\n          }\n          // We now need to convergde on the position of the root. \n          test = 1.;\n          while(test > 0.05){// This while loop will bisect the region containing the zero until the zero is found\n            //n++;\n            dummyposx3 = 0.5 * (dummyposx1 + dummyposx2);\n            //we need to reset dummyval3 continuousy\n            dummyvalx3 = 0;\n            for(UInt32 i = 0 ; i < sincoefx.size() ; i++){// This loop calculates the value at the midpoint\n              dummyvalx3 = dummyvalx3 + sincoefx[i] * sin( doublepi * i * dummyposx3 ) + coscoefx[i] * cos( doublepi * i * dummyposx3 );\n            }\n            dummyvalx3 = dummyvalx3 - row;\n            // We can now compare the sign of dummyvalx1 and dummyvalx2 to dummyvalx3;\n            if(dummyvalx1 * dummyvalx3 > 0){\n              dummyvalx1 = dummyvalx3;\n              dummyposx1 = dummyposx3;\n            } else{\n              dummyvalx2 = dummyvalx3;\n              dummyposx2 = dummyposx3;\n            }\n            // The test we use is the difference in size between either end of the region\n            test = abs(dummyvalx1 - dummyvalx2);\n          }// This closes the while loop\n          /*if(dummyposx3 >= 1){\n            dummyposx3 = dummyposx3 - 1;\n            if(intersectlist.size() > 0){\n              testfirstlast = abs(dummyposx3 - intersectlist[intersectlist.size() - 1]);\n              if( testfirstlast > 1./ ( 4. * sincoefx.size() ) ){\n                intersectlist.push(dummyposx3);\n                report(\"check here\");\n                report(intersectlist);\n              }\n            }\n          }*/\n          intersectlist.push(dummyposx3);\n        }// This closes the test for zeros between turning points\n        \n      }// This closes the loop over all turning points\n      //intersectlist.push(dummyvalx3);\n      //Since the function is periodic, there must be an even number of times that fx[s] = x. We add this break statement if there is an issue. \n      if(intersectlist.size()%2 == 1){\n        report(\"There is a mistake here somewhere\");\n        report(\"There are \" + intersectlist.size() + \" intersections for x = \" + row);\n        firstpass.resize(0);\n        break;\n      }\n      for(UInt32 column = 0 ; column < width ; column++){// this statement will perform the itteration over each column\n        // For each column, we need to count the number of times fy[s] = column in the domain s found for each row. \n        // If there are an odd number of intersections, then the pixel lies inside the shape. If there are an even number of intersections, the pixel lies outside the shape.\n        // for each continuous piece of the domain, there will be an even number of intersections if the function is greater than the coulmn at each endpoint. Similarly is less than the column at each endpoint. If it is greater at one endpoint and less at the other, there is an odd number of intersections.\n        // Therefore we can count the number of times the function is greater than the column at the edge of a region. \n        // The count must restart for each column. \n        poscount = 0;\n        for(UInt32 label2 = 0 ; label2 < intersectlist.size() ; label2++){// This stement will itterate over the list of the endpoints of the domain\n          //next we calculate the function value at the end points of the domain. \n          dummyy = 0;\n          for(UInt32 j = 0 ; j < sincoefy.size() ; j++){\n           dummyy = dummyy + sincoefy[j] * sin(doublepi * j * intersectlist[label2]) + coscoefy[j] * cos(doublepi * j * intersectlist[label2]);\n          }\n          // Next we count the number of times dummy is greater than column \n          if(dummyy > column){\n            poscount++;\n          }\n        }// this closes the itteration over the endpoints of the domain\n        // we can now test to see if poscount is odd;\n        if (poscount%2 ==1){\n          // if there is an odd number of intersections, we place a one in the corresponding row and column value\n          firstpass[row*width  + column] = 1;\n        }\n      }//this closes the itteration over each column\n    }//This closes the itteration over each row\n  }//This closes the if statement which tests for mistakes\n}\n"
+                    }
+                  },
+                {
+                  "objectType" : "Inst",
+                  "metadata" : {
+                    "uiGraphPos" : "{\"x\":-734.00244140625,\"y\":-945.3173217773438}"
+                    },
+                  "name" : "Set",
+                  "ports" : [
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "IO",
+                      "name" : "this"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "r"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "g"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "b"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "a"
+                      }
+                    ],
+                  "definition" : {
+                    "objectType" : "Func",
+                    "metadata" : {
+                      "uiNodeColor" : "{\n  \"r\" : 99,\n  \"g\" : 129,\n  \"b\" : 92\n  }",
+                      "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/Math/Color.html",
+                      "uiTooltip" : "Setter using rgba Scalar components\n\n Supported by Color"
+                      },
+                    "title" : "Set[]",
+                    "ports" : [
+                      {
+                        "objectType" : "Port",
+                        "metadata" : {
+                          "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 0,\n  \"b\" : 0\n  }"
+                          },
+                        "nodePortType" : "IO",
+                        "name" : "this",
+                        "execPortType" : "IO",
+                        "typeSpec" : "Color[]"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "defaultValues" : {
+                          "Scalar[]" : [
+                            0
+                            ]
+                          },
+                        "name" : "r",
+                        "execPortType" : "In",
+                        "typeSpec" : "Scalar[]"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "defaultValues" : {
+                          "Scalar[]" : [
+                            0
+                            ]
+                          },
+                        "name" : "g",
+                        "execPortType" : "In",
+                        "typeSpec" : "Scalar[]"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "defaultValues" : {
+                          "Scalar[]" : [
+                            0
+                            ]
+                          },
+                        "name" : "b",
+                        "execPortType" : "In",
+                        "typeSpec" : "Scalar[]"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "defaultValues" : {
+                          "Scalar[]" : [
+                            0
+                            ]
+                          },
+                        "name" : "a",
+                        "execPortType" : "In",
+                        "typeSpec" : "Scalar[]"
+                        }
+                      ],
+                    "extDeps" : {
+                      "Math" : "*"
+                      },
+                    "origPresetGUID" : "5F559A6D1D67286942B2C4019999E76A",
+                    "code" : "require Math;\n\noperator Math_Color_set_task<<<index>>>(\n  io Color[] this\n, in Scalar[] r\n, in Scalar[] g\n, in Scalar[] b\n, in Scalar[] a\n) {\n  this[index < this.size() ? index : this.size() - 1].set(r[index < r.size() ? index : r.size() - 1], g[index < g.size() ? index : g.size() - 1], b[index < b.size() ? index : b.size() - 1], a[index < a.size() ? index : a.size() - 1]);\n}\n\ndfgEntry {\n  if( this.size() == 0) return;\n  if( r.size() == 0) return;\n  if( g.size() == 0) return;\n  if( b.size() == 0) return;\n  if( a.size() == 0) return;\n  Size task_size = this.size();\n  if(task_size < r.size()) task_size = r.size();\n  if(task_size < g.size()) task_size = g.size();\n  if(task_size < b.size()) task_size = b.size();\n  if(task_size < a.size()) task_size = a.size();\n  if(task_size < 10000 /* pex margin */) {\n    for(Size index = 0; index < task_size; index++) {\n      Math_Color_set_task(index, this, r, g, b, a);\n    }\n  } else {\n    Math_Color_set_task<<<task_size>>>(this, r, g, b, a);\n  }\n}\n"
+                    }
+                  },
+                {
+                  "objectType" : "Inst",
+                  "metadata" : {
+                    "uiGraphPos" : "{\"x\":-880.2257080078125,\"y\":-1079.582275390625}"
+                    },
+                  "name" : "func_3",
+                  "ports" : [
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "width"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "height"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "Out",
+                      "name" : "output"
+                      }
+                    ],
+                  "definition" : {
+                    "objectType" : "Func",
+                    "title" : "func",
+                    "ports" : [
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "width",
+                        "execPortType" : "In",
+                        "typeSpec" : "Size"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "Out",
+                        "name" : "height",
+                        "execPortType" : "In",
+                        "typeSpec" : "Size"
+                        },
+                      {
+                        "objectType" : "Port",
+                        "nodePortType" : "In",
+                        "name" : "output",
+                        "execPortType" : "Out",
+                        "typeSpec" : "Color[]"
+                        }
+                      ],
+                    "extDeps" : {},
+                    "code" : "dfgEntry {\n  output.resize(width*height);\n}\n"
+                    }
+                  }
+                ],
+              "connections" : {
+                "sincoefx" : [
+                  "func_2.sincoefx"
+                  ],
+                "coscoefx" : [
+                  "func_2.coscoefx"
+                  ],
+                "sincoefy" : [
+                  "func_2.sincoefy"
+                  ],
+                "coscoefy" : [
+                  "func_2.coscoefy"
+                  ],
+                "turningpointpos" : [
+                  "func_2.turningpointposx"
+                  ],
+                "turningpointval" : [
+                  "func_2.turningpointvalx"
+                  ],
+                "width" : [
+                  "func_2.width"
+                  ],
+                "height" : [
+                  "func_2.height"
+                  ],
+                "issue" : [
+                  "func_2.conditional"
+                  ],
+                "func_2.width" : [
+                  "func_3.width"
+                  ],
+                "func_2.height" : [
+                  "func_3.height"
+                  ],
+                "func_2.firstpass" : [
+                  "Set.r"
+                  ],
+                "Set.this" : [
+                  "this"
+                  ],
+                "func_3.width" : [
+                  "width"
+                  ],
+                "func_3.height" : [
+                  "height"
+                  ],
+                "func_3.output" : [
+                  "Set.this"
+                  ]
+                }
+              },
+            "title" : "graph"
+            }
+          ],
+        "connections" : {
+          "sincoefx" : [
+            "graph.sincoefx"
+            ],
+          "coscoefx" : [
+            "graph.coscoefx"
+            ],
+          "sincoefy" : [
+            "graph_2.sincoefy"
+            ],
+          "coscoefy" : [
+            "graph_2.coscoefy"
+            ],
+          "width" : [
+            "graph_2.width"
+            ],
+          "height" : [
+            "graph_2.height"
+            ],
+          "graph.sincoefx" : [
+            "graph_2.sincoefx"
+            ],
+          "graph.coscoefx" : [
+            "graph_2.coscoefx"
+            ],
+          "graph.turningpointpos" : [
+            "graph_2.turningpointpos"
+            ],
+          "graph.turningpointval" : [
+            "graph_2.turningpointval"
+            ],
+          "graph.issue" : [
+            "graph_2.issue"
+            ],
+          "graph_2.width" : [
+            "width"
+            ],
+          "graph_2.height" : [
+            "height"
+            ],
+          "graph_2.this" : [
+            "this"
+            ]
+          }
+        },
+      "title" : "graph"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":-1546.270629882813,\"y\":-933.7162475585938}"
+        },
+      "name" : "graph",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "filePath"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "order"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "sincoefficients"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "coscoefficients"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "height"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "sincoefficients_2"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "coscoefficients_2"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Graph",
+        "title" : "",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "filePath",
+            "execPortType" : "In"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "order",
+            "execPortType" : "In"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "sincoefficients",
+            "execPortType" : "Out"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "coscoefficients",
+            "execPortType" : "Out"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "width",
+            "execPortType" : "Out"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "height",
+            "execPortType" : "Out"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "sincoefficients_2",
+            "execPortType" : "Out"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "coscoefficients_2",
+            "execPortType" : "Out"
+            }
+          ],
+        "extDeps" : {},
+        "nodes" : [
+          {
+            "objectType" : "Inst",
+            "metadata" : {
+              "uiGraphPos" : "{\"x\":-1606.145629882813,\"y\":-880.0925903320313}"
+              },
+            "name" : "LoadImage",
+            "ports" : [
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "verbose"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "filePath"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "result"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "pixels"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "width"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "height"
+                }
+              ],
+            "executable" : "User.LoadImage",
+            "presetGUID" : "29F3D286CA26AB0FB489A3E7F5F2EB11"
+            },
+          {
+            "objectType" : "Inst",
+            "metadata" : {
+              "uiGraphPos" : "{\"x\":-1214.799271737924,\"y\":-924.8178052990829}"
+              },
+            "name" : "inst_2",
+            "ports" : [
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "data"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "order"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "sincoefficients"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "coscoefficients"
+                }
+              ],
+            "executable" : "User.Fourier.FourierSeries"
+            },
+          {
+            "objectType" : "Inst",
+            "metadata" : {
+              "uiGraphPos" : "{\"x\":-1406.744506835938,\"y\":-842.8207397460938}"
+              },
+            "name" : "inst_3",
+            "ports" : [
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "pixels"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "xdata"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "ydata"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "depthdata"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "width"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "height"
+                }
+              ],
+            "executable" : "User.findingedge"
+            },
+          {
+            "objectType" : "Inst",
+            "metadata" : {
+              "uiGraphPos" : "{\"x\":-1225.979736328125,\"y\":-768.2794799804688}"
+              },
+            "name" : "inst2",
+            "ports" : [
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "data"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "order"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "sincoefficients"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "coscoefficients"
+                }
+              ],
+            "executable" : "User.Fourier.FourierSeries"
+            }
+          ],
+        "connections" : {
+          "filePath" : [
+            "LoadImage.filePath"
+            ],
+          "order" : [
+            "inst_2.order",
+            "inst2.order"
+            ],
+          "LoadImage.pixels" : [
+            "inst_3.pixels"
+            ],
+          "LoadImage.width" : [
+            "inst_3.width"
+            ],
+          "LoadImage.height" : [
+            "inst_3.height"
+            ],
+          "inst_2.sincoefficients" : [
+            "sincoefficients"
+            ],
+          "inst_2.coscoefficients" : [
+            "coscoefficients"
+            ],
+          "inst_3.xdata" : [
+            "inst_2.data"
+            ],
+          "inst_3.ydata" : [
+            "inst2.data"
+            ],
+          "inst_3.width" : [
+            "width"
+            ],
+          "inst_3.height" : [
+            "height"
+            ],
+          "inst2.sincoefficients" : [
+            "sincoefficients_2"
+            ],
+          "inst2.coscoefficients" : [
+            "coscoefficients_2"
+            ]
+          }
+        },
+      "title" : "graph"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":-1825.674682617188,\"y\":-1399.819580078125}"
+        },
+      "name" : "LoadImage",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "verbose"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "filePath"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "result"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "pixels"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "height"
+          }
+        ],
+      "executable" : "User.LoadImage",
+      "presetGUID" : "29F3D286CA26AB0FB489A3E7F5F2EB11"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":-1571.738525390625,\"y\":-1348.152954101563}"
+        },
+      "name" : "inst_2",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "dummyResult"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "height"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "pixels"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "position"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "scale"
+          }
+        ],
+      "executable" : "User.DrawPixels"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":-1761.268676757813,\"y\":-1246.798583984375}"
+        },
+      "name" : "Set",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "IO",
+          "name" : "this"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "x"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "y"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "z"
+          }
+        ],
+      "executable" : "Fabric.Exts.Math.Vec3.Set",
+      "presetGUID" : "5EA9654EA22722B9C28894F46721480C"
+      }
+    ],
+  "connections" : {
+    "filePath" : [
+      "graph.filePath",
+      "LoadImage.filePath"
+      ],
+    "order" : [
+      "graph.order"
+      ],
+    "position" : [
+      "inst.position",
+      "Set.this"
+      ],
+    "scale" : [
+      "inst.scale",
+      "inst_2.scale",
+      "Set.z"
+      ],
+    "inst.dummyResult" : [
+      "dummyResult_2"
+      ],
+    "graph_3.width" : [
+      "inst.width"
+      ],
+    "graph_3.height" : [
+      "inst.height"
+      ],
+    "graph_3.this" : [
+      "inst.pixels"
+      ],
+    "graph.sincoefficients" : [
+      "graph_3.sincoefx"
+      ],
+    "graph.coscoefficients" : [
+      "graph_3.coscoefx"
+      ],
+    "graph.width" : [
+      "graph_3.width"
+      ],
+    "graph.height" : [
+      "graph_3.height"
+      ],
+    "graph.sincoefficients_2" : [
+      "graph_3.sincoefy"
+      ],
+    "graph.coscoefficients_2" : [
+      "graph_3.coscoefy"
+      ],
+    "LoadImage.pixels" : [
+      "inst_2.pixels"
+      ],
+    "LoadImage.width" : [
+      "inst_2.width"
+      ],
+    "LoadImage.height" : [
+      "inst_2.height"
+      ],
+    "inst_2.dummyResult" : [
+      "dummyResult"
+      ],
+    "Set.this" : [
+      "inst_2.position"
+      ]
+    },
+  "requiredPresets" : {
+    "User.DrawPixels" : {
+      "objectType" : "Graph",
+      "metadata" : {
+        "camera_mat44" : "{\n  \"row0\" : {\n    \"x\" : -0.9310875535011292,\n    \"y\" : -0.3603379428386688,\n    \"z\" : 0.06555097550153732,\n    \"t\" : 4.267117023468018\n    },\n  \"row1\" : {\n    \"x\" : 1.267364723389619e-06,\n    \"y\" : 0.1789405345916748,\n    \"z\" : 0.9841665029525757,\n    \"t\" : 68.12296295166016\n    },\n  \"row2\" : {\n    \"x\" : -0.3664500117301941,\n    \"y\" : 0.9155585765838623,\n    \"z\" : -0.166550487279892,\n    \"t\" : -12.58343410491943\n    },\n  \"row3\" : {\n    \"x\" : 0,\n    \"y\" : 0,\n    \"z\" : 0,\n    \"t\" : 1\n    }\n  }",
+        "timeline_start" : "1",
+        "timeline_loopMode" : "1",
+        "uiGraphZoom" : "{\n  \"value\" : 2.096894502639771\n  }",
+        "timeline_simMode" : "0",
+        "camera_focalDistance" : "64.86742401123047",
+        "timeline_current" : "1",
+        "timeline_end" : "50",
+        "uiGraphPan" : "{\n  \"x\" : -508.4594116210938,\n  \"y\" : -1950.692626953125\n  }"
+        },
+      "title" : "",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "dummyResult",
+          "execPortType" : "Out",
+          "typeSpec" : "Vec3"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "width",
+          "execPortType" : "In",
+          "typeSpec" : "UInt32"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "height",
+          "execPortType" : "In",
+          "typeSpec" : "UInt32"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "pixels",
+          "execPortType" : "In",
+          "typeSpec" : "Color[]"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "position",
+          "execPortType" : "In",
+          "typeSpec" : "Vec3"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "scale",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar"
+          }
+        ],
+      "extDeps" : {},
+      "nodes" : [
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\":405.229736328125,\"y\":985.8463134765625}"
+            },
+          "name" : "DrawPixels",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "width"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "height"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "pixels"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "dummyResult"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "position"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "scale"
+              }
+            ],
+          "definition" : {
+            "objectType" : "Graph",
+            "metadata" : {
+              "uiGraphZoom" : "{\n  \"value\" : 0.8475913405418396\n  }",
+              "uiGraphPan" : "{\n  \"x\" : -299.9125867476896,\n  \"y\" : 73.68894752730603\n  }"
+              },
+            "title" : "DrawPixels",
+            "ports" : [
+              {
+                "objectType" : "Port",
+                "nodePortType" : "Out",
+                "name" : "width",
+                "execPortType" : "In"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "Out",
+                "name" : "height",
+                "execPortType" : "In"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "Out",
+                "name" : "pixels",
+                "execPortType" : "In"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "dummyResult",
+                "execPortType" : "Out"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "Out",
+                "name" : "position",
+                "execPortType" : "In"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "Out",
+                "name" : "scale",
+                "execPortType" : "In"
+                }
+              ],
+            "extDeps" : {},
+            "nodes" : [
+              {
+                "objectType" : "Inst",
+                "metadata" : {
+                  "uiGraphPos" : "{\"x\":1020.531127929688,\"y\":31.68296813964844}"
+                  },
+                "name" : "EmptyDrawingHandle",
+                "ports" : [
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "Out",
+                    "name" : "handle"
+                    }
+                  ],
+                "executable" : "Fabric.Exts.InlineDrawing.DrawingHandle.EmptyDrawingHandle",
+                "presetGUID" : "2440020BA6A1CAB1CEB690A198F99C70"
+                },
+              {
+                "objectType" : "Inst",
+                "metadata" : {
+                  "uiGraphPos" : "{\"x\":1436.8544921875,\"y\":31.14314270019531}"
+                  },
+                "name" : "DrawTexturedPlane_1",
+                "ports" : [
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "IO",
+                    "name" : "this"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "name"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "width"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "height"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "pixels"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "mirrorU"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "mirrorV"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "discardAlpha"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "transform"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "Out",
+                    "name" : "dummyResult"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "Out",
+                    "name" : "instance"
+                    }
+                  ],
+                "executable" : "Fabric.Exts.InlineDrawing.DrawingHandle.DrawTexturedPlane",
+                "presetGUID" : "0777B8FB148911AD43CC8258FA698C46"
+                },
+              {
+                "objectType" : "Inst",
+                "metadata" : {
+                  "uiGraphPos" : "{\"x\":741.43896484375,\"y\":159.9098510742188}"
+                  },
+                "name" : "Xfo_1",
+                "ports" : [
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "ori"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "tr"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "sc"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "Out",
+                    "name" : "result"
+                    }
+                  ],
+                "executable" : "Fabric.Exts.Math.Xfo.Xfo",
+                "presetGUID" : "A0F6CD63A2069530481F214C62A069AA"
+                },
+              {
+                "objectType" : "Inst",
+                "metadata" : {
+                  "uiGraphPos" : "{\"x\":495.0647277832031,\"y\":17.14056396484375}"
+                  },
+                "name" : "Vec3_1",
+                "ports" : [
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "x"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "y"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "z"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "Out",
+                    "name" : "result"
+                    }
+                  ],
+                "executable" : "Fabric.Exts.Math.Vec3.Vec3",
+                "presetGUID" : "A59E49949F21CFCB14B5711D52330BA7"
+                }
+              ],
+            "connections" : {
+              "width" : [
+                "DrawTexturedPlane_1.width"
+                ],
+              "height" : [
+                "DrawTexturedPlane_1.height"
+                ],
+              "pixels" : [
+                "DrawTexturedPlane_1.pixels"
+                ],
+              "position" : [
+                "Xfo_1.tr"
+                ],
+              "scale" : [
+                "Vec3_1.x",
+                "Vec3_1.y",
+                "Vec3_1.z"
+                ],
+              "EmptyDrawingHandle.handle" : [
+                "DrawTexturedPlane_1.this"
+                ],
+              "DrawTexturedPlane_1.dummyResult" : [
+                "dummyResult"
+                ],
+              "Xfo_1.result" : [
+                "DrawTexturedPlane_1.transform"
+                ],
+              "Vec3_1.result" : [
+                "Xfo_1.sc"
+                ]
+              }
+            }
+          }
+        ],
+      "connections" : {
+        "width" : [
+          "DrawPixels.width"
+          ],
+        "height" : [
+          "DrawPixels.height"
+          ],
+        "pixels" : [
+          "DrawPixels.pixels"
+          ],
+        "position" : [
+          "DrawPixels.position"
+          ],
+        "scale" : [
+          "DrawPixels.scale"
+          ],
+        "DrawPixels.dummyResult" : [
+          "dummyResult"
+          ]
+        }
+      },
+    "Fabric.Exts.InlineDrawing.DrawingHandle.EmptyDrawingHandle" : {
+      "objectType" : "Graph",
+      "title" : "EmptyDrawingHandle",
+      "cacheRule" : "never",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "handle",
+          "execPortType" : "Out",
+          "typeSpec" : "DrawingHandle"
+          }
+        ],
+      "extDeps" : {},
+      "presetGUID" : "2440020BA6A1CAB1CEB690A198F99C70",
+      "nodes" : [
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\": 894, \"y\": 100}"
+            },
+          "name" : "Clear",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "IO",
+              "name" : "this"
+              }
+            ],
+          "executable" : "Fabric.Exts.InlineDrawing.DrawingHandle.Clear",
+          "presetGUID" : "39E8D81FA7C7C4A825877F16EFE3564F",
+          "cacheRule" : "never"
+          },
+        {
+          "objectType" : "Var",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\":567.0,\"y\":56.0}",
+            "uiCollapsedState" : "0"
+            },
+          "name" : "handleVar",
+          "ports" : [
+            {
+              "objectType" : "VarPort",
+              "nodePortType" : "IO",
+              "name" : "value"
+              }
+            ],
+          "dataType" : "DrawingHandle",
+          "extDep" : "InlineDrawing:*"
+          },
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\":287.0,\"y\":56.0}"
+            },
+          "name" : "CreateDrawingHandle",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "handle"
+              }
+            ],
+          "definition" : {
+            "objectType" : "Func",
+            "title" : "Create DrawingHandle",
+            "ports" : [
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "handle",
+                "execPortType" : "Out",
+                "typeSpec" : "DrawingHandle"
+                }
+              ],
+            "extDeps" : {
+              "InlineDrawing" : "*"
+              },
+            "code" : "dfgEntry {\n  handle = DrawingHandle();\n}\n"
+            }
+          }
+        ],
+      "connections" : {
+        "Clear.this" : [
+          "handle"
+          ],
+        "handleVar.value" : [
+          "Clear.this"
+          ],
+        "CreateDrawingHandle.handle" : [
+          "handleVar.value"
+          ]
+        }
+      },
+    "Fabric.Exts.InlineDrawing.DrawingHandle.Clear" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/InlineDrawing/DrawingHandle.html",
+        "uiTooltip" : "removes all contents from the DrawingHandle\n\n Supported by DrawingHandle"
+        },
+      "title" : "Clear",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "IO",
+          "name" : "this",
+          "execPortType" : "IO",
+          "typeSpec" : "DrawingHandle"
+          }
+        ],
+      "extDeps" : {
+        "InlineDrawing" : "*"
+        },
+      "presetGUID" : "39E8D81FA7C7C4A825877F16EFE3564F",
+      "code" : "require InlineDrawing;\n\ndfgEntry {\n  this.clear();\n}\n"
+      },
+    "Fabric.Exts.InlineDrawing.DrawingHandle.DrawTexturedPlane" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/InlineDrawing/DrawingHandle.html",
+        "uiTooltip" : "helper function to draw a plane given texture values + a single transform\n\n Supported by DrawingHandle"
+        },
+      "title" : "DrawTexturedPlane",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "IO",
+          "name" : "this",
+          "execPortType" : "IO",
+          "typeSpec" : "DrawingHandle"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "name",
+          "execPortType" : "In",
+          "typeSpec" : "String"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "UInt32" : 512
+            },
+          "name" : "width",
+          "execPortType" : "In",
+          "typeSpec" : "UInt32"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "UInt32" : 512
+            },
+          "name" : "height",
+          "execPortType" : "In",
+          "typeSpec" : "UInt32"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 0,\n  \"b\" : 0\n  }"
+            },
+          "nodePortType" : "Out",
+          "name" : "pixels",
+          "execPortType" : "In",
+          "typeSpec" : "Color[]"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Boolean" : false
+            },
+          "name" : "mirrorU",
+          "execPortType" : "In",
+          "typeSpec" : "Boolean"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Boolean" : true
+            },
+          "name" : "mirrorV",
+          "execPortType" : "In",
+          "typeSpec" : "Boolean"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Boolean" : false
+            },
+          "name" : "discardAlpha",
+          "execPortType" : "In",
+          "typeSpec" : "Boolean"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 249,\n  \"g\" : 157,\n  \"b\" : 28\n  }"
+            },
+          "nodePortType" : "Out",
+          "name" : "transform",
+          "execPortType" : "In",
+          "typeSpec" : "Xfo"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 242,\n  \"b\" : 0\n  }"
+            },
+          "nodePortType" : "In",
+          "name" : "dummyResult",
+          "execPortType" : "Out",
+          "typeSpec" : "Vec3"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "instance",
+          "execPortType" : "Out",
+          "typeSpec" : "InlineInstance"
+          }
+        ],
+      "extDeps" : {
+        "InlineDrawing" : "*"
+        },
+      "presetGUID" : "0777B8FB148911AD43CC8258FA698C46",
+      "code" : "require InlineDrawing;\n\ndfgEntry {\n  this.drawTexturedPlane(name, width, height, pixels, mirrorU, mirrorV, discardAlpha, transform, dummyResult, instance);\n}\n"
+      },
+    "Fabric.Exts.Math.Xfo.Xfo" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiNodeColor" : "{\n  \"r\" : 99,\n  \"g\" : 129,\n  \"b\" : 92\n  }",
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/Math/Xfo.html",
+        "uiTooltip" : "Constructor from the orientation, translation and scaling\n\n Supported by Xfo"
+        },
+      "title" : "Xfo",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 0,\n  \"g\" : 191,\n  \"b\" : 232\n  }"
+            },
+          "nodePortType" : "Out",
+          "name" : "ori",
+          "execPortType" : "In",
+          "typeSpec" : "Quat"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 242,\n  \"b\" : 0\n  }"
+            },
+          "nodePortType" : "Out",
+          "name" : "tr",
+          "execPortType" : "In",
+          "typeSpec" : "Vec3"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 242,\n  \"b\" : 0\n  }"
+            },
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Vec3" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+              }
+            },
+          "name" : "sc",
+          "execPortType" : "In",
+          "typeSpec" : "Vec3"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 249,\n  \"g\" : 157,\n  \"b\" : 28\n  }"
+            },
+          "nodePortType" : "In",
+          "name" : "result",
+          "execPortType" : "Out",
+          "typeSpec" : "Xfo"
+          }
+        ],
+      "extDeps" : {
+        "Math" : "*"
+        },
+      "presetGUID" : "A0F6CD63A2069530481F214C62A069AA",
+      "code" : "require Math;\n\ndfgEntry {\n  result = Xfo(ori, tr, sc);\n}\n"
+      },
+    "Fabric.Exts.Math.Vec3.Vec3" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiNodeColor" : "{\n  \"r\" : 99,\n  \"g\" : 129,\n  \"b\" : 92\n  }",
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/Math/Vec3.html",
+        "uiTooltip" : "Constructor from scalar components\n\n Supported by Vec3"
+        },
+      "title" : "Vec3",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "x",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "y",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "z",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 242,\n  \"b\" : 0\n  }"
+            },
+          "nodePortType" : "In",
+          "name" : "result",
+          "execPortType" : "Out",
+          "typeSpec" : "Vec3"
+          }
+        ],
+      "extDeps" : {
+        "Math" : "*"
+        },
+      "presetGUID" : "A59E49949F21CFCB14B5711D52330BA7",
+      "code" : "require Math;\n\ndfgEntry {\n  result = Vec3(x, y, z);\n}\n"
+      },
+    "User.LoadImage" : {
+      "objectType" : "Graph",
+      "metadata" : {
+        "uiNodeColor" : "{\n  \"r\" : 144,\n  \"g\" : 130,\n  \"b\" : 120\n  }",
+        "uiGraphZoom" : "{\n  \"value\" : 0.8138958215713501\n  }",
+        "uiHeaderColor" : "{\n  \"r\" : 115,\n  \"g\" : 105,\n  \"b\" : 75\n  }",
+        "uiTooltip" : "loads an image from disk",
+        "uiGraphPan" : "{\n  \"x\" : 21.2629981637001,\n  \"y\" : 9.372200310230255\n  }"
+        },
+      "title" : "LoadImage",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "verbose",
+          "execPortType" : "In",
+          "typeSpec" : "Boolean"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "String" : "C:\\Temp\\image1.jpg"
+            },
+          "name" : "filePath",
+          "execPortType" : "In",
+          "typeSpec" : "String"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "result",
+          "execPortType" : "Out",
+          "typeSpec" : "Image2DColor"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "pixels",
+          "execPortType" : "Out",
+          "typeSpec" : "Color[]"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "width",
+          "execPortType" : "Out",
+          "typeSpec" : "Size"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "height",
+          "execPortType" : "Out",
+          "typeSpec" : "Size"
+          }
+        ],
+      "extDeps" : {
+        "OpenImageIO" : "*",
+        "FileIO" : "*",
+        "Images" : "*"
+        },
+      "presetGUID" : "29F3D286CA26AB0FB489A3E7F5F2EB11",
+      "nodes" : [
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\":125.0,\"y\":50.0}"
+            },
+          "name" : "applyLoadImage",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "verbose"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "filePath"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "success"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "image"
+              }
+            ],
+          "definition" : {
+            "objectType" : "Func",
+            "title" : "applyLoadImage",
+            "ports" : [
+              {
+                "objectType" : "Port",
+                "nodePortType" : "Out",
+                "name" : "verbose",
+                "execPortType" : "In",
+                "typeSpec" : "Boolean"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "Out",
+                "name" : "filePath",
+                "execPortType" : "In",
+                "typeSpec" : "String"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "success",
+                "execPortType" : "Out",
+                "typeSpec" : "Boolean"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "image",
+                "execPortType" : "Out",
+                "typeSpec" : "Image2DColor"
+                }
+              ],
+            "extDeps" : {},
+            "code" : "require OpenImageIO;\r\nrequire FileIO;\r\nrequire Images;\r\n\r\ndfgEntry\r\n{ \r\n  // init the outputs.\r\n  success = false;\r\n  image   = Image2DColor();\r\n\r\n  // open the image file.\r\n  if (verbose)  report(\"opening image file \\\"\" + filePath + \"\\\"\");\r\n  OpenImageInput file = OpenImageInput();\r\n  file.open(filePath);\r\n  if(!file.valid())\r\n  {\r\n    if (verbose)  report(\"ERROR: unable to open image file.\");\r\n    return;\r\n  }\r\n  \r\n  // get the image file's specs, verbose and check image resolution.\r\n  OpenImageSpec fileSpec = file.spec();\r\n  if (verbose)\r\n  {\r\n    report(\"   width    = \" + fileSpec.get_full_width ());\r\n    report(\"   height   = \" + fileSpec.get_full_height());\r\n    report(\"   channels = \" + fileSpec.get_nchannels  ());\r\n  }\r\n  if (fileSpec.get_full_width() <= 0 || fileSpec.get_full_height() <= 0)\r\n  {\r\n    if (verbose)  report(\"ERROR: bad image resolution.\");\r\n    return;\r\n  }\r\n  \r\n  // set output image from image file data.\r\n  OpenImageTypeDesc fileDesc = OpenImageTypeDesc(OpenImage_BASETYPE_FLOAT, OpenImage_AGGREGATE_SCALAR, OpenImage_VECSEMANTICS_NOXFORM);\r\n  switch (fileSpec.get_nchannels())\r\n  {\r\n    case 1:    // gray scale.\r\n    {\r\n      image.resize(fileSpec.get_full_width(), fileSpec.get_full_height());\r\n      Float32 tmp[];\r\n      tmp.resize(image.width * image.height);\r\n      Data data = tmp.data();\r\n      success = file.read_image(fileDesc, data, 0, 0, 0);\r\n      if (success)\r\n      {\r\n        for (UInt32 i=0;i<image.pixels.size();i++)\r\n        {\r\n          image.pixels[i].r = tmp[i];\r\n          image.pixels[i].g = tmp[i];\r\n          image.pixels[i].b = tmp[i];\r\n          image.pixels[i].a = 1.0;\r\n        }\r\n      }\r\n      else\r\n        if (verbose)  report(\"ERROR: read error.\");\r\n      break;\r\n    }\r\n    case 3:    // RGB.\r\n    {\r\n      image.resize(fileSpec.get_full_width(), fileSpec.get_full_height());\r\n      Float32 tmp[];\r\n      tmp.resize(image.width * image.height * 3);\r\n      Data data = tmp.data();\r\n      success = file.read_image(fileDesc, data, 0, 0, 0);\r\n      if (success)\r\n      {\r\n        UInt32 offset = 0;\r\n        for (UInt32 i=0;i<image.pixels.size();i++)\r\n        {\r\n          image.pixels[i].r = tmp[offset++];\r\n          image.pixels[i].g = tmp[offset++];\r\n          image.pixels[i].b = tmp[offset++];\r\n          image.pixels[i].a = 1.0;\r\n        }\r\n      }\r\n      else\r\n        if (verbose)  report(\"ERROR: read error.\");\r\n      break;\r\n    }\r\n    case 4:    // RGBA.\r\n    {\r\n      image.resize(fileSpec.get_full_width(), fileSpec.get_full_height());\r\n      Data data = image.pixels.data();\r\n      success = file.read_image(fileDesc, data, 0, 0, 0);\r\n      if (!success)\r\n        if (verbose)  report(\"ERROR: read error.\");\r\n      break;\r\n    }\r\n    default:   // unsupported amount of channels.\r\n    {\r\n      if (verbose)  report(\"ERROR: unsupported amount of channels.\");\r\n      break;\r\n    }\r\n  }\r\n  \r\n  // done.\r\n  if (success && verbose)\r\n    report(\"image successfully read.\");\r\n}\r\n\r\n"
+            }
+          },
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\":365.0,\"y\":153.0}"
+            },
+          "name" : "Cache_2",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "value"
+              }
+            ],
+          "executable" : "Fabric.Core.Data.Cache",
+          "presetGUID" : "D903AFD981FE9214C69943F542D5FD60"
+          },
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\":957.7288818359375,\"y\":208.054931640625}"
+            },
+          "name" : "imageMetaData",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "image"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "pixels"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "width"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "height"
+              }
+            ],
+          "definition" : {
+            "objectType" : "Func",
+            "title" : "imageMetaData",
+            "ports" : [
+              {
+                "objectType" : "Port",
+                "nodePortType" : "Out",
+                "name" : "image",
+                "execPortType" : "In",
+                "typeSpec" : "Image2D"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "pixels",
+                "execPortType" : "Out",
+                "typeSpec" : "Color[]"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "width",
+                "execPortType" : "Out",
+                "typeSpec" : "Size"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "height",
+                "execPortType" : "Out",
+                "typeSpec" : "Size"
+                }
+              ],
+            "extDeps" : {},
+            "code" : "dfgEntry {\r\n  //result = lhs + rhs;\r\n  pixels = image.pixels;\r\n  width = image.width;\r\n  height = image.height;\r\n}\r\n"
+            }
+          }
+        ],
+      "connections" : {
+        "verbose" : [
+          "applyLoadImage.verbose"
+          ],
+        "filePath" : [
+          "applyLoadImage.filePath"
+          ],
+        "applyLoadImage.image" : [
+          "Cache_2.value"
+          ],
+        "Cache_2.value" : [
+          "imageMetaData.image"
+          ],
+        "imageMetaData.image" : [
+          "result"
+          ],
+        "imageMetaData.pixels" : [
+          "pixels"
+          ],
+        "imageMetaData.width" : [
+          "width"
+          ],
+        "imageMetaData.height" : [
+          "height"
+          ]
+        }
+      },
+    "Fabric.Core.Data.Cache" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiNodeColor" : "{\n  \"r\" : 214,\n  \"g\" : 191,\n  \"b\" : 103\n  }",
+        "uiAlwaysShowDaisyChainPorts" : "true",
+        "uiHeaderColor" : "{\n  \"r\" : 188,\n  \"g\" : 129,\n  \"b\" : 83\n  }"
+        },
+      "title" : "Cache",
+      "cacheRule" : "always",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "value",
+          "execPortType" : "In",
+          "typeSpec" : "$TYPE$"
+          }
+        ],
+      "extDeps" : {},
+      "presetGUID" : "D903AFD981FE9214C69943F542D5FD60",
+      "code" : "dfgEntry {\n}\n"
+      },
+    "User.Fourier.FourierSeries" : {
+      "objectType" : "Graph",
+      "metadata" : {
+        "camera_mat44" : "{\n  \"row0\" : {\n    \"x\" : -0.9995133280754089,\n    \"y\" : -0.04420386627316475,\n    \"z\" : 0.008044050075113773,\n    \"t\" : 5.830448627471924\n    },\n  \"row1\" : {\n    \"x\" : 1.643713176235906e-06,\n    \"y\" : 0.1789751052856445,\n    \"z\" : 0.9840894937515259,\n    \"t\" : 160.0549163818359\n    },\n  \"row2\" : {\n    \"x\" : -0.04495096951723099,\n    \"y\" : 0.9829075336456299,\n    \"z\" : -0.178828626871109,\n    \"t\" : -28.76544189453125\n    },\n  \"row3\" : {\n    \"x\" : 0,\n    \"y\" : 0,\n    \"z\" : 0,\n    \"t\" : 1\n    }\n  }",
+        "timeline_start" : "1",
+        "timeline_loopMode" : "1",
+        "uiGraphZoom" : "{\n  \"value\" : 2.147008657455444\n  }",
+        "timeline_simMode" : "0",
+        "camera_focalDistance" : "157.6495208740234",
+        "timeline_current" : "1",
+        "timeline_end" : "50",
+        "uiGraphPan" : "{\n  \"x\" : -1277.029663085938,\n  \"y\" : -853.4037475585938\n  }"
+        },
+      "title" : "",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "data",
+          "execPortType" : "In"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "order",
+          "execPortType" : "In",
+          "typeSpec" : "UInt32"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "sincoefficients",
+          "execPortType" : "Out",
+          "typeSpec" : "Float64[]"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "coscoefficients",
+          "execPortType" : "Out",
+          "typeSpec" : "Float64[]"
+          }
+        ],
+      "extDeps" : {},
+      "nodes" : [
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\":853.2648315429688,\"y\":446.7018737792969}"
+            },
+          "name" : "FourierSeries_2",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "data"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "order"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "sincoefficients"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "coscoefficients"
+              }
+            ],
+          "definition" : {
+            "objectType" : "Func",
+            "title" : "FourierSeries",
+            "ports" : [
+              {
+                "objectType" : "Port",
+                "nodePortType" : "Out",
+                "name" : "data",
+                "execPortType" : "In",
+                "typeSpec" : "$TYPE$[]"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "Out",
+                "name" : "order",
+                "execPortType" : "In",
+                "typeSpec" : "UInt32"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "sincoefficients",
+                "execPortType" : "Out",
+                "typeSpec" : "Float64[]"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "coscoefficients",
+                "execPortType" : "Out",
+                "typeSpec" : "Float64[]"
+                }
+              ],
+            "extDeps" : {},
+            "code" : "dfgEntry {\n  sincoefficients.resize(0);\n  coscoefficients.resize(0);\n  Float64 doublepi = 6.28318530717958648;\n  Float64 multiplier;\n  for (UInt32 j = 0 ; j < order + 1 ; j++){\n      Float64 sinsum = 0;\n      Float64 cossum = 0;\n      multiplier = 1;\n      if (j==0){\n        multiplier = 0.5;\n      }\n      for (UInt32 i = 0 ; i<data.size() ; i++){\n        sinsum = sinsum + ( 2. / data.size() ) * sin( ( doublepi * j * i )/ data.size() ) * data[i] ;\n        cossum = cossum + ( 2. * multiplier / data.size() ) * cos( ( doublepi * j * i )/ data.size() ) * data[i] ;\n      }\n      sincoefficients.push(sinsum);\n      coscoefficients.push(cossum);\n   }\n}\n"
+            }
+          }
+        ],
+      "connections" : {
+        "data" : [
+          "FourierSeries_2.data"
+          ],
+        "order" : [
+          "FourierSeries_2.order"
+          ],
+        "FourierSeries_2.sincoefficients" : [
+          "sincoefficients"
+          ],
+        "FourierSeries_2.coscoefficients" : [
+          "coscoefficients"
+          ]
+        }
+      },
+    "User.findingedge" : {
+      "objectType" : "Graph",
+      "metadata" : {
+        "camera_mat44" : "{\n  \"row0\" : {\n    \"x\" : -0.9995133280754089,\n    \"y\" : -0.04420386627316475,\n    \"z\" : 0.008044050075113773,\n    \"t\" : 5.830448627471924\n    },\n  \"row1\" : {\n    \"x\" : 1.643713176235906e-06,\n    \"y\" : 0.1789751052856445,\n    \"z\" : 0.9840894937515259,\n    \"t\" : 160.0549163818359\n    },\n  \"row2\" : {\n    \"x\" : -0.04495096951723099,\n    \"y\" : 0.9829075336456299,\n    \"z\" : -0.178828626871109,\n    \"t\" : -28.76544189453125\n    },\n  \"row3\" : {\n    \"x\" : 0,\n    \"y\" : 0,\n    \"z\" : 0,\n    \"t\" : 1\n    }\n  }",
+        "timeline_start" : "1",
+        "timeline_loopMode" : "1",
+        "uiGraphZoom" : "{\n  \"value\" : 1.058385133743286\n  }",
+        "timeline_simMode" : "0",
+        "camera_focalDistance" : "157.6495208740234",
+        "timeline_current" : "1",
+        "timeline_end" : "50",
+        "uiGraphPan" : "{\n  \"x\" : 1312.736830574562,\n  \"y\" : -136.4933308564832\n  }"
+        },
+      "title" : "",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "pixels",
+          "execPortType" : "In",
+          "typeSpec" : "Color[]"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "xdata",
+          "execPortType" : "Out"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "ydata",
+          "execPortType" : "Out"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "depthdata",
+          "execPortType" : "Out"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "width",
+          "execPortType" : "In",
+          "typeSpec" : "Size"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "height",
+          "execPortType" : "In",
+          "typeSpec" : "Size"
+          }
+        ],
+      "extDeps" : {},
+      "nodes" : [
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\":-747.0846557617188,\"y\":149.0887603759766}"
+            },
+          "name" : "findingedge",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "pixels"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "width"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "height"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "xdata"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "ydata"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "depthdata"
+              }
+            ],
+          "definition" : {
+            "objectType" : "Graph",
+            "metadata" : {
+              "uiGraphZoom" : "{\n  \"value\" : 0.2327277660369873\n  }",
+              "uiGraphPan" : "{\n  \"x\" : 429.6724474811557,\n  \"y\" : 51.40724046528334\n  }"
+              },
+            "title" : "",
+            "ports" : [
+              {
+                "objectType" : "Port",
+                "nodePortType" : "Out",
+                "name" : "pixels",
+                "execPortType" : "In"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "Out",
+                "name" : "width",
+                "execPortType" : "In"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "Out",
+                "name" : "height",
+                "execPortType" : "In"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "xdata",
+                "execPortType" : "Out"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "ydata",
+                "execPortType" : "Out"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "depthdata",
+                "execPortType" : "Out"
+                }
+              ],
+            "extDeps" : {},
+            "nodes" : [
+              {
+                "objectType" : "Inst",
+                "metadata" : {
+                  "uiGraphPos" : "{\"x\":-326.8580017089844,\"y\":383.3693542480469}"
+                  },
+                "name" : "findfirstpixel",
+                "ports" : [
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "Out",
+                    "name" : "xstart"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "Out",
+                    "name" : "ystart"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "pixels"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "width"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "height"
+                    }
+                  ],
+                "definition" : {
+                  "objectType" : "Func",
+                  "title" : "findfirstpixel",
+                  "ports" : [
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "In",
+                      "name" : "xstart",
+                      "execPortType" : "Out",
+                      "typeSpec" : "UInt32"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "In",
+                      "name" : "ystart",
+                      "execPortType" : "Out",
+                      "typeSpec" : "UInt32"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "Out",
+                      "name" : "pixels",
+                      "execPortType" : "In",
+                      "typeSpec" : "Color[]"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "Out",
+                      "name" : "width",
+                      "execPortType" : "In",
+                      "typeSpec" : "Size"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "Out",
+                      "name" : "height",
+                      "execPortType" : "In",
+                      "typeSpec" : "Size"
+                      }
+                    ],
+                  "extDeps" : {},
+                  "code" : "dfgEntry {\n  // This fuction searches for an edge in the picture.\n   // Our height is the number of rows of pixels\n   xstart = 0;\n  for (UInt32 row = 0; row < height; row++)\n  {\n    // For each row, find the maximum pixel R value\n    for (UInt32 column = 0; column < width; column++)\n    {\n      // The pixels are stored in a 1D array, where\n      // the rows are packed together.  We find the \n      // correct pixel by expanding our 2D indices\n      // to a 1D address\n      if (pixels[row * width + column].r > 0)\n      {\n        xstart = row;\n        ystart = column;\n      }\n      if (xstart > 0)\n        break;\n    }\n     if (xstart > 0)\n       break;\n  }\n}"
+                  }
+                },
+              {
+                "objectType" : "Inst",
+                "metadata" : {
+                  "uiGraphPos" : "{\"x\":-29.80117797851563,\"y\":399.9150085449219}",
+                  "uiCollapsedState" : "0"
+                  },
+                "name" : "findingsecondpixel_2",
+                "ports" : [
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "xstart"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "ystart"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "pixels"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "width"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "height"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "Out",
+                    "name" : "xfirst"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "Out",
+                    "name" : "yfirst"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "Out",
+                    "name" : "directionfirst"
+                    }
+                  ],
+                "definition" : {
+                  "objectType" : "Func",
+                  "title" : "findingsecondpixel",
+                  "ports" : [
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "Out",
+                      "name" : "xstart",
+                      "execPortType" : "In",
+                      "typeSpec" : "$TYPE$"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "Out",
+                      "name" : "ystart",
+                      "execPortType" : "In",
+                      "typeSpec" : "$TYPE$"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "Out",
+                      "name" : "pixels",
+                      "execPortType" : "In",
+                      "typeSpec" : "Color[]"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "Out",
+                      "name" : "width",
+                      "execPortType" : "In",
+                      "typeSpec" : "$TYPE$"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "Out",
+                      "name" : "height",
+                      "execPortType" : "In",
+                      "typeSpec" : "$TYPE$"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "In",
+                      "name" : "xfirst",
+                      "execPortType" : "Out",
+                      "typeSpec" : "UInt32"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "In",
+                      "name" : "yfirst",
+                      "execPortType" : "Out",
+                      "typeSpec" : "UInt32"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "In",
+                      "name" : "directionfirst",
+                      "execPortType" : "Out",
+                      "typeSpec" : "UInt8"
+                      }
+                    ],
+                  "extDeps" : {},
+                  "code" : "dfgEntry {\n   if (pixels[xstart* width + ystart + 1].r > 0)\n   {\n     directionfirst = 1;\n     xfirst = xstart;\n     yfirst = ystart+1;\n   }\n   else if (pixels[(xstart+1)* width + ystart ].r > 0)\n   {\n     directionfirst = 2;\n     xfirst = xstart+1;\n     yfirst = ystart;\n   }\n   else\n   {\n   report('Isolated pixel');\n   }\n   \n  //result = lhs + rhs;\n}\n"
+                  }
+                },
+              {
+                "objectType" : "Inst",
+                "metadata" : {
+                  "uiGraphPos" : "{\"x\":411.5535583496094,\"y\":370.0595397949219}"
+                  },
+                "name" : "findingremainingedgepixels",
+                "ports" : [
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "xstart"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "ystart"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "pixels"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "width"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "height"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "xfirst"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "yfirst"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "In",
+                    "name" : "directionfirst"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "Out",
+                    "name" : "xdata"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "Out",
+                    "name" : "ydata"
+                    },
+                  {
+                    "objectType" : "InstPort",
+                    "nodePortType" : "Out",
+                    "name" : "depthdata"
+                    }
+                  ],
+                "definition" : {
+                  "objectType" : "Func",
+                  "title" : "findingremainingedgepixels",
+                  "ports" : [
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "Out",
+                      "name" : "xstart",
+                      "execPortType" : "In",
+                      "typeSpec" : "$TYPE$"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "Out",
+                      "name" : "ystart",
+                      "execPortType" : "In",
+                      "typeSpec" : "$TYPE$"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "Out",
+                      "name" : "pixels",
+                      "execPortType" : "In",
+                      "typeSpec" : "Color[]"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "Out",
+                      "name" : "width",
+                      "execPortType" : "In",
+                      "typeSpec" : "$TYPE$"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "Out",
+                      "name" : "height",
+                      "execPortType" : "In",
+                      "typeSpec" : "$TYPE$"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "Out",
+                      "name" : "xfirst",
+                      "execPortType" : "In",
+                      "typeSpec" : "$TYPE$"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "Out",
+                      "name" : "yfirst",
+                      "execPortType" : "In",
+                      "typeSpec" : "$TYPE$"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "Out",
+                      "name" : "directionfirst",
+                      "execPortType" : "In",
+                      "typeSpec" : "$TYPE$"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "In",
+                      "name" : "xdata",
+                      "execPortType" : "Out",
+                      "typeSpec" : "Float64[]"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "In",
+                      "name" : "ydata",
+                      "execPortType" : "Out",
+                      "typeSpec" : "Float64[]"
+                      },
+                    {
+                      "objectType" : "Port",
+                      "nodePortType" : "In",
+                      "name" : "depthdata",
+                      "execPortType" : "Out",
+                      "typeSpec" : "Float64[]"
+                      }
+                    ],
+                  "extDeps" : {},
+                  "code" : "dfgEntry {\n  \n    UInt8 direction = directionfirst;\n    xdata.resize(0);\n    ydata.resize(0);\n    depthdata.resize(0);\n    UInt32 xcurrent = xfirst;\n    UInt32 ycurrent = yfirst;\n    xdata.push(xcurrent);\n    ydata.push(ycurrent);\n    depthdata.push(pixels[ (xcurrent  ) * width + (ycurrent) ].r);\n    \n    while((xcurrent != xstart || ycurrent != ystart)){\n\n      // The first step is to identify where we are coming from. this is stored in direction. \n      // Direction has 4 options 1 moving to the right, 2 moving down, 3 moving to the left, 4 moving up. \n      // All of these directions are global or relative to the picture. These are the targets of the switch statements\n      switch(direction){\n\t\t  case 1:\n\t\t  {//brace opening the case\n\t\t\t  if (pixels[ (xcurrent-1) * width + (ycurrent  ) ].r > 0){\n\t\t\t\t  xcurrent--;\n\t\t\t\t  direction = 4;\n\t\t\t  } else if (pixels[ (xcurrent  ) * width + (ycurrent+1) ].r > 0){\n\t\t\t\t  ycurrent++;\n\t\t\t\t  direction = 1;\n  \t\t\t} else if (pixels[ (xcurrent+1) * width + (ycurrent  ) ].r > 0){\n\t  \t\t\txcurrent++;\n\t\t  \t\tdirection = 2;\n\t\t\t  } else if (pixels[ (xcurrent  ) * width + (ycurrent-1) ].r > 0){\n\t\t\t\t  ycurrent--;\n  \t\t\t\tdirection = 3;\n\t  \t\t}\n        break; \n  \t\t}//brace closing the case\n\t  \tcase 2:\n\t\t  {//brace opening the case\n\t\t\t  if (pixels[ (xcurrent  ) * width + (ycurrent+1) ].r > 0){\n\t\t\t\t  ycurrent++;\n  \t\t\t\tdirection = 1;\n\t  \t\t} else if (pixels[ (xcurrent+1) * width + (ycurrent  ) ].r > 0){\n\t\t  \t\txcurrent++;\n\t\t\t  \tdirection = 2;\n  \t\t\t} else if (pixels[ (xcurrent  ) * width + (ycurrent-1) ].r > 0){\n\t  \t\t\tycurrent--;\n\t\t  \t\tdirection = 3;\n\t\t\t  } else if (pixels[ (xcurrent-1) * width + (ycurrent  ) ].r > 0){\n\t\t\t\t  xcurrent--;\n  \t\t\t\tdirection = 4;\n\t  \t\t} \n        break;\n  \t\t}//brace closing the case\n\t  \tcase 3:\n\t\t  {//brace opening the case\n\t\t\t  if (pixels[ (xcurrent+1) * width + (ycurrent  ) ].r > 0){\n\t\t\t\t  xcurrent++;\n  \t\t\t\tdirection = 2;\n\t  \t\t} else if (pixels[ (xcurrent  ) * width + (ycurrent-1) ].r > 0){\n\t\t  \t\tycurrent--;\n\t\t\t  \tdirection = 3;\n  \t\t\t} else if(pixels[ (xcurrent-1) * width + (ycurrent  ) ].r > 0){\n\t  \t\t\txcurrent--;\n\t\t  \t\tdirection = 4;\n\t\t\t  } else if (pixels[ (xcurrent  ) * width + (ycurrent+1) ].r > 0){\n\t\t\t\t  ycurrent++;\n  \t\t\t\tdirection = 1;\n\t  \t\t} \n        break;\n  \t\t}//brace closing the case\n\t  \tcase 4:\n\t\t  {//brace opening the case\n\t\t\t  if (pixels[ (xcurrent  ) * width + (ycurrent-1) ].r > 0){\n\t\t\t\t  ycurrent--;\n  \t\t\t\tdirection = 3;\n\t  \t\t} else if (pixels[ (xcurrent-1) * width + (ycurrent  ) ].r > 0){\n\t\t  \t\txcurrent--;\n\t\t\t  \tdirection = 4;\n  \t\t\t} else if (pixels[ (xcurrent  ) * width + (ycurrent+1) ].r > 0){\n\t  \t\t\tycurrent++;\n\t\t  \t\tdirection = 1;\n\t\t\t  } else if (pixels[ (xcurrent+1) * width + (ycurrent  ) ].r > 0){\n\t\t\t\t  xcurrent++;\n  \t\t\t\tdirection = 2;\n\t  \t\t}\n  \t\t}//brace closing the case\n\t  }//brace closing the switch\n      xdata.push(xcurrent);\n      ydata.push(ycurrent);\n      depthdata.push(pixels[ (xcurrent  ) * width + (ycurrent  ) ].r);\n  } //brace closing the while loop\n\n}//brace closing the function\n"
+                  }
+                }
+              ],
+            "connections" : {
+              "pixels" : [
+                "findfirstpixel.pixels"
+                ],
+              "width" : [
+                "findfirstpixel.width"
+                ],
+              "height" : [
+                "findfirstpixel.height"
+                ],
+              "findfirstpixel.xstart" : [
+                "findingsecondpixel_2.xstart"
+                ],
+              "findfirstpixel.ystart" : [
+                "findingsecondpixel_2.ystart"
+                ],
+              "findfirstpixel.pixels" : [
+                "findingsecondpixel_2.pixels"
+                ],
+              "findfirstpixel.width" : [
+                "findingsecondpixel_2.width"
+                ],
+              "findfirstpixel.height" : [
+                "findingsecondpixel_2.height"
+                ],
+              "findingsecondpixel_2.xstart" : [
+                "findingremainingedgepixels.xstart"
+                ],
+              "findingsecondpixel_2.ystart" : [
+                "findingremainingedgepixels.ystart"
+                ],
+              "findingsecondpixel_2.pixels" : [
+                "findingremainingedgepixels.pixels"
+                ],
+              "findingsecondpixel_2.width" : [
+                "findingremainingedgepixels.width"
+                ],
+              "findingsecondpixel_2.height" : [
+                "findingremainingedgepixels.height"
+                ],
+              "findingsecondpixel_2.xfirst" : [
+                "findingremainingedgepixels.xfirst"
+                ],
+              "findingsecondpixel_2.yfirst" : [
+                "findingremainingedgepixels.yfirst"
+                ],
+              "findingsecondpixel_2.directionfirst" : [
+                "findingremainingedgepixels.directionfirst"
+                ],
+              "findingremainingedgepixels.xdata" : [
+                "xdata"
+                ],
+              "findingremainingedgepixels.ydata" : [
+                "ydata"
+                ],
+              "findingremainingedgepixels.depthdata" : [
+                "depthdata"
+                ]
+              }
+            },
+          "title" : "findingedge"
+          }
+        ],
+      "connections" : {
+        "pixels" : [
+          "findingedge.pixels"
+          ],
+        "width" : [
+          "findingedge.width"
+          ],
+        "height" : [
+          "findingedge.height"
+          ],
+        "findingedge.xdata" : [
+          "xdata"
+          ],
+        "findingedge.ydata" : [
+          "ydata"
+          ],
+        "findingedge.depthdata" : [
+          "depthdata"
+          ]
+        }
+      },
+    "Fabric.Exts.Math.Vec3.Set" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiNodeColor" : "{\n  \"r\" : 99,\n  \"g\" : 129,\n  \"b\" : 92\n  }",
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/Math/Vec3.html",
+        "uiTooltip" : "Setter from scalar components\n\n Supported by Vec3"
+        },
+      "title" : "Set",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 242,\n  \"b\" : 0\n  }"
+            },
+          "nodePortType" : "IO",
+          "name" : "this",
+          "execPortType" : "IO",
+          "typeSpec" : "Vec3"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "x",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "y",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "z",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar"
+          }
+        ],
+      "extDeps" : {
+        "Math" : "*"
+        },
+      "presetGUID" : "5EA9654EA22722B9C28894F46721480C",
+      "code" : "require Math;\n\ndfgEntry {\n  this.set(x, y, z);\n}\n"
+      }
+    },
+  "args" : [
+    {
+      "type" : "String",
+      "value" : "C:\\Users\\Nick\\Documents\\GitHub\\RnD_edgedetect\\Textures_original\\Bunny_Left.tga"
+      },
+    {
+      "type" : "UInt32",
+      "value" : 25
+      },
+    {
+      "type" : "Vec3",
+      "value" : {
+        "x" : 0,
+        "y" : 1,
+        "z" : 0
+        },
+      "ext" : "Math"
+      },
+    {
+      "type" : "Float32",
+      "value" : 100
+      },
+    {
+      "type" : "Vec3",
+      "value" : null,
+      "ext" : "Math"
+      },
+    {
+      "type" : "Vec3",
+      "value" : null,
+      "ext" : "Math"
+      }
+    ]
+  }

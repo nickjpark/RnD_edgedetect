@@ -1,0 +1,1832 @@
+{
+  "objectType" : "Graph",
+  "metadata" : {
+    "camera_mat44" : "{\n  \"row0\" : {\n    \"x\" : 0.7999998331069946,\n    \"y\" : -0.2228345274925232,\n    \"z\" : 0.557086169719696,\n    \"t\" : 30\n    },\n  \"row1\" : {\n    \"x\" : -7.450580596923828e-09,\n    \"y\" : 0.9284766316413879,\n    \"z\" : 0.3713907599449158,\n    \"t\" : 20\n    },\n  \"row2\" : {\n    \"x\" : -0.6000002026557922,\n    \"y\" : -0.2971125841140747,\n    \"z\" : 0.7427811622619629,\n    \"t\" : 40\n    },\n  \"row3\" : {\n    \"x\" : 0,\n    \"y\" : 0,\n    \"z\" : 0,\n    \"t\" : 1\n    }\n  }",
+    "timeline_start" : "1",
+    "timeline_loopMode" : "1",
+    "timeline_simMode" : "0",
+    "camera_focalDistance" : "53.85164642333984",
+    "timeline_current" : "1",
+    "timeline_end" : "50"
+    },
+  "title" : "",
+  "ports" : [
+    {
+      "objectType" : "Port",
+      "metadata" : {
+        "uiPersistValue" : "true"
+        },
+      "nodePortType" : "Out",
+      "name" : "filePath",
+      "execPortType" : "In",
+      "typeSpec" : "String"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "drawThis",
+      "execPortType" : "Out",
+      "typeSpec" : "DrawingHandle"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "dummyResult",
+      "execPortType" : "Out",
+      "typeSpec" : "Vec3"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {
+        "uiPersistValue" : "true"
+        },
+      "nodePortType" : "Out",
+      "name" : "position",
+      "execPortType" : "In",
+      "typeSpec" : "Vec3"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {
+        "uiPersistValue" : "true"
+        },
+      "nodePortType" : "Out",
+      "name" : "scale",
+      "execPortType" : "In",
+      "typeSpec" : "Scalar"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "dummyResult_2",
+      "execPortType" : "Out",
+      "typeSpec" : "Vec3"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {
+        "uiPersistValue" : "true"
+        },
+      "nodePortType" : "Out",
+      "name" : "position_2",
+      "execPortType" : "In",
+      "typeSpec" : "Vec3"
+      }
+    ],
+  "extDeps" : {},
+  "nodes" : [
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":617.0,\"y\":0.0}"
+        },
+      "name" : "inst",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "dummyResult"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "height"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "pixels"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "position"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "scale"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Graph",
+        "metadata" : {
+          "camera_mat44" : "{\n  \"row0\" : {\n    \"x\" : -0.9310875535011292,\n    \"y\" : -0.3603379428386688,\n    \"z\" : 0.06555097550153732,\n    \"t\" : 4.267117023468018\n    },\n  \"row1\" : {\n    \"x\" : 1.267364723389619e-06,\n    \"y\" : 0.1789405345916748,\n    \"z\" : 0.9841665029525757,\n    \"t\" : 68.12296295166016\n    },\n  \"row2\" : {\n    \"x\" : -0.3664500117301941,\n    \"y\" : 0.9155585765838623,\n    \"z\" : -0.166550487279892,\n    \"t\" : -12.58343410491943\n    },\n  \"row3\" : {\n    \"x\" : 0,\n    \"y\" : 0,\n    \"z\" : 0,\n    \"t\" : 1\n    }\n  }",
+          "timeline_start" : "1",
+          "timeline_loopMode" : "1",
+          "uiGraphZoom" : "{\n  \"value\" : 1.521884322166443\n  }",
+          "timeline_simMode" : "0",
+          "camera_focalDistance" : "64.86742401123047",
+          "timeline_current" : "1",
+          "timeline_end" : "50",
+          "uiGraphPan" : "{\n  \"x\" : -268.8136279036172,\n  \"y\" : -1450.896228576101\n  }"
+          },
+        "title" : "",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "dummyResult",
+            "execPortType" : "Out",
+            "typeSpec" : "Vec3"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "width",
+            "execPortType" : "In",
+            "typeSpec" : "UInt32"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "height",
+            "execPortType" : "In",
+            "typeSpec" : "UInt32"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "pixels",
+            "execPortType" : "In",
+            "typeSpec" : "Color[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "position",
+            "execPortType" : "In",
+            "typeSpec" : "Vec3"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "scale",
+            "execPortType" : "In",
+            "typeSpec" : "Scalar"
+            }
+          ],
+        "extDeps" : {},
+        "nodes" : [
+          {
+            "objectType" : "Inst",
+            "metadata" : {
+              "uiGraphPos" : "{\"x\":405.229736328125,\"y\":985.8463134765625}"
+              },
+            "name" : "DrawPixels",
+            "ports" : [
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "width"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "height"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "pixels"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "dummyResult"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "position"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "scale"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "ori"
+                }
+              ],
+            "definition" : {
+              "objectType" : "Graph",
+              "metadata" : {
+                "uiGraphZoom" : "{\n  \"value\" : 0.8475913405418396\n  }",
+                "uiGraphPan" : "{\n  \"x\" : -299.9125867476896,\n  \"y\" : 73.68894752730603\n  }"
+                },
+              "title" : "DrawPixels",
+              "ports" : [
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "width",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "height",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "pixels",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "In",
+                  "name" : "dummyResult",
+                  "execPortType" : "Out"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "position",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "scale",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "ori",
+                  "execPortType" : "In",
+                  "typeSpec" : "Quat"
+                  }
+                ],
+              "extDeps" : {},
+              "nodes" : [
+                {
+                  "objectType" : "Inst",
+                  "metadata" : {
+                    "uiGraphPos" : "{\"x\":1020.531127929688,\"y\":31.68296813964844}"
+                    },
+                  "name" : "EmptyDrawingHandle",
+                  "ports" : [
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "Out",
+                      "name" : "handle"
+                      }
+                    ],
+                  "executable" : "Fabric.Exts.InlineDrawing.DrawingHandle.EmptyDrawingHandle",
+                  "presetGUID" : "2440020BA6A1CAB1CEB690A198F99C70"
+                  },
+                {
+                  "objectType" : "Inst",
+                  "metadata" : {
+                    "uiGraphPos" : "{\"x\":1426.236206054688,\"y\":-32.56679916381836}"
+                    },
+                  "name" : "DrawTexturedPlane_1",
+                  "ports" : [
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "IO",
+                      "name" : "this"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "name"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "width"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "height"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "pixels"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "mirrorU"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "mirrorV"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "discardAlpha"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "transform"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "Out",
+                      "name" : "dummyResult"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "Out",
+                      "name" : "instance"
+                      }
+                    ],
+                  "executable" : "Fabric.Exts.InlineDrawing.DrawingHandle.DrawTexturedPlane",
+                  "presetGUID" : "0777B8FB148911AD43CC8258FA698C46"
+                  },
+                {
+                  "objectType" : "Inst",
+                  "metadata" : {
+                    "uiGraphPos" : "{\"x\":829.9246826171875,\"y\":132.7741546630859}"
+                    },
+                  "name" : "Xfo_1",
+                  "ports" : [
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "ori"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "tr"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "sc"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "Out",
+                      "name" : "result"
+                      }
+                    ],
+                  "executable" : "Fabric.Exts.Math.Xfo.Xfo",
+                  "presetGUID" : "A0F6CD63A2069530481F214C62A069AA"
+                  },
+                {
+                  "objectType" : "Inst",
+                  "metadata" : {
+                    "uiGraphPos" : "{\"x\":495.0647277832031,\"y\":17.14056396484375}"
+                    },
+                  "name" : "Vec3_1",
+                  "ports" : [
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "x"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "y"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "z"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "Out",
+                      "name" : "result"
+                      }
+                    ],
+                  "executable" : "Fabric.Exts.Math.Vec3.Vec3",
+                  "presetGUID" : "A59E49949F21CFCB14B5711D52330BA7"
+                  }
+                ],
+              "connections" : {
+                "width" : [
+                  "DrawTexturedPlane_1.width"
+                  ],
+                "height" : [
+                  "DrawTexturedPlane_1.height"
+                  ],
+                "pixels" : [
+                  "DrawTexturedPlane_1.pixels"
+                  ],
+                "position" : [
+                  "Xfo_1.tr"
+                  ],
+                "scale" : [
+                  "Vec3_1.x",
+                  "Vec3_1.y",
+                  "Vec3_1.z"
+                  ],
+                "ori" : [
+                  "Xfo_1.ori"
+                  ],
+                "EmptyDrawingHandle.handle" : [
+                  "DrawTexturedPlane_1.this"
+                  ],
+                "DrawTexturedPlane_1.dummyResult" : [
+                  "dummyResult"
+                  ],
+                "Xfo_1.result" : [
+                  "DrawTexturedPlane_1.transform"
+                  ],
+                "Vec3_1.result" : [
+                  "Xfo_1.sc"
+                  ]
+                }
+              }
+            }
+          ],
+        "connections" : {
+          "width" : [
+            "DrawPixels.width"
+            ],
+          "height" : [
+            "DrawPixels.height"
+            ],
+          "pixels" : [
+            "DrawPixels.pixels"
+            ],
+          "position" : [
+            "DrawPixels.position"
+            ],
+          "scale" : [
+            "DrawPixels.scale"
+            ],
+          "DrawPixels.dummyResult" : [
+            "dummyResult"
+            ]
+          }
+        }
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":186.0,\"y\":21.0}"
+        },
+      "name" : "LoadImage_2",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "verbose"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "filePath"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "result"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "pixels"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "height"
+          }
+        ],
+      "executable" : "User.LoadImage",
+      "presetGUID" : "29F3D286CA26AB0FB489A3E7F5F2EB11"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":338.0,\"y\":179.0}"
+        },
+      "name" : "func",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "pixels"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "height"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "array"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Func",
+        "title" : "func",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "pixels",
+            "execPortType" : "In",
+            "typeSpec" : "Color[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "width",
+            "execPortType" : "In",
+            "typeSpec" : "Size"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "height",
+            "execPortType" : "In",
+            "typeSpec" : "Size"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "array",
+            "execPortType" : "Out",
+            "typeSpec" : "Float64[]"
+            }
+          ],
+        "extDeps" : {},
+        "code" : "dfgEntry {\n  array.resize(0);\n  for(UInt32 row = 0 ; row < height ; row++){\n    for (UInt32 column = 0 ; column < width ; column++){\n      array.push(pixels[ row * width + column].r);\n    }\n  }\n}\n"
+        }
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":791.0,\"y\":241.0}"
+        },
+      "name" : "Set_2",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "IO",
+          "name" : "this"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "r"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "g"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "b"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "a"
+          }
+        ],
+      "executable" : "Fabric.Exts.Math.Color.SetArray",
+      "presetGUID" : "5F559A6D1D67286942B2C4019999E76A"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":495.0,\"y\":179.0}"
+        },
+      "name" : "func_2",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "arrayin"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "arrayout"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Func",
+        "title" : "func",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "arrayin",
+            "execPortType" : "In",
+            "typeSpec" : "Float64[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "arrayout",
+            "execPortType" : "Out",
+            "typeSpec" : "Scalar[]"
+            }
+          ],
+        "extDeps" : {},
+        "code" : "dfgEntry {\n  arrayout.resize(0);\n  for(UInt32 i = 0 ; i<arrayin.size() ; i++){\n    arrayout.push(arrayin[i]);\n  }//result = lhs + rhs;\n}\n"
+        }
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":926.0,\"y\":181.0}"
+        },
+      "name" : "inst_2",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "dummyResult"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "width"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "height"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "pixels"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "position"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "scale"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Graph",
+        "metadata" : {
+          "camera_mat44" : "{\n  \"row0\" : {\n    \"x\" : -0.9310875535011292,\n    \"y\" : -0.3603379428386688,\n    \"z\" : 0.06555097550153732,\n    \"t\" : 4.267117023468018\n    },\n  \"row1\" : {\n    \"x\" : 1.267364723389619e-06,\n    \"y\" : 0.1789405345916748,\n    \"z\" : 0.9841665029525757,\n    \"t\" : 68.12296295166016\n    },\n  \"row2\" : {\n    \"x\" : -0.3664500117301941,\n    \"y\" : 0.9155585765838623,\n    \"z\" : -0.166550487279892,\n    \"t\" : -12.58343410491943\n    },\n  \"row3\" : {\n    \"x\" : 0,\n    \"y\" : 0,\n    \"z\" : 0,\n    \"t\" : 1\n    }\n  }",
+          "timeline_start" : "1",
+          "timeline_loopMode" : "1",
+          "uiGraphZoom" : "{\n  \"value\" : 1.521884322166443\n  }",
+          "timeline_simMode" : "0",
+          "camera_focalDistance" : "64.86742401123047",
+          "timeline_current" : "1",
+          "timeline_end" : "50",
+          "uiGraphPan" : "{\n  \"x\" : -268.8136279036172,\n  \"y\" : -1450.896228576101\n  }"
+          },
+        "title" : "",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "dummyResult",
+            "execPortType" : "Out",
+            "typeSpec" : "Vec3"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "width",
+            "execPortType" : "In",
+            "typeSpec" : "UInt32"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "height",
+            "execPortType" : "In",
+            "typeSpec" : "UInt32"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "pixels",
+            "execPortType" : "In",
+            "typeSpec" : "Color[]"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "position",
+            "execPortType" : "In",
+            "typeSpec" : "Vec3"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "scale",
+            "execPortType" : "In",
+            "typeSpec" : "Scalar"
+            }
+          ],
+        "extDeps" : {},
+        "nodes" : [
+          {
+            "objectType" : "Inst",
+            "metadata" : {
+              "uiGraphPos" : "{\"x\":405.229736328125,\"y\":985.8463134765625}"
+              },
+            "name" : "DrawPixels",
+            "ports" : [
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "width"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "height"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "pixels"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "Out",
+                "name" : "dummyResult"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "position"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "scale"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "ori"
+                }
+              ],
+            "definition" : {
+              "objectType" : "Graph",
+              "metadata" : {
+                "uiGraphZoom" : "{\n  \"value\" : 0.8475913405418396\n  }",
+                "uiGraphPan" : "{\n  \"x\" : -299.9125867476896,\n  \"y\" : 73.68894752730603\n  }"
+                },
+              "title" : "DrawPixels",
+              "ports" : [
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "width",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "height",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "pixels",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "In",
+                  "name" : "dummyResult",
+                  "execPortType" : "Out"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "position",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "scale",
+                  "execPortType" : "In"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "ori",
+                  "execPortType" : "In",
+                  "typeSpec" : "Quat"
+                  }
+                ],
+              "extDeps" : {},
+              "nodes" : [
+                {
+                  "objectType" : "Inst",
+                  "metadata" : {
+                    "uiGraphPos" : "{\"x\":1020.531127929688,\"y\":31.68296813964844}"
+                    },
+                  "name" : "EmptyDrawingHandle",
+                  "ports" : [
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "Out",
+                      "name" : "handle"
+                      }
+                    ],
+                  "executable" : "Fabric.Exts.InlineDrawing.DrawingHandle.EmptyDrawingHandle",
+                  "presetGUID" : "2440020BA6A1CAB1CEB690A198F99C70"
+                  },
+                {
+                  "objectType" : "Inst",
+                  "metadata" : {
+                    "uiGraphPos" : "{\"x\":1426.236206054688,\"y\":-32.56679916381836}"
+                    },
+                  "name" : "DrawTexturedPlane_1",
+                  "ports" : [
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "IO",
+                      "name" : "this"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "name"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "width"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "height"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "pixels"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "mirrorU"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "mirrorV"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "discardAlpha"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "transform"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "Out",
+                      "name" : "dummyResult"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "Out",
+                      "name" : "instance"
+                      }
+                    ],
+                  "executable" : "Fabric.Exts.InlineDrawing.DrawingHandle.DrawTexturedPlane",
+                  "presetGUID" : "0777B8FB148911AD43CC8258FA698C46"
+                  },
+                {
+                  "objectType" : "Inst",
+                  "metadata" : {
+                    "uiGraphPos" : "{\"x\":829.9246826171875,\"y\":132.7741546630859}"
+                    },
+                  "name" : "Xfo_1",
+                  "ports" : [
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "ori"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "tr"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "sc"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "Out",
+                      "name" : "result"
+                      }
+                    ],
+                  "executable" : "Fabric.Exts.Math.Xfo.Xfo",
+                  "presetGUID" : "A0F6CD63A2069530481F214C62A069AA"
+                  },
+                {
+                  "objectType" : "Inst",
+                  "metadata" : {
+                    "uiGraphPos" : "{\"x\":495.0647277832031,\"y\":17.14056396484375}"
+                    },
+                  "name" : "Vec3_1",
+                  "ports" : [
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "x"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "y"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "In",
+                      "name" : "z"
+                      },
+                    {
+                      "objectType" : "InstPort",
+                      "nodePortType" : "Out",
+                      "name" : "result"
+                      }
+                    ],
+                  "executable" : "Fabric.Exts.Math.Vec3.Vec3",
+                  "presetGUID" : "A59E49949F21CFCB14B5711D52330BA7"
+                  }
+                ],
+              "connections" : {
+                "width" : [
+                  "DrawTexturedPlane_1.width"
+                  ],
+                "height" : [
+                  "DrawTexturedPlane_1.height"
+                  ],
+                "pixels" : [
+                  "DrawTexturedPlane_1.pixels"
+                  ],
+                "position" : [
+                  "Xfo_1.tr"
+                  ],
+                "scale" : [
+                  "Vec3_1.x",
+                  "Vec3_1.y",
+                  "Vec3_1.z"
+                  ],
+                "ori" : [
+                  "Xfo_1.ori"
+                  ],
+                "EmptyDrawingHandle.handle" : [
+                  "DrawTexturedPlane_1.this"
+                  ],
+                "DrawTexturedPlane_1.dummyResult" : [
+                  "dummyResult"
+                  ],
+                "Xfo_1.result" : [
+                  "DrawTexturedPlane_1.transform"
+                  ],
+                "Vec3_1.result" : [
+                  "Xfo_1.sc"
+                  ]
+                }
+              }
+            }
+          ],
+        "connections" : {
+          "width" : [
+            "DrawPixels.width"
+            ],
+          "height" : [
+            "DrawPixels.height"
+            ],
+          "pixels" : [
+            "DrawPixels.pixels"
+            ],
+          "position" : [
+            "DrawPixels.position"
+            ],
+          "scale" : [
+            "DrawPixels.scale"
+            ],
+          "DrawPixels.dummyResult" : [
+            "dummyResult"
+            ]
+          }
+        }
+      }
+    ],
+  "connections" : {
+    "filePath" : [
+      "LoadImage_2.filePath"
+      ],
+    "position" : [
+      "inst.position"
+      ],
+    "scale" : [
+      "inst.scale",
+      "inst_2.scale"
+      ],
+    "position_2" : [
+      "inst_2.position"
+      ],
+    "inst.dummyResult" : [
+      "dummyResult"
+      ],
+    "inst.width" : [
+      "inst_2.width"
+      ],
+    "inst.height" : [
+      "inst_2.height"
+      ],
+    "LoadImage_2.pixels" : [
+      "func.pixels",
+      "inst.pixels"
+      ],
+    "LoadImage_2.width" : [
+      "func.width",
+      "inst.width"
+      ],
+    "LoadImage_2.height" : [
+      "func.height",
+      "inst.height"
+      ],
+    "func.array" : [
+      "func_2.arrayin"
+      ],
+    "Set_2.this" : [
+      "inst_2.pixels"
+      ],
+    "func_2.arrayout" : [
+      "Set_2.r",
+      "Set_2.g",
+      "Set_2.b",
+      "Set_2.a"
+      ],
+    "inst_2.dummyResult" : [
+      "dummyResult_2"
+      ]
+    },
+  "requiredPresets" : {
+    "Fabric.Exts.InlineDrawing.DrawingHandle.EmptyDrawingHandle" : {
+      "objectType" : "Graph",
+      "title" : "EmptyDrawingHandle",
+      "cacheRule" : "never",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "handle",
+          "execPortType" : "Out",
+          "typeSpec" : "DrawingHandle"
+          }
+        ],
+      "extDeps" : {},
+      "presetGUID" : "2440020BA6A1CAB1CEB690A198F99C70",
+      "nodes" : [
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\": 894, \"y\": 100}"
+            },
+          "name" : "Clear",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "IO",
+              "name" : "this"
+              }
+            ],
+          "executable" : "Fabric.Exts.InlineDrawing.DrawingHandle.Clear",
+          "presetGUID" : "39E8D81FA7C7C4A825877F16EFE3564F",
+          "cacheRule" : "never"
+          },
+        {
+          "objectType" : "Var",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\":567.0,\"y\":56.0}",
+            "uiCollapsedState" : "0"
+            },
+          "name" : "handleVar",
+          "ports" : [
+            {
+              "objectType" : "VarPort",
+              "nodePortType" : "IO",
+              "name" : "value"
+              }
+            ],
+          "dataType" : "DrawingHandle",
+          "extDep" : "InlineDrawing:*"
+          },
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\":287.0,\"y\":56.0}"
+            },
+          "name" : "CreateDrawingHandle",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "handle"
+              }
+            ],
+          "definition" : {
+            "objectType" : "Func",
+            "title" : "Create DrawingHandle",
+            "ports" : [
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "handle",
+                "execPortType" : "Out",
+                "typeSpec" : "DrawingHandle"
+                }
+              ],
+            "extDeps" : {
+              "InlineDrawing" : "*"
+              },
+            "code" : "dfgEntry {\n  handle = DrawingHandle();\n}\n"
+            }
+          }
+        ],
+      "connections" : {
+        "Clear.this" : [
+          "handle"
+          ],
+        "handleVar.value" : [
+          "Clear.this"
+          ],
+        "CreateDrawingHandle.handle" : [
+          "handleVar.value"
+          ]
+        }
+      },
+    "Fabric.Exts.InlineDrawing.DrawingHandle.Clear" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/InlineDrawing/DrawingHandle.html",
+        "uiTooltip" : "removes all contents from the DrawingHandle\n\n Supported by DrawingHandle"
+        },
+      "title" : "Clear",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "IO",
+          "name" : "this",
+          "execPortType" : "IO",
+          "typeSpec" : "DrawingHandle"
+          }
+        ],
+      "extDeps" : {
+        "InlineDrawing" : "*"
+        },
+      "presetGUID" : "39E8D81FA7C7C4A825877F16EFE3564F",
+      "code" : "require InlineDrawing;\n\ndfgEntry {\n  this.clear();\n}\n"
+      },
+    "Fabric.Exts.InlineDrawing.DrawingHandle.DrawTexturedPlane" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/InlineDrawing/DrawingHandle.html",
+        "uiTooltip" : "helper function to draw a plane given texture values + a single transform\n\n Supported by DrawingHandle"
+        },
+      "title" : "DrawTexturedPlane",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "IO",
+          "name" : "this",
+          "execPortType" : "IO",
+          "typeSpec" : "DrawingHandle"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "name",
+          "execPortType" : "In",
+          "typeSpec" : "String"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "UInt32" : 512
+            },
+          "name" : "width",
+          "execPortType" : "In",
+          "typeSpec" : "UInt32"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "UInt32" : 512
+            },
+          "name" : "height",
+          "execPortType" : "In",
+          "typeSpec" : "UInt32"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 0,\n  \"b\" : 0\n  }"
+            },
+          "nodePortType" : "Out",
+          "name" : "pixels",
+          "execPortType" : "In",
+          "typeSpec" : "Color[]"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Boolean" : false
+            },
+          "name" : "mirrorU",
+          "execPortType" : "In",
+          "typeSpec" : "Boolean"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Boolean" : true
+            },
+          "name" : "mirrorV",
+          "execPortType" : "In",
+          "typeSpec" : "Boolean"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Boolean" : false
+            },
+          "name" : "discardAlpha",
+          "execPortType" : "In",
+          "typeSpec" : "Boolean"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 249,\n  \"g\" : 157,\n  \"b\" : 28\n  }"
+            },
+          "nodePortType" : "Out",
+          "name" : "transform",
+          "execPortType" : "In",
+          "typeSpec" : "Xfo"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 242,\n  \"b\" : 0\n  }"
+            },
+          "nodePortType" : "In",
+          "name" : "dummyResult",
+          "execPortType" : "Out",
+          "typeSpec" : "Vec3"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "instance",
+          "execPortType" : "Out",
+          "typeSpec" : "InlineInstance"
+          }
+        ],
+      "extDeps" : {
+        "InlineDrawing" : "*"
+        },
+      "presetGUID" : "0777B8FB148911AD43CC8258FA698C46",
+      "code" : "require InlineDrawing;\n\ndfgEntry {\n  this.drawTexturedPlane(name, width, height, pixels, mirrorU, mirrorV, discardAlpha, transform, dummyResult, instance);\n}\n"
+      },
+    "Fabric.Exts.Math.Xfo.Xfo" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiNodeColor" : "{\n  \"r\" : 99,\n  \"g\" : 129,\n  \"b\" : 92\n  }",
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/Math/Xfo.html",
+        "uiTooltip" : "Constructor from the orientation, translation and scaling\n\n Supported by Xfo"
+        },
+      "title" : "Xfo",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 0,\n  \"g\" : 191,\n  \"b\" : 232\n  }"
+            },
+          "nodePortType" : "Out",
+          "name" : "ori",
+          "execPortType" : "In",
+          "typeSpec" : "Quat"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 242,\n  \"b\" : 0\n  }"
+            },
+          "nodePortType" : "Out",
+          "name" : "tr",
+          "execPortType" : "In",
+          "typeSpec" : "Vec3"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 242,\n  \"b\" : 0\n  }"
+            },
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Vec3" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+              }
+            },
+          "name" : "sc",
+          "execPortType" : "In",
+          "typeSpec" : "Vec3"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 249,\n  \"g\" : 157,\n  \"b\" : 28\n  }"
+            },
+          "nodePortType" : "In",
+          "name" : "result",
+          "execPortType" : "Out",
+          "typeSpec" : "Xfo"
+          }
+        ],
+      "extDeps" : {
+        "Math" : "*"
+        },
+      "presetGUID" : "A0F6CD63A2069530481F214C62A069AA",
+      "code" : "require Math;\n\ndfgEntry {\n  result = Xfo(ori, tr, sc);\n}\n"
+      },
+    "Fabric.Exts.Math.Vec3.Vec3" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiNodeColor" : "{\n  \"r\" : 99,\n  \"g\" : 129,\n  \"b\" : 92\n  }",
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/Math/Vec3.html",
+        "uiTooltip" : "Constructor from scalar components\n\n Supported by Vec3"
+        },
+      "title" : "Vec3",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "x",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "y",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "z",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar"
+          },
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 242,\n  \"b\" : 0\n  }"
+            },
+          "nodePortType" : "In",
+          "name" : "result",
+          "execPortType" : "Out",
+          "typeSpec" : "Vec3"
+          }
+        ],
+      "extDeps" : {
+        "Math" : "*"
+        },
+      "presetGUID" : "A59E49949F21CFCB14B5711D52330BA7",
+      "code" : "require Math;\n\ndfgEntry {\n  result = Vec3(x, y, z);\n}\n"
+      },
+    "User.LoadImage" : {
+      "objectType" : "Graph",
+      "metadata" : {
+        "uiNodeColor" : "{\n  \"r\" : 144,\n  \"g\" : 130,\n  \"b\" : 120\n  }",
+        "uiGraphZoom" : "{\n  \"value\" : 0.8138958215713501\n  }",
+        "uiHeaderColor" : "{\n  \"r\" : 115,\n  \"g\" : 105,\n  \"b\" : 75\n  }",
+        "uiTooltip" : "loads an image from disk",
+        "uiGraphPan" : "{\n  \"x\" : 21.2629981637001,\n  \"y\" : 9.372200310230255\n  }"
+        },
+      "title" : "LoadImage",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "verbose",
+          "execPortType" : "In",
+          "typeSpec" : "Boolean"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "String" : "C:\\Temp\\image1.jpg"
+            },
+          "name" : "filePath",
+          "execPortType" : "In",
+          "typeSpec" : "String"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "result",
+          "execPortType" : "Out",
+          "typeSpec" : "Image2DColor"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "pixels",
+          "execPortType" : "Out",
+          "typeSpec" : "Color[]"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "width",
+          "execPortType" : "Out",
+          "typeSpec" : "Size"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "height",
+          "execPortType" : "Out",
+          "typeSpec" : "Size"
+          }
+        ],
+      "extDeps" : {
+        "OpenImageIO" : "*",
+        "FileIO" : "*",
+        "Images" : "*"
+        },
+      "presetGUID" : "29F3D286CA26AB0FB489A3E7F5F2EB11",
+      "nodes" : [
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\":125.0,\"y\":50.0}"
+            },
+          "name" : "applyLoadImage",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "verbose"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "filePath"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "success"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "image"
+              }
+            ],
+          "definition" : {
+            "objectType" : "Func",
+            "title" : "applyLoadImage",
+            "ports" : [
+              {
+                "objectType" : "Port",
+                "nodePortType" : "Out",
+                "name" : "verbose",
+                "execPortType" : "In",
+                "typeSpec" : "Boolean"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "Out",
+                "name" : "filePath",
+                "execPortType" : "In",
+                "typeSpec" : "String"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "success",
+                "execPortType" : "Out",
+                "typeSpec" : "Boolean"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "image",
+                "execPortType" : "Out",
+                "typeSpec" : "Image2DColor"
+                }
+              ],
+            "extDeps" : {},
+            "code" : "require OpenImageIO;\r\nrequire FileIO;\r\nrequire Images;\r\n\r\ndfgEntry\r\n{ \r\n  // init the outputs.\r\n  success = false;\r\n  image   = Image2DColor();\r\n\r\n  // open the image file.\r\n  if (verbose)  report(\"opening image file \\\"\" + filePath + \"\\\"\");\r\n  OpenImageInput file = OpenImageInput();\r\n  file.open(filePath);\r\n  if(!file.valid())\r\n  {\r\n    if (verbose)  report(\"ERROR: unable to open image file.\");\r\n    return;\r\n  }\r\n  \r\n  // get the image file's specs, verbose and check image resolution.\r\n  OpenImageSpec fileSpec = file.spec();\r\n  if (verbose)\r\n  {\r\n    report(\"   width    = \" + fileSpec.get_full_width ());\r\n    report(\"   height   = \" + fileSpec.get_full_height());\r\n    report(\"   channels = \" + fileSpec.get_nchannels  ());\r\n  }\r\n  if (fileSpec.get_full_width() <= 0 || fileSpec.get_full_height() <= 0)\r\n  {\r\n    if (verbose)  report(\"ERROR: bad image resolution.\");\r\n    return;\r\n  }\r\n  \r\n  // set output image from image file data.\r\n  OpenImageTypeDesc fileDesc = OpenImageTypeDesc(OpenImage_BASETYPE_FLOAT, OpenImage_AGGREGATE_SCALAR, OpenImage_VECSEMANTICS_NOXFORM);\r\n  switch (fileSpec.get_nchannels())\r\n  {\r\n    case 1:    // gray scale.\r\n    {\r\n      image.resize(fileSpec.get_full_width(), fileSpec.get_full_height());\r\n      Float32 tmp[];\r\n      tmp.resize(image.width * image.height);\r\n      Data data = tmp.data();\r\n      success = file.read_image(fileDesc, data, 0, 0, 0);\r\n      if (success)\r\n      {\r\n        for (UInt32 i=0;i<image.pixels.size();i++)\r\n        {\r\n          image.pixels[i].r = tmp[i];\r\n          image.pixels[i].g = tmp[i];\r\n          image.pixels[i].b = tmp[i];\r\n          image.pixels[i].a = 1.0;\r\n        }\r\n      }\r\n      else\r\n        if (verbose)  report(\"ERROR: read error.\");\r\n      break;\r\n    }\r\n    case 3:    // RGB.\r\n    {\r\n      image.resize(fileSpec.get_full_width(), fileSpec.get_full_height());\r\n      Float32 tmp[];\r\n      tmp.resize(image.width * image.height * 3);\r\n      Data data = tmp.data();\r\n      success = file.read_image(fileDesc, data, 0, 0, 0);\r\n      if (success)\r\n      {\r\n        UInt32 offset = 0;\r\n        for (UInt32 i=0;i<image.pixels.size();i++)\r\n        {\r\n          image.pixels[i].r = tmp[offset++];\r\n          image.pixels[i].g = tmp[offset++];\r\n          image.pixels[i].b = tmp[offset++];\r\n          image.pixels[i].a = 1.0;\r\n        }\r\n      }\r\n      else\r\n        if (verbose)  report(\"ERROR: read error.\");\r\n      break;\r\n    }\r\n    case 4:    // RGBA.\r\n    {\r\n      image.resize(fileSpec.get_full_width(), fileSpec.get_full_height());\r\n      Data data = image.pixels.data();\r\n      success = file.read_image(fileDesc, data, 0, 0, 0);\r\n      if (!success)\r\n        if (verbose)  report(\"ERROR: read error.\");\r\n      break;\r\n    }\r\n    default:   // unsupported amount of channels.\r\n    {\r\n      if (verbose)  report(\"ERROR: unsupported amount of channels.\");\r\n      break;\r\n    }\r\n  }\r\n  \r\n  // done.\r\n  if (success && verbose)\r\n    report(\"image successfully read.\");\r\n}\r\n\r\n"
+            }
+          },
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\":365.0,\"y\":153.0}"
+            },
+          "name" : "Cache_2",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "value"
+              }
+            ],
+          "executable" : "Fabric.Core.Data.Cache",
+          "presetGUID" : "D903AFD981FE9214C69943F542D5FD60"
+          },
+        {
+          "objectType" : "Inst",
+          "metadata" : {
+            "uiGraphPos" : "{\"x\":957.7288818359375,\"y\":208.054931640625}"
+            },
+          "name" : "imageMetaData",
+          "ports" : [
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "In",
+              "name" : "image"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "pixels"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "width"
+              },
+            {
+              "objectType" : "InstPort",
+              "nodePortType" : "Out",
+              "name" : "height"
+              }
+            ],
+          "definition" : {
+            "objectType" : "Func",
+            "title" : "imageMetaData",
+            "ports" : [
+              {
+                "objectType" : "Port",
+                "nodePortType" : "Out",
+                "name" : "image",
+                "execPortType" : "In",
+                "typeSpec" : "Image2D"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "pixels",
+                "execPortType" : "Out",
+                "typeSpec" : "Color[]"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "width",
+                "execPortType" : "Out",
+                "typeSpec" : "Size"
+                },
+              {
+                "objectType" : "Port",
+                "nodePortType" : "In",
+                "name" : "height",
+                "execPortType" : "Out",
+                "typeSpec" : "Size"
+                }
+              ],
+            "extDeps" : {},
+            "code" : "dfgEntry {\r\n  //result = lhs + rhs;\r\n  pixels = image.pixels;\r\n  width = image.width;\r\n  height = image.height;\r\n}\r\n"
+            }
+          }
+        ],
+      "connections" : {
+        "verbose" : [
+          "applyLoadImage.verbose"
+          ],
+        "filePath" : [
+          "applyLoadImage.filePath"
+          ],
+        "applyLoadImage.image" : [
+          "Cache_2.value"
+          ],
+        "Cache_2.value" : [
+          "imageMetaData.image"
+          ],
+        "imageMetaData.image" : [
+          "result"
+          ],
+        "imageMetaData.pixels" : [
+          "pixels"
+          ],
+        "imageMetaData.width" : [
+          "width"
+          ],
+        "imageMetaData.height" : [
+          "height"
+          ]
+        }
+      },
+    "Fabric.Core.Data.Cache" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiNodeColor" : "{\n  \"r\" : 214,\n  \"g\" : 191,\n  \"b\" : 103\n  }",
+        "uiAlwaysShowDaisyChainPorts" : "true",
+        "uiHeaderColor" : "{\n  \"r\" : 188,\n  \"g\" : 129,\n  \"b\" : 83\n  }"
+        },
+      "title" : "Cache",
+      "cacheRule" : "always",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "value",
+          "execPortType" : "In",
+          "typeSpec" : "$TYPE$"
+          }
+        ],
+      "extDeps" : {},
+      "presetGUID" : "D903AFD981FE9214C69943F542D5FD60",
+      "code" : "dfgEntry {\n}\n"
+      },
+    "Fabric.Exts.Math.Color.SetArray" : {
+      "objectType" : "Func",
+      "metadata" : {
+        "uiNodeColor" : "{\n  \"r\" : 99,\n  \"g\" : 129,\n  \"b\" : 92\n  }",
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/Math/Color.html",
+        "uiTooltip" : "Setter using rgba Scalar components\n\n Supported by Color"
+        },
+      "title" : "Set[]",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "metadata" : {
+            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 0,\n  \"b\" : 0\n  }"
+            },
+          "nodePortType" : "IO",
+          "name" : "this",
+          "execPortType" : "IO",
+          "typeSpec" : "Color[]"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Scalar[]" : [
+              0
+              ]
+            },
+          "name" : "r",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar[]"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Scalar[]" : [
+              0
+              ]
+            },
+          "name" : "g",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar[]"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Scalar[]" : [
+              0
+              ]
+            },
+          "name" : "b",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar[]"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "defaultValues" : {
+            "Scalar[]" : [
+              0
+              ]
+            },
+          "name" : "a",
+          "execPortType" : "In",
+          "typeSpec" : "Scalar[]"
+          }
+        ],
+      "extDeps" : {
+        "Math" : "*"
+        },
+      "presetGUID" : "5F559A6D1D67286942B2C4019999E76A",
+      "code" : "require Math;\n\noperator Math_Color_set_task<<<index>>>(\n  io Color[] this\n, in Scalar[] r\n, in Scalar[] g\n, in Scalar[] b\n, in Scalar[] a\n) {\n  this[index < this.size() ? index : this.size() - 1].set(r[index < r.size() ? index : r.size() - 1], g[index < g.size() ? index : g.size() - 1], b[index < b.size() ? index : b.size() - 1], a[index < a.size() ? index : a.size() - 1]);\n}\n\ndfgEntry {\n  if( this.size() == 0) return;\n  if( r.size() == 0) return;\n  if( g.size() == 0) return;\n  if( b.size() == 0) return;\n  if( a.size() == 0) return;\n  Size task_size = this.size();\n  if(task_size < r.size()) task_size = r.size();\n  if(task_size < g.size()) task_size = g.size();\n  if(task_size < b.size()) task_size = b.size();\n  if(task_size < a.size()) task_size = a.size();\n  if(task_size < 10000 /* pex margin */) {\n    for(Size index = 0; index < task_size; index++) {\n      Math_Color_set_task(index, this, r, g, b, a);\n    }\n  } else {\n    Math_Color_set_task<<<task_size>>>(this, r, g, b, a);\n  }\n}\n"
+      }
+    },
+  "args" : [
+    {
+      "type" : "String",
+      "value" : "C:\\Users\\Nick\\Documents\\GitHub\\RnD_edgedetect\\Textures_original\\Bunny_Left.tga"
+      },
+    {
+      "type" : "DrawingHandle",
+      "value" : null,
+      "ext" : "InlineDrawing"
+      },
+    {
+      "type" : "Vec3",
+      "value" : null,
+      "ext" : "Math"
+      },
+    {
+      "type" : "Vec3",
+      "value" : {
+        "x" : 0,
+        "y" : 1,
+        "z" : 0
+        },
+      "ext" : "Math"
+      },
+    {
+      "type" : "Float32",
+      "value" : 50
+      },
+    {
+      "type" : "Vec3",
+      "value" : null,
+      "ext" : "Math"
+      },
+    {
+      "type" : "Vec3",
+      "value" : {
+        "x" : 0,
+        "y" : 10,
+        "z" : 0
+        },
+      "ext" : "Math"
+      }
+    ]
+  }

@@ -1,15 +1,15 @@
 {
   "objectType" : "Graph",
   "metadata" : {
-    "camera_mat44" : "{\n  \"row0\" : {\n    \"x\" : -0.9995133280754089,\n    \"y\" : -0.04420386627316475,\n    \"z\" : 0.008044050075113773,\n    \"t\" : 5.979546546936035\n    },\n  \"row1\" : {\n    \"x\" : 1.643713176235906e-06,\n    \"y\" : 0.1789751052856445,\n    \"z\" : 0.9840894937515259,\n    \"t\" : 178.2951812744141\n    },\n  \"row2\" : {\n    \"x\" : -0.04495096951723099,\n    \"y\" : 0.9829075336456299,\n    \"z\" : -0.178828626871109,\n    \"t\" : -32.08006286621094\n    },\n  \"row3\" : {\n    \"x\" : 0,\n    \"y\" : 0,\n    \"z\" : 0,\n    \"t\" : 1\n    }\n  }",
+    "camera_mat44" : "{\n  \"row0\" : {\n    \"x\" : -1.000550866127014,\n    \"y\" : 0.01445055939257145,\n    \"z\" : -0.004309871699661017,\n    \"t\" : 3.807251930236816\n    },\n  \"row1\" : {\n    \"x\" : 1.749254465721606e-06,\n    \"y\" : 0.2858561873435974,\n    \"z\" : 0.9586182236671448,\n    \"t\" : 173.7832183837891\n    },\n  \"row2\" : {\n    \"x\" : 0.01508840546011925,\n    \"y\" : 0.9582206010818481,\n    \"z\" : -0.2859098017215729,\n    \"t\" : -50.94060134887695\n    },\n  \"row3\" : {\n    \"x\" : 0,\n    \"y\" : 0,\n    \"z\" : 0,\n    \"t\" : 1\n    }\n  }",
     "timeline_start" : "1",
     "timeline_loopMode" : "1",
-    "uiGraphZoom" : "{\n  \"value\" : 0.3937845528125763\n  }",
+    "uiGraphZoom" : "{\n  \"value\" : 0.8046634793281555\n  }",
     "timeline_simMode" : "0",
     "camera_focalDistance" : "176.1891021728516",
     "timeline_current" : "1",
     "timeline_end" : "50",
-    "uiGraphPan" : "{\n  \"x\" : 567.2168076334102,\n  \"y\" : 351.8351591728226\n  }"
+    "uiGraphPan" : "{\n  \"x\" : 917.7181502655019,\n  \"y\" : 532.9978561086173\n  }"
     },
   "title" : "",
   "ports" : [
@@ -35,12 +35,20 @@
       },
     {
       "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "insideoutside",
+      "execPortType" : "Out",
+      "typeSpec" : "Boolean"
+      },
+    {
+      "objectType" : "Port",
       "metadata" : {
         "uiPersistValue" : "true"
         },
       "nodePortType" : "Out",
       "name" : "testvalx",
-      "execPortType" : "In"
+      "execPortType" : "In",
+      "typeSpec" : "UInt32"
       },
     {
       "objectType" : "Port",
@@ -51,38 +59,6 @@
       "name" : "testvaly",
       "execPortType" : "In",
       "typeSpec" : "UInt32"
-      },
-    {
-      "objectType" : "Port",
-      "metadata" : {},
-      "nodePortType" : "In",
-      "name" : "value",
-      "execPortType" : "Out",
-      "typeSpec" : "Float64[]"
-      },
-    {
-      "objectType" : "Port",
-      "metadata" : {},
-      "nodePortType" : "In",
-      "name" : "value_2",
-      "execPortType" : "Out",
-      "typeSpec" : "Float64[]"
-      },
-    {
-      "objectType" : "Port",
-      "metadata" : {},
-      "nodePortType" : "In",
-      "name" : "value_4",
-      "execPortType" : "Out",
-      "typeSpec" : "Float64[]"
-      },
-    {
-      "objectType" : "Port",
-      "metadata" : {},
-      "nodePortType" : "In",
-      "name" : "value_5",
-      "execPortType" : "Out",
-      "typeSpec" : "Boolean"
       }
     ],
   "extDeps" : {},
@@ -90,7 +66,7 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\":-964.626953125,\"y\":-759.6320190429688}"
+        "uiGraphPos" : "{\"x\":-1027.6572265625,\"y\":-655.3001708984375}"
         },
       "name" : "LoadImage",
       "ports" : [
@@ -368,7 +344,7 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\":-241.2017059326172,\"y\":-712.5148315429688}"
+        "uiGraphPos" : "{\"x\":-599.2294311523438,\"y\":-517.57763671875}"
         },
       "name" : "FourierSeries_2",
       "ports" : [
@@ -433,7 +409,7 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\":-727.5358276367188,\"y\":-756.100830078125}"
+        "uiGraphPos" : "{\"x\":-860.737060546875,\"y\":-665.8394165039063}"
         },
       "name" : "findingedge",
       "ports" : [
@@ -921,7 +897,7 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\":-73.56576538085938,\"y\":-551.2295532226563}"
+        "uiGraphPos" : "{\"x\":-604.0982055664063,\"y\":-395.7076110839844}"
         },
       "name" : "FourierSeries2",
       "ports" : [
@@ -986,25 +962,8 @@
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\n  \"x\" : 1006.452240467072,\n  \"y\" : -663.5300903320313\n  }"
-        },
-      "name" : "Report",
-      "ports" : [
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "In",
-          "name" : "value"
-          }
-        ],
-      "executable" : "Fabric.Core.Func.Report",
-      "presetGUID" : "E9448726588111C443C34B2F3D9B0172"
-      },
-    {
-      "objectType" : "Inst",
-      "metadata" : {
         "uiComment" : "This function takes the fourier series for the edge of the shape (fx[s], fy[s]), and and calculates if the point (testvalx,testvaly) lies inside the edge. ",
-        "uiGraphPos" : "{\"x\":554.3817749023438,\"y\":-723.169921875}",
-        "uiCommentExpanded" : "true"
+        "uiGraphPos" : "{\"x\":-352.7166137695313,\"y\":-326.5632019042969}"
         },
       "name" : "testinsideedge",
       "ports" : [
@@ -1046,6 +1005,10 @@
         ],
       "definition" : {
         "objectType" : "Graph",
+        "metadata" : {
+          "uiGraphZoom" : "{\n  \"value\" : 1.233552694320679\n  }",
+          "uiGraphPan" : "{\n  \"x\" : -32.30821187332003,\n  \"y\" : 1056.518672304264\n  }"
+          },
         "title" : "",
         "ports" : [
           {
@@ -1657,11 +1620,8 @@
     "FourierSeries2.coscoefficients" : [
       "testinsideedge.coscoefficients_2"
       ],
-    "Report.value" : [
-      "value_5"
-      ],
     "testinsideedge.insideoutside" : [
-      "Report.value"
+      "insideoutside"
       ]
     },
   "requiredPresets" : {
@@ -1686,27 +1646,6 @@
       "extDeps" : {},
       "presetGUID" : "D903AFD981FE9214C69943F542D5FD60",
       "code" : "dfgEntry {\n}\n"
-      },
-    "Fabric.Core.Func.Report" : {
-      "objectType" : "Func",
-      "metadata" : {
-        "uiNodeColor" : "{\n  \"r\" : 214,\n  \"g\" : 191,\n  \"b\" : 103\n  }",
-        "uiAlwaysShowDaisyChainPorts" : "true",
-        "uiHeaderColor" : "{\n  \"r\" : 188,\n  \"g\" : 129,\n  \"b\" : 83\n  }"
-        },
-      "title" : "Report",
-      "ports" : [
-        {
-          "objectType" : "Port",
-          "nodePortType" : "Out",
-          "name" : "value",
-          "execPortType" : "In",
-          "typeSpec" : "$TYPE$"
-          }
-        ],
-      "extDeps" : {},
-      "presetGUID" : "E9448726588111C443C34B2F3D9B0172",
-      "code" : "\ndfgEntry {\n\treport(value);\n}\n"
       }
     },
   "args" : [
@@ -1716,31 +1655,19 @@
       },
     {
       "type" : "UInt32",
-      "value" : 13
-      },
-    {
-      "type" : "UInt32",
-      "value" : 85
-      },
-    {
-      "type" : "UInt32",
-      "value" : 380
-      },
-    {
-      "type" : "Float64[]",
-      "value" : null
-      },
-    {
-      "type" : "Float64[]",
-      "value" : null
-      },
-    {
-      "type" : "Float64[]",
-      "value" : null
+      "value" : 15
       },
     {
       "type" : "Boolean",
       "value" : null
+      },
+    {
+      "type" : "UInt32",
+      "value" : 390
+      },
+    {
+      "type" : "UInt32",
+      "value" : 400
       }
     ]
   }
